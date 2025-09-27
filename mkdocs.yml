@@ -55,8 +55,3 @@ theme:
 
 plugins:
   - search
-  - git-revision-date-localized:
-      enable_creation_date: true
-      type: date
-      locale: pt_BR
-      fallback_to_build_date: true

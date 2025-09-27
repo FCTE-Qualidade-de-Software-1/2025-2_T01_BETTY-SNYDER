@@ -1,4 +1,4 @@
-# Qualidade de software - 2025.1 - T1- Betty Snyder
+# Qualidade de software - 2025.2 - T1- Betty Snyder
 
 ## Sobre o projeto
    Explique brevemente sobre o projeto que estão desenvolvendo. 
