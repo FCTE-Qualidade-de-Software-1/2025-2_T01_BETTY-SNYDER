@@ -1,0 +1,62 @@
+site_name: Betty Snyder
+site_url: https://fcte-qualidade-de-software-1.github.io/2025-2_T01_BETTY-SNYDER
+repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_BETTY-SNYDER
+repo_name: Betty Snyder
+site_description: Documentação do projeto do grupo Betty Snyder de Qualidade de Software (2025.2), Turma 1
+
+nav:
+  - Início: index.md
+  - Fase 1:
+    - Fase 1/index.md
+  - Fase 2:
+    - Fase 2/index.md
+  - Fase 3:
+    - Fase 3/index.md
+  - Fase 4:
+    - Fase 4/index.md
+
+theme:
+  name: material
+  language: pt-BR
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  features:
+    - navigation.tabs        # Adiciona abas de navegação no topo da página
+    - navigation.top         # Botão "Voltar ao topo" para facilitar navegação
+    - search.suggest         # Sugestões automáticas durante a busca
+    - search.highlight       # Destaca termos pesquisados nos resultados
+    - navigation.sections    # Organiza navegação em seções
+    - navigation.indexes     # Permite páginas de índice para seções
+    - navigation.instant     # Carregamento instantâneo de páginas
+    - content.tabs.link      # Vincula abas de conteúdo
+    - content.code.annotate  # Permite anotações em blocos de código
+    - content.code.copy      # Botão para copiar código dos blocos
+    - navigation.expand      # Expande seções de navegação automaticamente
+    - navigation.tracking    # Atualiza URL conforme navegação
+    - header.autohide        # Esconde cabeçalho automaticamente ao fazer scroll
+  
+  palette: 
+    # Paleta para o modo claro
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/toggle-switch
+        name: Mudar para o modo escuro
+
+    # Paleta para o modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Mudar para o modo claro
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+      locale: pt_BR
+      fallback_to_build_date: true
