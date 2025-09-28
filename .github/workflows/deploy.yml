@@ -5,24 +5,31 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Baixar repositório
-        uses: actions/checkout@v4
+      - name: Checkout do código
+        uses: actions/checkout@v3
 
       - name: Configurar Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: 3.x
 
-      - name: Instalar dependências
-        run: |
-          pip install mkdocs
-          pip install mkdocs-material
-          pip install mkdocs-git-revision-date-localized-plugin
+      - name: Instalar MkDocs Material
+        run: pip install mkdocs-material
 
-      - name: Build e Deploy para GitHub Pages
-        run: mkdocs gh-deploy --force
+      - name: Build da documentação
+        run: mkdocs build --strict --verbose
+
+      - name: Deploy para GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+
