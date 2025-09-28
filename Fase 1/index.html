@@ -24,7 +24,7 @@
     
     
       
-        <title>Fase 1 - Betty Snyder</title>
+        <title>Fase 1 – Processo de Avaliação - Betty Snyder</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fase-1" class="md-skip">
+        <a href="#fase-1-processo-de-avaliacao" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fase 1
+              Fase 1 – Processo de Avaliação
             
           </span>
         </div>
@@ -664,6 +664,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-de-trabalho" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto de Trabalho
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-escolhido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Escolhido
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Escolhido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dominio-de-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domínio de Aplicação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação Técnica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionalidades-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionalidades do Sistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivo-da-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo da avaliação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classificacao-e-enfase-das-caracteristicas-de-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação e Ênfase das Características de Qualidade
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -681,7 +758,80 @@
   
 
 
-<h1 id="fase-1">Fase 1</h1>
+<h1 id="fase-1-processo-de-avaliacao">Fase 1 – Processo de Avaliação</h1>
+<h2 id="contexto-de-trabalho"><strong>Contexto de Trabalho</strong></h2>
+<p>Este trabalho foi desenvolvido no âmbito da disciplina de <strong>Qualidade de Software</strong>, com o objetivo de proporcionar aos alunos a compreensão, do início ao fim, da execução de um processo de avaliação de um produto de software, aplicando conceitos, metodologias e normas padronizadas e reconhecidas internacionalmente. Para isso, foi selecionado o <strong>ChamaControl</strong>, um software criado por estudantes da disciplina de Métodos de Desenvolvimento de Software.</p>
+<p>O projeto envolve diferentes atores em sua concepção e uso. O desenvolvimento do ChamaControl foi conduzido por um grupo de estudantes, que atuaram como responsáveis pela implementação técnica do sistema e também pelo seu papel de operadores durante a execução acadêmica, cuidando da infraestrutura e manutenção básica. A disponibilização do software ocorreu de forma aberta, em repositório público, o que permite classificá-los também como fornecedores da solução. A avaliação é conduzida por estudantes da disciplina de Qualidade de Software, sendo essa avaliação requisitada pela professora da turma. Os usuários finais abrangem cidadãos em geral, pesquisadores, órgãos públicos e organizações ambientais, todos interessados em acessar informações atualizadas sobre queimadas de forma simples e confiável.</p>
+<h2 id="software-escolhido"><strong>Software Escolhido</strong></h2>
+<p><strong>Nome do produto:</strong> ChamaControl</p>
+<p><strong>Versão do produto:</strong> Versão inicial acadêmica</p>
+<h4 id="dominio-de-aplicacao"><strong>Domínio de Aplicação</strong></h4>
+<p>O sistema se insere no domínio de <strong>monitoramento ambiental</strong>, oferecendo uma interface web intuitiva para a consulta de dados públicos do <strong>INPE</strong> relacionados a focos de incêndio no Brasil. O ChamaControl organiza informações de forma estruturada e acessível, permitindo acompanhar tanto os registros anuais de queimadas quanto os focos diários mais recentes, atualizados todos os dias às 10h com base em arquivos disponibilizados pelo INPE.</p>
+<h4 id="classificacao-tecnica"><strong>Classificação Técnica</strong></h4>
+<p>Assim, o ChamaControl foi classificado como <strong>Software de Tempo Real</strong> conforme Pressman (2002), devido à sua função de monitoramento contínuo de incêndios e necessidade de resposta em tempo útil.</p>
+<p>Já sob a ótica da norma <strong>IEEE 1062</strong>, enquadra-se como <strong>COTS (Commercial Off-The-Shelf Software)</strong>, pois foi desenvolvido para atender a um público amplo, sem customização específica para um cliente. Além disso, o produto está de acordo com as características de escopo, manutenção, custo de aquisição, entre outras, padrões de softwares da categoria COTS.</p>
+<h4 id="funcionalidades-do-sistema"><strong>Funcionalidades do Sistema</strong></h4>
+<p>Além dos <strong>dashboards interativos</strong>, o sistema incorpora uma tela dedicada a notícias sobre queimadas, alimentada por meio da <strong>API do GNews</strong>, fornecendo informações complementares e contextualizadas sobre os eventos monitorados.</p>
+<p>Para manter a base de dados atualizada, o ChamaControl conta com <strong>três scrapers principais</strong>:</p>
+<ul>
+<li><strong>processaDadosAnual</strong>, que popula o banco de dados com registros históricos entre 2003 e 2024;</li>
+<li><strong>processaDadosDiarios30Dias</strong>, que insere os focos registrados diariamente nos últimos 30 dias;</li>
+<li><strong>processaDadoDiario</strong>, responsável por atualizar a aplicação diariamente com os dados mais recentes.</li>
+</ul>
+<h4 id="objetivo-da-avaliacao"><strong>Objetivo da avaliação</strong></h4>
+<p>A análise de qualidade do ChamaControl busca verificar se o sistema atende aos padrões definidos pelo modelo ISO/IEC 25010, considerando atributos como Eficiência de Desempenho e Manutenibilidade.</p>
+<p>Entre os objetivos específicos destacam-se:
+Avaliar se o sistema utiliza os recursos computacionais de forma adequada e se responde dentro de prazos aceitáveis, considerando seu propósito de monitoramento ambiental;</p>
+<p>Identificar melhorias que possam otimizar o tempo de resposta, a utilização de recursos e a capacidade do sistema;</p>
+<p>Examinar o grau de modularidade, testabilidade e modificabilidade do software, verificando se sua estrutura favorece manutenção e evolução;</p>
+<p>Produzir um diagnóstico técnico direcionado a essas duas características, servindo como base para ajustes futuros e comparações com sistemas de propósito semelhante.</p>
+<h2 id="classificacao-e-enfase-das-caracteristicas-de-qualidade">Classificação e Ênfase das Características de Qualidade</h2>
+<p>Nesta etapa inicial do processo de avaliação, foram definidas as características de qualidade a serem analisadas com base nos objetivos do trabalho e no perfil do público-alvo do ChamaControl. A escolha levou em conta tanto a necessidade de garantir o bom desempenho do sistema quanto a importância de facilitar sua manutenção e evolução futura.</p>
+<p>Foram priorizadas as características de Eficiência de Desempenho e Manutenibilidade, pois estão diretamente ligadas à capacidade do sistema de processar e apresentar dados atualizados do INPE em tempo adequado, além de permitir que sua estrutura seja mantida e modificada de forma confiável pelos desenvolvedores.</p>
+<p>A seguir, apresenta-se a classificação das características de qualidade, conforme a abordagem SQuaRE (ISO/IEC 25010), em uma escala de 1 a 5:</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Ênfase (1-5)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eficiência de Desempenho</td>
+<td>5 – grande interesse</td>
+</tr>
+<tr>
+<td>Manutenibilidade</td>
+<td>5 – grande interesse</td>
+</tr>
+<tr>
+<td>Usabilidade</td>
+<td>4 – baixo interesse</td>
+</tr>
+<tr>
+<td>Confiabilidade</td>
+<td>3 – baixo interesse</td>
+</tr>
+<tr>
+<td>Segurança</td>
+<td>3 – nenhum interesse</td>
+</tr>
+<tr>
+<td>Compatibilidade</td>
+<td>3 – nenhum interesse</td>
+</tr>
+<tr>
+<td>Portabilidade</td>
+<td>3 – nenhum interesse</td>
+</tr>
+<tr>
+<td>Funcionalidade</td>
+<td>3 – nenhum interesse</td>
+</tr>
+</tbody>
+</table>
+<p>Essa priorização servirá como base para a definição das métricas e critérios de avaliação, garantindo foco nos aspectos mais relevantes para a análise do sistema.</p>
 
 
 
