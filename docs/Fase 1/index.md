@@ -170,3 +170,25 @@ A avaliação do **ChamaControl** também se conecta a objetivos mais amplos, es
 
 - **ODS 11 – Cidades e Comunidades Sustentáveis**  
   Ao mapear incêndios que atingem áreas urbanas e periurbanas, a aplicação fortalece o planejamento de cidades mais seguras, resilientes e preparadas para lidar com riscos ambientais, contribuindo para a proteção de pessoas, habitações e infraestrutura.
+
+## Conclusão
+
+A Fase 1 permitiu estruturar de forma clara o processo de avaliação do ChamaControl, definindo o contexto, objetivos, escopo, métricas e alinhamento com os ODS da ONU.  
+Esse trabalho inicial fornece a base para análises mais aprofundadas nas próximas etapas, garantindo que o sistema seja avaliado de maneira sistemática e orientada a melhorias contínuas.
+
+## Contribuição dos Integrantes
+
+| Integrante | Matrícula | Percentual |
+|------------|-----------|------------|
+| **Breno Soares Fernandes** | 202017540 | 16,6% |
+| **Bruno Ricardo de Menezes** | 221007680 | 16,6% |
+| **Enrico Martins Mantoan Zoratto** | 222006688 | 16,6% |
+| **Filipe Bressanelli Azevedo Filho** | 222024579 | 16,6% |
+| **Gabriel Soares dos Anjos** | SAnjos3 | 16,6% |
+| **Leonardo Henrique Sobral Sauma Junior** | 231035428 | 16,6% |
+
+## Histórico de versão
+
+| Versão | Data       | Descrição                                                                                                     | Autores |
+|--------|------------|---------------------------------------------------------------------------------------------------------------|---------|
+| 1.0    | 29/09/2025 | Criação da página inicial, inclusão de contexto e software, definição de escopo e profundidade, métricas, priorização das características de qualidade, revisão final, conclusão e formatação | [Breno Soares](https://github.com/Brenofrds), [Bruno Ricardo](https://github.com/EhOBruno), [Enrico Zoratto](https://github.com/sidts), [Filipe Azevedo](https://github.com/fbressa), [Gabriel dos Anjos](https://github.com/SAnjos3), [Leonardo Sauma Jr](https://github.com/leohssjr) |
