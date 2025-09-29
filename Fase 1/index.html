@@ -740,66 +740,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proposito-da-avaliacao-modelo-de-qualidade-e-caracteristicas-escolhidas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Propósito da Avaliação, Modelo de Qualidade e Características Escolhidas
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Propósito da Avaliação, Modelo de Qualidade e Características Escolhidas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proposito-da-avaliacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Propósito da Avaliação
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#modelo-de-qualidade" class="md-nav__link">
-    <span class="md-ellipsis">
-      Modelo de Qualidade
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#caracteristicas-e-subcaracteristicas-escolhidas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Características e Subcaracterísticas Escolhidas
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#relacao-entre-modularidade-e-capacidade" class="md-nav__link">
-    <span class="md-ellipsis">
-      Relação entre Modularidade e Capacidade
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#objetivos-de-melhoria-a-serem-refinados" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objetivos de Melhoria (a serem refinados)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#escopo-profundidade-e-objetos-de-avaliacao" class="md-nav__link">
     <span class="md-ellipsis">
       Escopo, Profundidade e Objetos de Avaliação
@@ -994,68 +934,6 @@ Avaliar se o sistema utiliza os recursos computacionais de forma adequada e se r
 </tbody>
 </table>
 <p>Essa priorização servirá como base para a definição das métricas e critérios de avaliação, garantindo foco nos aspectos mais relevantes para a análise do sistema.</p>
-<h2 id="proposito-da-avaliacao-modelo-de-qualidade-e-caracteristicas-escolhidas">Propósito da Avaliação, Modelo de Qualidade e Características Escolhidas</h2>
-<h3 id="proposito-da-avaliacao">Propósito da Avaliação</h3>
-<ul>
-<li>Verificar se o <strong>ChamaControl</strong> atende às características críticas selecionadas (Eficiência de Desempenho e Manutenibilidade).</li>
-<li>Identificar pontos de melhoria que apoiem a evolução futura do sistema.</li>
-<li>Estabelecer um <strong>baseline de qualidade</strong> para comparações futuras com versões mais avançadas ou sistemas similares.</li>
-</ul>
-<h3 id="modelo-de-qualidade">Modelo de Qualidade</h3>
-<ul>
-<li>A avaliação segue como referência a norma <strong>ISO/IEC 25010</strong>, considerando suas características e subcaracterísticas.</li>
-<li>O foco recai sobre:</li>
-<li><strong>Manutenibilidade → Modularidade</strong></li>
-<li><strong>Eficiência de Desempenho → Capacidade</strong></li>
-<li>O modelo SQuaRE (Software Product Quality Requirements and Evaluation) será utilizado como guia para definição de métricas e critérios.</li>
-</ul>
-<h3 id="caracteristicas-e-subcaracteristicas-escolhidas">Características e Subcaracterísticas Escolhidas</h3>
-<ol>
-<li><strong>Modularidade (Manutenibilidade)</strong></li>
-<li>Avaliar o grau de independência e coesão entre módulos do sistema.</li>
-<li><strong>Métricas candidatas (a confirmar):</strong><ul>
-<li><code>CBO (Coupling Between Objects)</code>: mede acoplamento entre classes/módulos.</li>
-<li><code>LCOM (Lack of Cohesion of Methods)</code>: mede coesão interna de classes/módulos.</li>
-<li><code>Complexidade Ciclomática</code>: mede simplicidade/lógica interna dos módulos.</li>
-</ul>
-</li>
-<li>
-<p><strong>Possíveis objetivos de melhoria:</strong></p>
-<ul>
-<li>Redução do acoplamento entre módulos.</li>
-<li>Aumento da coesão em componentes críticos.</li>
-</ul>
-</li>
-<li>
-<p><strong>Capacidade (Eficiência de Desempenho)</strong></p>
-</li>
-<li>Avaliar o volume de trabalho que o sistema suporta sem degradação do desempenho.</li>
-<li><strong>Métricas candidatas (a confirmar):</strong><ul>
-<li>Número máximo de usuários simultâneos suportados.</li>
-<li>Throughput (transações/requisições por segundo).</li>
-<li>Latência sob carga máxima.</li>
-</ul>
-</li>
-<li><strong>Possíveis objetivos de melhoria:</strong><ul>
-<li>Melhoria no throughput em situações de carga.</li>
-<li>Redução da latência em picos de acesso.</li>
-</ul>
-</li>
-</ol>
-<h3 id="relacao-entre-modularidade-e-capacidade">Relação entre Modularidade e Capacidade</h3>
-<ul>
-<li>Sistemas mais <strong>modulares</strong> permitem otimizar e escalar módulos de forma independente.</li>
-<li>Isso impacta diretamente a <strong>capacidade global</strong> do sistema, reduzindo gargalos de desempenho.</li>
-<li>Avaliar modularidade ajuda a prever a reação do sistema em cenários de aumento de carga.</li>
-</ul>
-<h3 id="objetivos-de-melhoria-a-serem-refinados">Objetivos de Melhoria (a serem refinados)</h3>
-<ul>
-<li>Redução do acoplamento entre módulos.</li>
-<li>Aumento da coesão de componentes críticos.</li>
-<li>Melhoria no throughput sob carga máxima.</li>
-<li>Redução da latência em picos de uso.</li>
-<li>Definição de um <strong>baseline arquitetural</strong> para evoluções futuras.</li>
-</ul>
 <h2 id="escopo-profundidade-e-objetos-de-avaliacao">Escopo, Profundidade e Objetos de Avaliação</h2>
 <h3 id="escopo">Escopo</h3>
 <p>A avaliação abrangerá os <strong>principais módulos</strong> do sistema <strong>ChamaControl</strong>, a saber:
@@ -1070,8 +948,7 @@ Avaliar se o sistema utiliza os recursos computacionais de forma adequada e se r
 <p>O nível de análise será <strong>intermediário</strong>, contemplando:<br />
 - Verificação de corretude das principais funcionalidades (coleta, armazenamento, exibição e consumo de API).<br />
 - Testes funcionais de cenários típicos (visualização de gráficos, acesso às notícias, chamadas básicas à API).<br />
-- Checagem de consistência entre dados coletados e exibidos.<br />
-- Avaliação de usabilidade básica do front-end.  </p>
+- Checagem de consistência entre dados coletados e exibidos.  </p>
 <p><strong>Não serão realizados</strong>:<br />
 - Testes extensivos de performance.<br />
 - Testes de segurança avançada.<br />
