@@ -66,52 +66,6 @@ A seguir, apresenta-se a classificação das características de qualidade, conf
 
 Essa priorização servirá como base para a definição das métricas e critérios de avaliação, garantindo foco nos aspectos mais relevantes para a análise do sistema.
 
-## Propósito da Avaliação, Modelo de Qualidade e Características Escolhidas
-
-### Propósito da Avaliação
-- Verificar se o **ChamaControl** atende às características críticas selecionadas (Eficiência de Desempenho e Manutenibilidade).
-- Identificar pontos de melhoria que apoiem a evolução futura do sistema.
-- Estabelecer um **baseline de qualidade** para comparações futuras com versões mais avançadas ou sistemas similares.
-
-### Modelo de Qualidade
-- A avaliação segue como referência a norma **ISO/IEC 25010**, considerando suas características e subcaracterísticas.
-- O foco recai sobre:
-  - **Manutenibilidade → Modularidade**
-  - **Eficiência de Desempenho → Capacidade**
-- O modelo SQuaRE (Software Product Quality Requirements and Evaluation) será utilizado como guia para definição de métricas e critérios.
-
-### Características e Subcaracterísticas Escolhidas
-1. **Modularidade (Manutenibilidade)**
-   - Avaliar o grau de independência e coesão entre módulos do sistema.
-   - **Métricas candidatas (a confirmar):**
-     - `CBO (Coupling Between Objects)`: mede acoplamento entre classes/módulos.
-     - `LCOM (Lack of Cohesion of Methods)`: mede coesão interna de classes/módulos.
-     - `Complexidade Ciclomática`: mede simplicidade/lógica interna dos módulos.
-   - **Possíveis objetivos de melhoria:**
-     - Redução do acoplamento entre módulos.
-     - Aumento da coesão em componentes críticos.
-
-2. **Capacidade (Eficiência de Desempenho)**
-   - Avaliar o volume de trabalho que o sistema suporta sem degradação do desempenho.
-   - **Métricas candidatas (a confirmar):**
-     - Número máximo de usuários simultâneos suportados.
-     - Throughput (transações/requisições por segundo).
-     - Latência sob carga máxima.
-   - **Possíveis objetivos de melhoria:**
-     - Melhoria no throughput em situações de carga.
-     - Redução da latência em picos de acesso.
-
-### Relação entre Modularidade e Capacidade
-- Sistemas mais **modulares** permitem otimizar e escalar módulos de forma independente.
-- Isso impacta diretamente a **capacidade global** do sistema, reduzindo gargalos de desempenho.
-- Avaliar modularidade ajuda a prever a reação do sistema em cenários de aumento de carga.
-
-### Objetivos de Melhoria (a serem refinados)
-- Redução do acoplamento entre módulos.
-- Aumento da coesão de componentes críticos.
-- Melhoria no throughput sob carga máxima.
-- Redução da latência em picos de uso.
-- Definição de um **baseline arquitetural** para evoluções futuras.
 
 ## Escopo, Profundidade e Objetos de Avaliação
 
@@ -131,7 +85,7 @@ O nível de análise será **intermediário**, contemplando:
 - Verificação de corretude das principais funcionalidades (coleta, armazenamento, exibição e consumo de API).  
 - Testes funcionais de cenários típicos (visualização de gráficos, acesso às notícias, chamadas básicas à API).  
 - Checagem de consistência entre dados coletados e exibidos.  
-- Avaliação de usabilidade básica do front-end.  
+
 
 **Não serão realizados**:  
 - Testes extensivos de performance.  
