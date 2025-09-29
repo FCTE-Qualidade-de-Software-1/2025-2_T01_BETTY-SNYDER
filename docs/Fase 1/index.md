@@ -55,15 +55,118 @@ A seguir, apresenta-se a classificação das características de qualidade, conf
 
 | Característica           | Ênfase (1-5)         |
 | ------------------------ | -------------------- |
-| Eficiência de Desempenho | 5 – grande interesse |
-| Manutenibilidade         | 5 – grande interesse |
-| Usabilidade              | 4 – baixo interesse  |
-| Confiabilidade           | 3 – baixo interesse  |
-| Segurança                | 3 – nenhum interesse |
-| Compatibilidade          | 3 – nenhum interesse |
-| Portabilidade            | 3 – nenhum interesse |
-| Funcionalidade           | 3 – nenhum interesse |
+| Eficiência de Desempenho | 5 – Alta prioridade  |
+| Manutenibilidade         | 5 – Alta prioridade  |
+| Usabilidade              | 4 – Média prioridade |
+| Confiabilidade           | 2 – Baixa prioridade |
+| Segurança                | 1 – Baixa prioridade |
+| Compatibilidade          | 1 – Baixa prioridade |
+| Portabilidade            | 1 – Baixa prioridade |
+| Funcionalidade           | 1 – Baixa prioridade |
 
 Essa priorização servirá como base para a definição das métricas e critérios de avaliação, garantindo foco nos aspectos mais relevantes para a análise do sistema.
 
+## Propósito da Avaliação, Modelo de Qualidade e Características Escolhidas
 
+### Propósito da Avaliação
+- Verificar se o **ChamaControl** atende às características críticas selecionadas (Eficiência de Desempenho e Manutenibilidade).
+- Identificar pontos de melhoria que apoiem a evolução futura do sistema.
+- Estabelecer um **baseline de qualidade** para comparações futuras com versões mais avançadas ou sistemas similares.
+
+### Modelo de Qualidade
+- A avaliação segue como referência a norma **ISO/IEC 25010**, considerando suas características e subcaracterísticas.
+- O foco recai sobre:
+  - **Manutenibilidade → Modularidade**
+  - **Eficiência de Desempenho → Capacidade**
+- O modelo SQuaRE (Software Product Quality Requirements and Evaluation) será utilizado como guia para definição de métricas e critérios.
+
+### Características e Subcaracterísticas Escolhidas
+1. **Modularidade (Manutenibilidade)**
+   - Avaliar o grau de independência e coesão entre módulos do sistema.
+   - **Métricas candidatas (a confirmar):**
+     - `CBO (Coupling Between Objects)`: mede acoplamento entre classes/módulos.
+     - `LCOM (Lack of Cohesion of Methods)`: mede coesão interna de classes/módulos.
+     - `Complexidade Ciclomática`: mede simplicidade/lógica interna dos módulos.
+   - **Possíveis objetivos de melhoria:**
+     - Redução do acoplamento entre módulos.
+     - Aumento da coesão em componentes críticos.
+
+2. **Capacidade (Eficiência de Desempenho)**
+   - Avaliar o volume de trabalho que o sistema suporta sem degradação do desempenho.
+   - **Métricas candidatas (a confirmar):**
+     - Número máximo de usuários simultâneos suportados.
+     - Throughput (transações/requisições por segundo).
+     - Latência sob carga máxima.
+   - **Possíveis objetivos de melhoria:**
+     - Melhoria no throughput em situações de carga.
+     - Redução da latência em picos de acesso.
+
+### Relação entre Modularidade e Capacidade
+- Sistemas mais **modulares** permitem otimizar e escalar módulos de forma independente.
+- Isso impacta diretamente a **capacidade global** do sistema, reduzindo gargalos de desempenho.
+- Avaliar modularidade ajuda a prever a reação do sistema em cenários de aumento de carga.
+
+### Objetivos de Melhoria (a serem refinados)
+- Redução do acoplamento entre módulos.
+- Aumento da coesão de componentes críticos.
+- Melhoria no throughput sob carga máxima.
+- Redução da latência em picos de uso.
+- Definição de um **baseline arquitetural** para evoluções futuras.
+
+## Escopo, Profundidade e Objetos de Avaliação
+
+### Escopo
+A avaliação abrangerá os **principais módulos** do sistema **ChamaControl**, a saber:
+- **Coleta de dados**: Scrapers responsáveis pela importação e atualização de dados do INPE (.csv) e do GNews (notícias).  
+- **Armazenamento**: Estrutura de persistência em banco de dados MySQL.  
+- **API Backend**: Endpoints em Node.js/Express responsáveis por fornecer dados processados.  
+- **Front-end**: Interface desenvolvida em React/Vite, incluindo componentes, rotas e visualizações gráficas.  
+
+**Fora do escopo** (não serão avaliados nesta fase):  
+- Configurações de infraestrutura (Docker e docker-compose).  
+- Ferramentas externas de teste/documentação (Postman, Swagger).  
+
+### Profundidade
+O nível de análise será **intermediário**, contemplando:  
+- Verificação de corretude das principais funcionalidades (coleta, armazenamento, exibição e consumo de API).  
+- Testes funcionais de cenários típicos (visualização de gráficos, acesso às notícias, chamadas básicas à API).  
+- Checagem de consistência entre dados coletados e exibidos.  
+- Avaliação de usabilidade básica do front-end.  
+
+**Não serão realizados**:  
+- Testes extensivos de performance.  
+- Testes de segurança avançada.  
+- Análises profundas de logs de execução.  
+
+### Objetos de Avaliação
+**Funcionalidades específicas**:  
+- Execução diária do scraper.  
+- Consulta de dados históricos e recentes via API.  
+- Renderização de gráficos de focos de incêndio no front-end.  
+- Exibição de notícias atualizadas sobre queimadas.  
+
+**Fluxos principais de usuário**:  
+- Acesso à interface web (navegação entre páginas).  
+- Consulta e interpretação de dados apresentados em gráficos.  
+- Visualização de notícias integradas ao sistema.  
+
+## ODS Relacionados e Metas Associadas
+
+A avaliação do **ChamaControl** também se conecta a objetivos mais amplos, especialmente aos **Objetivos de Desenvolvimento Sustentável (ODS) da ONU**, reforçando a relevância social e ambiental do sistema.
+
+### Principal
+- **ODS 13 – Ação contra a mudança global do clima**  
+  Ao disponibilizar informações sobre a ocorrência e a intensidade dos incêndios, o projeto contribui para a compreensão dos impactos do fogo nas emissões de gases de efeito estufa, apoiando estratégias de mitigação e adaptação às mudanças climáticas e fortalecendo políticas de resiliência ambiental.
+
+- **ODS 15 – Vida Terrestre**  
+  Ao monitorar os incêndios que afetam florestas, áreas de vegetação nativa e ecossistemas sensíveis, a iniciativa favorece a preservação da biodiversidade, o manejo sustentável da terra e a recuperação de áreas degradadas, colaborando com a conservação da vida terrestre.
+
+### Secundária
+- **ODS 3 – Saúde e Bem-estar**  
+  Ao evidenciar os riscos da fumaça e da poluição atmosférica gerada pelos incêndios, o projeto reforça a importância da prevenção de doenças respiratórias e cardiovasculares, além de subsidiar ações de proteção à saúde de comunidades expostas aos efeitos do fogo.
+
+- **ODS 9 – Indústria, Inovação e Infraestrutura**  
+  Ao desenvolver um software de monitoramento de incêndios, a aplicação promove a inovação tecnológica e fortalece a infraestrutura digital para coleta, processamento e análise de dados ambientais, apoiando decisões rápidas e eficazes e contribuindo para soluções mais resilientes frente aos desafios climáticos.
+
+- **ODS 11 – Cidades e Comunidades Sustentáveis**  
+  Ao mapear incêndios que atingem áreas urbanas e periurbanas, a aplicação fortalece o planejamento de cidades mais seguras, resilientes e preparadas para lidar com riscos ambientais, contribuindo para a proteção de pessoas, habitações e infraestrutura.
