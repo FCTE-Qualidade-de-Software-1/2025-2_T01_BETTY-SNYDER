@@ -2,15 +2,19 @@
 
 ## **Contexto de Trabalho**
 
-Este trabalho foi desenvolvido no âmbito da disciplina de **Qualidade de Software**, com o objetivo de proporcionar aos alunos a compreensão, do início ao fim, da execução de um processo de avaliação de um produto de software, aplicando conceitos, metodologias e normas padronizadas e reconhecidas internacionalmente. Para isso, foi selecionado o **ChamaControl**, um software criado por estudantes da disciplina de Métodos de Desenvolvimento de Software.
-
-O projeto envolve diferentes atores em sua concepção e uso. O desenvolvimento do ChamaControl foi conduzido por um grupo de estudantes, que atuaram como responsáveis pela implementação técnica do sistema e também pelo seu papel de operadores durante a execução acadêmica, cuidando da infraestrutura e manutenção básica. A disponibilização do software ocorreu de forma aberta, em repositório público, o que permite classificá-los também como fornecedores da solução. A avaliação é conduzida por estudantes da disciplina de Qualidade de Software, sendo essa avaliação requisitada pela professora da turma. Os usuários finais abrangem cidadãos em geral, pesquisadores, órgãos públicos e organizações ambientais, todos interessados em acessar informações atualizadas sobre queimadas de forma simples e confiável.
+Este trabalho foi desenvolvido no âmbito da disciplina de **Qualidade de Software**, com o objetivo de proporcionar aos alunos a compreensão, do início ao fim, da execução de um processo de avaliação de um produto de software, aplicando conceitos, metodologias e normas padronizadas e reconhecidas internacionalmente. 
 
 ## **Software Escolhido**
 
-**Nome do produto:** ChamaControl
+O software escolhido para a realização do trabalho é o [**ChamaControl <sup>[1]</sup>**](#referencias-bibliograficas), criado por estudantes da disciplina de Métodos de Desenvolvimento de Software da Universidade de Brasília. Os estudantes atuaram como **responsáveis** pela implementação técnica do sistema e também como **operadores** durante a execução acadêmica, cuidando da infraestrutura e manutenção básica. 
 
-**Versão do produto:** Versão inicial acadêmica
+A disponibilização do software ocorreu de forma aberta, em repositório público, o que permite classificá-los também como **fornecedores** da solução. A avaliação é conduzida por estudantes da disciplina de Qualidade de Software, sendo essa avaliação requisitada pela professora da turma. 
+
+Os usuários finais abrangem cidadãos em geral, pesquisadores, órgãos públicos e organizações ambientais, todos interessados em acessar informações atualizadas sobre queimadas de forma simples e confiável.
+
+| **Nome do produto** | **Versão do produto**             |
+|---------------------|-----------------------------------|
+| ChamaControl        | v1.0.0 (Versão inicial acadêmica) |
 
 #### **Domínio de Aplicação**
 
@@ -19,8 +23,6 @@ O sistema se insere no domínio de **monitoramento ambiental**, oferecendo uma i
 #### **Classificação Técnica**
 
 Assim, o ChamaControl foi classificado como **Software de Tempo Real** conforme Pressman (2002), devido à sua função de monitoramento contínuo de incêndios e necessidade de resposta em tempo útil.
-
-Já sob a ótica da norma **IEEE 1062**, enquadra-se como **COTS (Commercial Off-The-Shelf Software)**, pois foi desenvolvido para atender a um público amplo, sem customização específica para um cliente. Além disso, o produto está de acordo com as características de escopo, manutenção, custo de aquisição, entre outras, padrões de softwares da categoria COTS.
 
 #### **Funcionalidades do Sistema**
 
@@ -71,6 +73,7 @@ Essa priorização servirá como base para a definição das métricas e critér
 
 ### Escopo
 A avaliação abrangerá os **principais módulos** do sistema **ChamaControl**, a saber:
+
 - **Coleta de dados**: Scrapers responsáveis pela importação e atualização de dados do INPE (.csv) e do GNews (notícias).  
 - **Armazenamento**: Estrutura de persistência em banco de dados MySQL.  
 - **API Backend**: Endpoints em Node.js/Express responsáveis por fornecer dados processados.  
@@ -129,6 +132,11 @@ A avaliação do **ChamaControl** também se conecta a objetivos mais amplos, es
 
 A Fase 1 permitiu estruturar de forma clara o processo de avaliação do ChamaControl, definindo o contexto, objetivos, escopo, métricas e alinhamento com os ODS da ONU.  
 Esse trabalho inicial fornece a base para análises mais aprofundadas nas próximas etapas, garantindo que o sistema seja avaliado de maneira sistemática e orientada a melhorias contínuas.
+
+## Referências Bibliográficas
+
+> [1] ChamaControl. Disponível em: <https://github.com/unb-mds/2024-2-ChamaControl>. Acesso em: 29 de setembro de 2025  
+
 
 ## Contribuição dos Integrantes
 
