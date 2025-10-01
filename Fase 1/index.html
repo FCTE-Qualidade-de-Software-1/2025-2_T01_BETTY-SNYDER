@@ -824,6 +824,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências Bibliográficas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#contribuicao-dos-integrantes" class="md-nav__link">
     <span class="md-ellipsis">
       Contribuição dos Integrantes
@@ -862,15 +871,29 @@
 
 <h1 id="fase-1-processo-de-avaliacao">Fase 1 – Processo de Avaliação</h1>
 <h2 id="contexto-de-trabalho"><strong>Contexto de Trabalho</strong></h2>
-<p>Este trabalho foi desenvolvido no âmbito da disciplina de <strong>Qualidade de Software</strong>, com o objetivo de proporcionar aos alunos a compreensão, do início ao fim, da execução de um processo de avaliação de um produto de software, aplicando conceitos, metodologias e normas padronizadas e reconhecidas internacionalmente. Para isso, foi selecionado o <strong>ChamaControl</strong>, um software criado por estudantes da disciplina de Métodos de Desenvolvimento de Software.</p>
-<p>O projeto envolve diferentes atores em sua concepção e uso. O desenvolvimento do ChamaControl foi conduzido por um grupo de estudantes, que atuaram como responsáveis pela implementação técnica do sistema e também pelo seu papel de operadores durante a execução acadêmica, cuidando da infraestrutura e manutenção básica. A disponibilização do software ocorreu de forma aberta, em repositório público, o que permite classificá-los também como fornecedores da solução. A avaliação é conduzida por estudantes da disciplina de Qualidade de Software, sendo essa avaliação requisitada pela professora da turma. Os usuários finais abrangem cidadãos em geral, pesquisadores, órgãos públicos e organizações ambientais, todos interessados em acessar informações atualizadas sobre queimadas de forma simples e confiável.</p>
+<p>Este trabalho foi desenvolvido no âmbito da disciplina de <strong>Qualidade de Software</strong>, com o objetivo de proporcionar aos alunos a compreensão, do início ao fim, da execução de um processo de avaliação de um produto de software, aplicando conceitos, metodologias e normas padronizadas e reconhecidas internacionalmente. </p>
 <h2 id="software-escolhido"><strong>Software Escolhido</strong></h2>
-<p><strong>Nome do produto:</strong> ChamaControl</p>
-<p><strong>Versão do produto:</strong> Versão inicial acadêmica</p>
+<p>O software escolhido para a realização do trabalho é o <a href="#referencias-bibliograficas"><strong>ChamaControl <sup>[1]</sup></strong></a>, criado por estudantes da disciplina de Métodos de Desenvolvimento de Software da Universidade de Brasília. Os estudantes atuaram como <strong>responsáveis</strong> pela implementação técnica do sistema e também como <strong>operadores</strong> durante a execução acadêmica, cuidando da infraestrutura e manutenção básica. </p>
+<p>A disponibilização do software ocorreu de forma aberta, em repositório público, o que permite classificá-los também como <strong>fornecedores</strong> da solução. A avaliação é conduzida por estudantes da disciplina de Qualidade de Software, sendo essa avaliação requisitada pela professora da turma. </p>
+<p>Os usuários finais abrangem cidadãos em geral, pesquisadores, órgãos públicos e organizações ambientais, todos interessados em acessar informações atualizadas sobre queimadas de forma simples e confiável.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nome do produto</strong></th>
+<th><strong>Versão do produto</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChamaControl</td>
+<td>v1.0.0 (Versão inicial acadêmica)</td>
+</tr>
+</tbody>
+</table>
 <h4 id="dominio-de-aplicacao"><strong>Domínio de Aplicação</strong></h4>
 <p>O sistema se insere no domínio de <strong>monitoramento ambiental</strong>, oferecendo uma interface web intuitiva para a consulta de dados públicos do <strong>INPE</strong> relacionados a focos de incêndio no Brasil. O ChamaControl organiza informações de forma estruturada e acessível, permitindo acompanhar tanto os registros anuais de queimadas quanto os focos diários mais recentes, atualizados todos os dias às 10h com base em arquivos disponibilizados pelo INPE.</p>
 <h4 id="classificacao-tecnica"><strong>Classificação Técnica</strong></h4>
-<p>Assim, o ChamaControl foi classificado como <strong>Software de Tempo Real</strong> conforme Pressman (2002), devido à sua função de monitoramento contínuo de incêndios e necessidade de resposta em tempo útil.</p>
+<p>Assim, o ChamaControl foi classificado como <strong>Software de Tempo Real</strong> conforme Pressman (2002), devido à sua função de monitoramento contínuo de incêndios e necessidade de resposta em tempo útil. </p>
 <h4 id="funcionalidades-do-sistema"><strong>Funcionalidades do Sistema</strong></h4>
 <p>Além dos <strong>dashboards interativos</strong>, o sistema incorpora uma tela dedicada a notícias sobre queimadas, alimentada por meio da <strong>API do GNews</strong>, fornecendo informações complementares e contextualizadas sobre os eventos monitorados.</p>
 <p>Para manter a base de dados atualizada, o ChamaControl conta com <strong>três scrapers principais</strong>:</p>
@@ -880,25 +903,28 @@
 <li><strong>processaDadoDiario</strong>, responsável por atualizar a aplicação diariamente com os dados mais recentes.</li>
 </ul>
 <h4 id="objetivo-da-avaliacao"><strong>Objetivo da avaliação</strong></h4>
-<p>A análise de qualidade do ChamaControl busca verificar se o sistema atende aos padrões definidos pelo modelo ISO/IEC 25010, considerando atributos como Eficiência de Desempenho e Manutenibilidade.</p>
-<p>Entre os objetivos específicos destacam-se:
-Avaliar se o sistema utiliza os recursos computacionais de forma adequada e se responde dentro de prazos aceitáveis, considerando seu propósito de monitoramento ambiental;</p>
+<p>A análise de qualidade do ChamaControl busca verificar se o sistema atende aos padrões definidos pelo modelo ISO/IEC 25010, considerando atributos como Eficiência de Desempenho e Manutenibilidade.Entre os objetivos específicos destacam-se:</p>
+<ul>
+<li>
+<p>Avaliar se o sistema utiliza os recursos computacionais de forma adequada e se responde dentro de prazos aceitáveis, considerando seu propósito de monitoramento ambiental;</p>
+</li>
+<li>
 <p>Identificar melhorias que possam otimizar o tempo de resposta, a utilização de recursos e a capacidade do sistema;</p>
+</li>
+<li>
 <p>Examinar o grau de modularidade, testabilidade e modificabilidade do software, verificando se sua estrutura favorece manutenção e evolução;</p>
-<p>Produzir um diagnóstico técnico direcionado a essas duas características, servindo como base para ajustes futuros e comparações com sistemas de propósito semelhante.</p>
+</li>
+</ul>
+<p>Portanto, ao final do processo de avaliação, procura-se produzir diagnóstico técnico direcionado a essas duas características e relatórios de comparações com sistemas de propósito semelhante, que servirão como base para ajustes futuros e possível continuação do software.</p>
 <h2 id="classificacao-e-enfase-das-caracteristicas-de-qualidade">Classificação e Ênfase das Características de Qualidade</h2>
 <p>Nesta etapa inicial do processo de avaliação, foram definidas as características de qualidade a serem analisadas com base nos objetivos do trabalho e no perfil do público-alvo do ChamaControl. A escolha levou em conta tanto a necessidade de garantir o bom desempenho do sistema quanto a importância de facilitar sua manutenção e evolução futura.</p>
-<p>Foram priorizadas as características de Eficiência de Desempenho e Manutenibilidade, pois estão diretamente ligadas à capacidade do sistema de processar e apresentar dados atualizados do INPE em tempo adequado, além de permitir que sua estrutura seja mantida e modificada de forma confiável pelos desenvolvedores.</p>
-<p><img alt="Características de qualidade" src="../assets/caracteristicas.jpg" /></p>
 <p>A seguir, apresenta-se a classificação das características de qualidade, conforme a abordagem SQuaRE (ISO/IEC 25010), em uma escala de 1 a 5:</p>
+<div align="center">
 <table>
-<thead>
 <tr>
 <th>Característica</th>
 <th>Ênfase (1-5)</th>
 </tr>
-</thead>
-<tbody>
 <tr>
 <td>Eficiência de Desempenho</td>
 <td>5 – Alta prioridade</td>
@@ -931,38 +957,58 @@ Avaliar se o sistema utiliza os recursos computacionais de forma adequada e se r
 <td>Funcionalidade</td>
 <td>1 – Baixa prioridade</td>
 </tr>
-</tbody>
 </table>
-<p>Essa priorização servirá como base para a definição das métricas e critérios de avaliação, garantindo foco nos aspectos mais relevantes para a análise do sistema.</p>
+<p><em>Tabela: Ênfase das Características de Qualidade</em></p>
+</div>
+
+<p>Foram priorizadas as características de <strong>Eficiência de Desempenho</strong> e <strong>Manutenibilidade</strong>, pois estão diretamente relacionadas à capacidade do sistema de processar e apresentar dados atualizados do INPE em tempo adequado, além de permitir que sua estrutura seja mantida e modificada de forma confiável pelos desenvolvedores.</p>
+<p>Essa priorização servirá como base para a definição das métricas e critérios de avaliação, garantindo o foco nos aspectos mais relevantes para a análise do sistema. Considerando as características priorizadas, foram elicitadas as seguintes subcaracterísticas, de acordo com o modelo de qualidade ISO/IEC 25010:</p>
+<div align="center">
+  <img src="../assets/caracteristicas.jpg" alt="Características de qualidade">
+  <p><em>Figura 1: Características de qualidade priorizadas conforme ISO/IEC 25010</em></p>
+</div>
+
 <h2 id="escopo-profundidade-e-objetos-de-avaliacao">Escopo, Profundidade e Objetos de Avaliação</h2>
 <h3 id="escopo">Escopo</h3>
-<p>A avaliação abrangerá os <strong>principais módulos</strong> do sistema <strong>ChamaControl</strong>, a saber:
-- <strong>Coleta de dados</strong>: Scrapers responsáveis pela importação e atualização de dados do INPE (.csv) e do GNews (notícias).<br />
-- <strong>Armazenamento</strong>: Estrutura de persistência em banco de dados MySQL.<br />
-- <strong>API Backend</strong>: Endpoints em Node.js/Express responsáveis por fornecer dados processados.<br />
-- <strong>Front-end</strong>: Interface desenvolvida em React/Vite, incluindo componentes, rotas e visualizações gráficas.  </p>
-<p><strong>Fora do escopo</strong> (não serão avaliados nesta fase):<br />
-- Configurações de infraestrutura (Docker e docker-compose).<br />
-- Ferramentas externas de teste/documentação (Postman, Swagger).  </p>
+<p>A avaliação abrangerá os <strong>principais módulos</strong> do sistema <strong>ChamaControl</strong>, a saber:</p>
+<ul>
+<li><strong>Coleta de dados</strong>: Scrapers responsáveis pela importação e atualização de dados do INPE (.csv) e do GNews (notícias).  </li>
+<li><strong>Armazenamento</strong>: Estrutura de persistência em banco de dados MySQL.  </li>
+<li><strong>API Backend</strong>: Endpoints em Node.js/Express responsáveis por fornecer dados processados.  </li>
+<li><strong>Front-end</strong>: Interface desenvolvida em React/Vite, incluindo componentes, rotas e visualizações gráficas.  </li>
+</ul>
+<p>Abaixo são mencionados quais módulos do sistema estão <strong>Fora do escopo</strong> e portanto, não serão avaliados nesta fase:</p>
+<ul>
+<li>Configurações de infraestrutura (Docker e docker-compose).  </li>
+<li>Ferramentas externas de teste/documentação (Postman, Swagger).  </li>
+</ul>
 <h3 id="profundidade">Profundidade</h3>
-<p>O nível de análise será <strong>intermediário</strong>, contemplando:<br />
-- Verificação de corretude das principais funcionalidades (coleta, armazenamento, exibição e consumo de API).<br />
-- Testes funcionais de cenários típicos (visualização de gráficos, acesso às notícias, chamadas básicas à API).<br />
-- Checagem de consistência entre dados coletados e exibidos.  </p>
-<p><strong>Não serão realizados</strong>:<br />
-- Testes extensivos de performance.<br />
-- Testes de segurança avançada.<br />
-- Análises profundas de logs de execução.  </p>
+<p>O nível de análise será <strong>intermediário</strong>, contemplando:  </p>
+<ul>
+<li>Verificação de corretude das principais funcionalidades (coleta, armazenamento, exibição e consumo de API).  </li>
+<li>Testes funcionais de cenários típicos (visualização de gráficos, acesso às notícias, chamadas básicas à API).  </li>
+<li>Checagem de consistência entre dados coletados e exibidos.  </li>
+</ul>
+<p><strong>Não serão realizados</strong>:  </p>
+<ul>
+<li>Testes extensivos de performance.  </li>
+<li>Testes de segurança avançada.  </li>
+<li>Análises profundas de logs de execução.  </li>
+</ul>
 <h3 id="objetos-de-avaliacao">Objetos de Avaliação</h3>
-<p><strong>Funcionalidades específicas</strong>:<br />
-- Execução diária do scraper.<br />
-- Consulta de dados históricos e recentes via API.<br />
-- Renderização de gráficos de focos de incêndio no front-end.<br />
-- Exibição de notícias atualizadas sobre queimadas.  </p>
-<p><strong>Fluxos principais de usuário</strong>:<br />
-- Acesso à interface web (navegação entre páginas).<br />
-- Consulta e interpretação de dados apresentados em gráficos.<br />
-- Visualização de notícias integradas ao sistema.  </p>
+<p><strong>Funcionalidades específicas</strong>:  </p>
+<ul>
+<li>Execução diária do scraper.  </li>
+<li>Consulta de dados históricos e recentes via API.  </li>
+<li>Renderização de gráficos de focos de incêndio no front-end.  </li>
+<li>Exibição de notícias atualizadas sobre queimadas.  </li>
+</ul>
+<p><strong>Fluxos principais de usuário</strong>: </p>
+<ul>
+<li>Acesso à interface web (navegação entre páginas).  </li>
+<li>Consulta e interpretação de dados apresentados em gráficos.  </li>
+<li>Visualização de notícias integradas ao sistema.  </li>
+</ul>
 <h2 id="ods-relacionados-e-metas-associadas">ODS Relacionados e Metas Associadas</h2>
 <p>A avaliação do <strong>ChamaControl</strong> também se conecta a objetivos mais amplos, especialmente aos <strong>Objetivos de Desenvolvimento Sustentável (ODS) da ONU</strong>, reforçando a relevância social e ambiental do sistema.</p>
 <h3 id="principal">Principal</h3>
@@ -994,6 +1040,15 @@ Avaliar se o sistema utiliza os recursos computacionais de forma adequada e se r
 <h2 id="conclusao">Conclusão</h2>
 <p>A Fase 1 permitiu estruturar de forma clara o processo de avaliação do ChamaControl, definindo o contexto, objetivos, escopo, métricas e alinhamento com os ODS da ONU.<br />
 Esse trabalho inicial fornece a base para análises mais aprofundadas nas próximas etapas, garantindo que o sistema seja avaliado de maneira sistemática e orientada a melhorias contínuas.</p>
+<p><code>Declaração de Uso da IA: Durante a elaboração deste documento foram utilizadas ferramentas de inteligência artificial baseadas em modelos de linguagem como apoio para:</code><br>
+<code>(1) sugerir uma organização coerente dos tópicos;</code><br>
+<code>(2) revisar ortografia e gramática;</code><br>
+<code>(3) verificar a cobertura dos critérios do documento de avaliação.</code><br></p>
+<p>Todas as sugestões foram revisadas e, quando apropriado, editadas manualmente pela(s) pessoa(s) responsável(is) pelo trabalho.</p>
+<h2 id="referencias-bibliograficas">Referências Bibliográficas</h2>
+<blockquote>
+<p>[1] ChamaControl. Disponível em: <a href="https://github.com/unb-mds/2024-2-ChamaControl">https://github.com/unb-mds/2024-2-ChamaControl</a>. Acesso em: 29 de setembro de 2025  </p>
+</blockquote>
 <h2 id="contribuicao-dos-integrantes">Contribuição dos Integrantes</h2>
 <table>
 <thead>
@@ -1026,7 +1081,7 @@ Esse trabalho inicial fornece a base para análises mais aprofundadas nas próxi
 </tr>
 <tr>
 <td><strong>Gabriel Soares dos Anjos</strong></td>
-<td>SAnjos3</td>
+<td>231026625</td>
 <td>16,6%</td>
 </tr>
 <tr>
@@ -1058,6 +1113,12 @@ Esse trabalho inicial fornece a base para análises mais aprofundadas nas próxi
 <td>01/10/2025</td>
 <td>Ajustes, adição da representação visual das características escolhidas</td>
 <td><a href="https://github.com/fbressa">Filipe Azevedo</a></td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>01/10/2025</td>
+<td>Adição do tópico "Uso de IA" e reajuste do código md para melhorias na visualização e organização dos tópicosv</td>
+<td><a href="https://github.com/SAnjos3">Gabriel Soares</a></td>
 </tr>
 </tbody>
 </table>
