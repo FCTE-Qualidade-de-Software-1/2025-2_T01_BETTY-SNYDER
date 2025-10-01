@@ -20,8 +20,6 @@ O sistema se insere no domínio de **monitoramento ambiental**, oferecendo uma i
 
 Assim, o ChamaControl foi classificado como **Software de Tempo Real** conforme Pressman (2002), devido à sua função de monitoramento contínuo de incêndios e necessidade de resposta em tempo útil.
 
-Já sob a ótica da norma **IEEE 1062**, enquadra-se como **COTS (Commercial Off-The-Shelf Software)**, pois foi desenvolvido para atender a um público amplo, sem customização específica para um cliente. Além disso, o produto está de acordo com as características de escopo, manutenção, custo de aquisição, entre outras, padrões de softwares da categoria COTS.
-
 #### **Funcionalidades do Sistema**
 
 Além dos **dashboards interativos**, o sistema incorpora uma tela dedicada a notícias sobre queimadas, alimentada por meio da **API do GNews**, fornecendo informações complementares e contextualizadas sobre os eventos monitorados.
@@ -50,6 +48,8 @@ Produzir um diagnóstico técnico direcionado a essas duas características, ser
 Nesta etapa inicial do processo de avaliação, foram definidas as características de qualidade a serem analisadas com base nos objetivos do trabalho e no perfil do público-alvo do ChamaControl. A escolha levou em conta tanto a necessidade de garantir o bom desempenho do sistema quanto a importância de facilitar sua manutenção e evolução futura.
 
 Foram priorizadas as características de Eficiência de Desempenho e Manutenibilidade, pois estão diretamente ligadas à capacidade do sistema de processar e apresentar dados atualizados do INPE em tempo adequado, além de permitir que sua estrutura seja mantida e modificada de forma confiável pelos desenvolvedores.
+
+![Características de qualidade](..\assets\caracteristicas.jpg)
 
 A seguir, apresenta-se a classificação das características de qualidade, conforme a abordagem SQuaRE (ISO/IEC 25010), em uma escala de 1 a 5:
 
@@ -146,3 +146,4 @@ Esse trabalho inicial fornece a base para análises mais aprofundadas nas próxi
 | Versão | Data       | Descrição                                                                                                     | Autores |
 |--------|------------|---------------------------------------------------------------------------------------------------------------|---------|
 | 1.0    | 29/09/2025 | Criação da página inicial, inclusão de contexto e software, definição de escopo e profundidade, métricas, priorização das características de qualidade, revisão final, conclusão e formatação | [Breno Soares](https://github.com/Brenofrds), [Bruno Ricardo](https://github.com/EhOBruno), [Enrico Zoratto](https://github.com/sidts), [Filipe Azevedo](https://github.com/fbressa), [Gabriel dos Anjos](https://github.com/SAnjos3), [Leonardo Sauma Jr](https://github.com/leohssjr) |
+| 1.1    | 01/10/2025 | Ajustes, adição da representação visual das características escolhidas | [Filipe Azevedo](https://github.com/fbressa) |
