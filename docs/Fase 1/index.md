@@ -49,7 +49,7 @@ Nesta etapa inicial do processo de avaliação, foram definidas as característi
 
 Foram priorizadas as características de Eficiência de Desempenho e Manutenibilidade, pois estão diretamente ligadas à capacidade do sistema de processar e apresentar dados atualizados do INPE em tempo adequado, além de permitir que sua estrutura seja mantida e modificada de forma confiável pelos desenvolvedores.
 
-![Características de qualidade](..\assets\caracteristicas.jpg)
+![Características de qualidade](../assets/caracteristicas.jpg)
 
 A seguir, apresenta-se a classificação das características de qualidade, conforme a abordagem SQuaRE (ISO/IEC 25010), em uma escala de 1 a 5:
 
