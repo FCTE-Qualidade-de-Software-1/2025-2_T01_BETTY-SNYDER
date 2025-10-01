@@ -13,7 +13,7 @@ A disponibilização do software ocorreu de forma aberta, em repositório públi
 Os usuários finais abrangem cidadãos em geral, pesquisadores, órgãos públicos e organizações ambientais, todos interessados em acessar informações atualizadas sobre queimadas de forma simples e confiável.
 
 | **Nome do produto** | **Versão do produto**             |
-|---------------------|-----------------------------------|
+| ------------------- | --------------------------------- |
 | ChamaControl        | v1.0.0 (Versão inicial acadêmica) |
 
 #### **Domínio de Aplicação**
@@ -22,7 +22,7 @@ O sistema se insere no domínio de **monitoramento ambiental**, oferecendo uma i
 
 #### **Classificação Técnica**
 
-Assim, o ChamaControl foi classificado como **Software de Tempo Real** conforme Pressman (2002), devido à sua função de monitoramento contínuo de incêndios e necessidade de resposta em tempo útil.
+Assim, o ChamaControl foi classificado como **Software de Tempo Real** conforme Pressman (2002), devido à sua função de monitoramento contínuo de incêndios e necessidade de resposta em tempo útil. 
 
 #### **Funcionalidades do Sistema**
 
@@ -36,39 +36,73 @@ Para manter a base de dados atualizada, o ChamaControl conta com **três scraper
 
 #### **Objetivo da avaliação**
 
-A análise de qualidade do ChamaControl busca verificar se o sistema atende aos padrões definidos pelo modelo ISO/IEC 25010, considerando atributos como Eficiência de Desempenho e Manutenibilidade.
+A análise de qualidade do ChamaControl busca verificar se o sistema atende aos padrões definidos pelo modelo ISO/IEC 25010, considerando atributos como Eficiência de Desempenho e Manutenibilidade.Entre os objetivos específicos destacam-se:
 
-Entre os objetivos específicos destacam-se:
-Avaliar se o sistema utiliza os recursos computacionais de forma adequada e se responde dentro de prazos aceitáveis, considerando seu propósito de monitoramento ambiental;
+- Avaliar se o sistema utiliza os recursos computacionais de forma adequada e se responde dentro de prazos aceitáveis, considerando seu propósito de monitoramento ambiental;
 
-Identificar melhorias que possam otimizar o tempo de resposta, a utilização de recursos e a capacidade do sistema;
+- Identificar melhorias que possam otimizar o tempo de resposta, a utilização de recursos e a capacidade do sistema;
 
-Examinar o grau de modularidade, testabilidade e modificabilidade do software, verificando se sua estrutura favorece manutenção e evolução;
+- Examinar o grau de modularidade, testabilidade e modificabilidade do software, verificando se sua estrutura favorece manutenção e evolução;
 
-Produzir um diagnóstico técnico direcionado a essas duas características, servindo como base para ajustes futuros e comparações com sistemas de propósito semelhante.
+Portanto, ao final do processo de avaliação, procura-se produzir diagnóstico técnico direcionado a essas duas características e relatórios de comparações com sistemas de propósito semelhante, que servirão como base para ajustes futuros e possível continuação do software.
 
 ## Classificação e Ênfase das Características de Qualidade
 
 Nesta etapa inicial do processo de avaliação, foram definidas as características de qualidade a serem analisadas com base nos objetivos do trabalho e no perfil do público-alvo do ChamaControl. A escolha levou em conta tanto a necessidade de garantir o bom desempenho do sistema quanto a importância de facilitar sua manutenção e evolução futura.
 
-Foram priorizadas as características de Eficiência de Desempenho e Manutenibilidade, pois estão diretamente ligadas à capacidade do sistema de processar e apresentar dados atualizados do INPE em tempo adequado, além de permitir que sua estrutura seja mantida e modificada de forma confiável pelos desenvolvedores.
-
-![Características de qualidade](../assets/caracteristicas.jpg)
-
 A seguir, apresenta-se a classificação das características de qualidade, conforme a abordagem SQuaRE (ISO/IEC 25010), em uma escala de 1 a 5:
 
-| Característica           | Ênfase (1-5)         |
-| ------------------------ | -------------------- |
-| Eficiência de Desempenho | 5 – Alta prioridade  |
-| Manutenibilidade         | 5 – Alta prioridade  |
-| Usabilidade              | 4 – Média prioridade |
-| Confiabilidade           | 2 – Baixa prioridade |
-| Segurança                | 1 – Baixa prioridade |
-| Compatibilidade          | 1 – Baixa prioridade |
-| Portabilidade            | 1 – Baixa prioridade |
-| Funcionalidade           | 1 – Baixa prioridade |
+<div align="center">
+<table>
+<tr>
+<th>Característica</th>
+<th>Ênfase (1-5)</th>
+</tr>
+<tr>
+<td>Eficiência de Desempenho</td>
+<td>5 – Alta prioridade</td>
+</tr>
+<tr>
+<td>Manutenibilidade</td>
+<td>5 – Alta prioridade</td>
+</tr>
+<tr>
+<td>Usabilidade</td>
+<td>4 – Média prioridade</td>
+</tr>
+<tr>
+<td>Confiabilidade</td>
+<td>2 – Baixa prioridade</td>
+</tr>
+<tr>
+<td>Segurança</td>
+<td>1 – Baixa prioridade</td>
+</tr>
+<tr>
+<td>Compatibilidade</td>
+<td>1 – Baixa prioridade</td>
+</tr>
+<tr>
+<td>Portabilidade</td>
+<td>1 – Baixa prioridade</td>
+</tr>
+<tr>
+<td>Funcionalidade</td>
+<td>1 – Baixa prioridade</td>
+</tr>
+</table>
+<p><em>Tabela: Ênfase das Características de Qualidade</em></p>
+</div>
 
-Essa priorização servirá como base para a definição das métricas e critérios de avaliação, garantindo foco nos aspectos mais relevantes para a análise do sistema.
+Foram priorizadas as características de **Eficiência de Desempenho** e **Manutenibilidade**, pois estão diretamente relacionadas à capacidade do sistema de processar e apresentar dados atualizados do INPE em tempo adequado, além de permitir que sua estrutura seja mantida e modificada de forma confiável pelos desenvolvedores.
+
+Essa priorização servirá como base para a definição das métricas e critérios de avaliação, garantindo o foco nos aspectos mais relevantes para a análise do sistema. Considerando as características priorizadas, foram elicitadas as seguintes subcaracterísticas, de acordo com o modelo de qualidade ISO/IEC 25010:
+
+
+<div align="center">
+  <img src="../assets/caracteristicas.jpg" alt="Características de qualidade">
+  <p><em>Figura 1: Características de qualidade priorizadas conforme ISO/IEC 25010</em></p>
+</div>
 
 
 ## Escopo, Profundidade e Objetos de Avaliação
@@ -81,30 +115,34 @@ A avaliação abrangerá os **principais módulos** do sistema **ChamaControl**,
 - **API Backend**: Endpoints em Node.js/Express responsáveis por fornecer dados processados.  
 - **Front-end**: Interface desenvolvida em React/Vite, incluindo componentes, rotas e visualizações gráficas.  
 
-**Fora do escopo** (não serão avaliados nesta fase):  
+Abaixo são mencionados quais módulos do sistema estão **Fora do escopo** e portanto, não serão avaliados nesta fase:
+
 - Configurações de infraestrutura (Docker e docker-compose).  
 - Ferramentas externas de teste/documentação (Postman, Swagger).  
 
 ### Profundidade
 O nível de análise será **intermediário**, contemplando:  
+
 - Verificação de corretude das principais funcionalidades (coleta, armazenamento, exibição e consumo de API).  
 - Testes funcionais de cenários típicos (visualização de gráficos, acesso às notícias, chamadas básicas à API).  
 - Checagem de consistência entre dados coletados e exibidos.  
-
-
+  
 **Não serão realizados**:  
+
 - Testes extensivos de performance.  
 - Testes de segurança avançada.  
 - Análises profundas de logs de execução.  
 
 ### Objetos de Avaliação
 **Funcionalidades específicas**:  
+
 - Execução diária do scraper.  
 - Consulta de dados históricos e recentes via API.  
 - Renderização de gráficos de focos de incêndio no front-end.  
 - Exibição de notícias atualizadas sobre queimadas.  
 
-**Fluxos principais de usuário**:  
+**Fluxos principais de usuário**: 
+ 
 - Acesso à interface web (navegação entre páginas).  
 - Consulta e interpretação de dados apresentados em gráficos.  
 - Visualização de notícias integradas ao sistema.  
@@ -135,6 +173,13 @@ A avaliação do **ChamaControl** também se conecta a objetivos mais amplos, es
 A Fase 1 permitiu estruturar de forma clara o processo de avaliação do ChamaControl, definindo o contexto, objetivos, escopo, métricas e alinhamento com os ODS da ONU.  
 Esse trabalho inicial fornece a base para análises mais aprofundadas nas próximas etapas, garantindo que o sistema seja avaliado de maneira sistemática e orientada a melhorias contínuas.
 
+```Declaração de Uso da IA: Durante a elaboração deste documento foram utilizadas ferramentas de inteligência artificial baseadas em modelos de linguagem como apoio para: ```<br>
+`(1) sugerir uma organização coerente dos tópicos;`<br>
+`(2) revisar ortografia e gramática;`<br>
+`(3) verificar a cobertura dos critérios do documento de avaliação.`<br>
+ 
+ Todas as sugestões foram revisadas e, quando apropriado, editadas manualmente pela(s) pessoa(s) responsável(is) pelo trabalho.
+
 ## Referências Bibliográficas
 
 > [1] ChamaControl. Disponível em: <https://github.com/unb-mds/2024-2-ChamaControl>. Acesso em: 29 de setembro de 2025  
@@ -142,18 +187,19 @@ Esse trabalho inicial fornece a base para análises mais aprofundadas nas próxi
 
 ## Contribuição dos Integrantes
 
-| Integrante | Matrícula | Percentual |
-|------------|-----------|------------|
-| **Breno Soares Fernandes** | 202017540 | 16,6% |
-| **Bruno Ricardo de Menezes** | 221007680 | 16,6% |
-| **Enrico Martins Mantoan Zoratto** | 222006688 | 16,6% |
-| **Filipe Bressanelli Azevedo Filho** | 222024579 | 16,6% |
-| **Gabriel Soares dos Anjos** | SAnjos3 | 16,6% |
-| **Leonardo Henrique Sobral Sauma Junior** | 231035428 | 16,6% |
+| Integrante                                | Matrícula | Percentual |
+| ----------------------------------------- | --------- | ---------- |
+| **Breno Soares Fernandes**                | 202017540 | 16,6%      |
+| **Bruno Ricardo de Menezes**              | 221007680 | 16,6%      |
+| **Enrico Martins Mantoan Zoratto**        | 222006688 | 16,6%      |
+| **Filipe Bressanelli Azevedo Filho**      | 222024579 | 16,6%      |
+| **Gabriel Soares dos Anjos**              | 231026625 | 16,6%      |
+| **Leonardo Henrique Sobral Sauma Junior** | 231035428 | 16,6%      |
 
 ## Histórico de versão
 
-| Versão | Data       | Descrição                                                                                                     | Autores |
-|--------|------------|---------------------------------------------------------------------------------------------------------------|---------|
+| Versão | Data       | Descrição                                                                                                                                                                                     | Autores                                                                                                                                                                                                                                                                                 |
+| ------ | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1.0    | 29/09/2025 | Criação da página inicial, inclusão de contexto e software, definição de escopo e profundidade, métricas, priorização das características de qualidade, revisão final, conclusão e formatação | [Breno Soares](https://github.com/Brenofrds), [Bruno Ricardo](https://github.com/EhOBruno), [Enrico Zoratto](https://github.com/sidts), [Filipe Azevedo](https://github.com/fbressa), [Gabriel dos Anjos](https://github.com/SAnjos3), [Leonardo Sauma Jr](https://github.com/leohssjr) |
-| 1.1    | 01/10/2025 | Ajustes, adição da representação visual das características escolhidas | [Filipe Azevedo](https://github.com/fbressa) |
+| 1.1    | 01/10/2025 | Ajustes, adição da representação visual das características escolhidas                                                                                                                        | [Filipe Azevedo](https://github.com/fbressa)                                                                                                                                                                                                                                            |
+| 1.2    | 01/10/2025 | Adição do tópico "Uso de IA" e reajuste do código md para melhorias na visualização e organização dos tópicosv                                                                                | [Gabriel Soares](https://github.com/SAnjos3)                                                                                                                                                                                                                                            |
