@@ -716,6 +716,73 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo de Qualidade
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo de Qualidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracterisitcas-de-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caracterísitcas de Qualidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-e-enfase-das-caracteristicas-de-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação e Ênfase das Características de Qualidade
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classificação e Ênfase das Características de Qualidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabela-impacto-x-risco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela Impacto x Risco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motivacao-para-definicao-dos-pesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivação para Definição dos Pesos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-final-de-priorizacao-das-caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela Final de Priorização das Características
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tabela Final de Priorização das Características">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#objetivo-da-avaliacao" class="md-nav__link">
     <span class="md-ellipsis">
@@ -729,13 +796,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#classificacao-e-enfase-das-caracteristicas-de-qualidade" class="md-nav__link">
-    <span class="md-ellipsis">
-      Classificação e Ênfase das Características de Qualidade
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -893,7 +956,7 @@
 <h4 id="dominio-de-aplicacao"><strong>Domínio de Aplicação</strong></h4>
 <p>O sistema se insere no domínio de <strong>monitoramento ambiental</strong>, oferecendo uma interface web intuitiva para a consulta de dados públicos do <strong>INPE</strong> relacionados a focos de incêndio no Brasil. O ChamaControl organiza informações de forma estruturada e acessível, permitindo acompanhar tanto os registros anuais de queimadas quanto os focos diários mais recentes, atualizados todos os dias às 10h com base em arquivos disponibilizados pelo INPE.</p>
 <h4 id="classificacao-tecnica"><strong>Classificação Técnica</strong></h4>
-<p>Assim, o ChamaControl foi classificado como <strong>Software de Tempo Real</strong> conforme Pressman (2002), devido à sua função de monitoramento contínuo de incêndios e necessidade de resposta em tempo útil. </p>
+<p>Assim, o ChamaControl foi classificado como <strong>Software de Tempo Real</strong> conforme <a href="#referencias-bibliograficas"><strong>Pressman <sup>[2]</sup></strong></a> (2002), devido à sua função de monitoramento contínuo de incêndios e necessidade de resposta em tempo útil. </p>
 <h4 id="funcionalidades-do-sistema"><strong>Funcionalidades do Sistema</strong></h4>
 <p>Além dos <strong>dashboards interativos</strong>, o sistema incorpora uma tela dedicada a notícias sobre queimadas, alimentada por meio da <strong>API do GNews</strong>, fornecendo informações complementares e contextualizadas sobre os eventos monitorados.</p>
 <p>Para manter a base de dados atualizada, o ChamaControl conta com <strong>três scrapers principais</strong>:</p>
@@ -902,8 +965,192 @@
 <li><strong>processaDadosDiarios30Dias</strong>, que insere os focos registrados diariamente nos últimos 30 dias;</li>
 <li><strong>processaDadoDiario</strong>, responsável por atualizar a aplicação diariamente com os dados mais recentes.</li>
 </ul>
+<h2 id="modelo-de-qualidade">Modelo de Qualidade</h2>
+<p>O modelo de qualidade utilizado nesta avaliação fundamenta-se na norma <a href="#referencias-bibliograficas"><strong>ISO/IEC 25010 <sup>[3]</sup></strong></a>, integrante da série SQuaRE (Systems and Software Quality Requirements and Evaluation). Esta norma foi desenvolvida para fornecer critérios claros e abrangentes na avaliação de sistemas e softwares.</p>
+<p><img alt="iso25010" src="../assets/iso25010.png" /></p>
+<div align="center">
+<p><em>Figura 1: Características do modelo de qualidade</em></p>
+</div>
+
+<h3 id="caracterisitcas-de-qualidade">Caracterísitcas de Qualidade</h3>
+<p>Para a avaliação de qualidade do software ChamaControl, foram selecionadas e priorizadas as características <strong>Manutenibilidade</strong> e <strong>Eficiência de Desempenho</strong>, com base no modelo de qualidade da norma <a href="#referencias-bibliograficas"><strong>ISO/IEC 25010 <sup>[3]</sup></strong></a>. A escolha dessas características foi realizada utilizando a matriz impacto x risco, permitindo uma análise quantitativa e estruturada que assegura decisões robustas, alinhadas aos objetivos do sistema e às necessidades dos stakeholders. Essa abordagem garante que os aspectos críticos do software, tanto em termos de manutenção quanto de desempenho, sejam cuidadosamente monitorados e aprimorados.</p>
+<h3 id="classificacao-e-enfase-das-caracteristicas-de-qualidade">Classificação e Ênfase das Características de Qualidade</h3>
+<p>Nesta etapa inicial do processo de avaliação, foram definidas as características de qualidade a serem analisadas com base nos objetivos do trabalho e no perfil do público-alvo do ChamaControl. </p>
+<p>Para apoiar a priorização das características de qualidade, foi utilizada a <strong>Matriz Impacto x Risco</strong>. Esse método permite classificar cada característica considerando não apenas sua importância para o sucesso do sistema (impacto), mas também a probabilidade de gerar problemas ou dificultar a evolução do software (risco). A análise garante que as escolhas não sejam subjetivas, mas fundamentadas em critérios objetivos.</p>
+<p>A pontuação foi calculada pela soma simples entre Impacto e Risco.</p>
+<p><code>Soma = Impacto + Risco</code></p>
+<p>A seguir a tabela com as informações de Impacto e Risco atribuídas a cada característica de qualidade com seus devidos resultados.</p>
+<h4 id="tabela-impacto-x-risco">Tabela Impacto x Risco</h4>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th style="text-align: right;">Impacto (1-5)</th>
+<th style="text-align: right;">Risco (1-5)</th>
+<th style="text-align: right;">Soma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eficiência de Desempenho</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td>Manutenibilidade</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td>Usabilidade</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td>Confiabilidade</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>Segurança</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>Compatibilidade</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>Portabilidade</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>Funcionalidade</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+<div align="center">
+<p><em>Tabela 1: Impacto x Risco Características de Qualidade com Soma Final</em></p>
+</div>
+
+<h4 id="motivacao-para-definicao-dos-pesos">Motivação para Definição dos Pesos</h4>
+<ul>
+<li>
+<p><strong>Eficiência de Desempenho (5 de Impacto e 4 de Risco):</strong> 
+O ChamaControl é um sistema de monitoramento que precisa atualizar e exibir dados em tempo útil, atrasos ou processamento lento comprometem a utilidade para os usuários. O risco é elevado porque os scrapers e o pipeline de dados podem se tornar gargalos, além disso a arquitetura é acadêmica e pode não estar otimizada.</p>
+</li>
+<li>
+<p><strong>Manutenibilidade (5 de Impacto e 4 de Risco):</strong>
+Como projeto open-source, mantido por estudantes e com potencial continuidade, a capacidade de entender, modificar e testar o código é crítica. Risco alto porque código acadêmico frequentemente falta documentação, testes e modularidade suficientes, dificultando evolução e correções rápidas.</p>
+</li>
+<li>
+<p><strong>Usabilidade (3 de Impacto e 3 de Risco):</strong> 
+A interface afeta diretamente a aceitação pelos usuários finais, mas não impede a funcionalidade básica (dados continuam disponíveis). Risco moderado: se a interface for confusa, usuários não aproveitarão os dados, mas isso não "quebra" o sistema.</p>
+</li>
+<li>
+<p><strong>Confiabilidade (2 de Impacto e 2 de Risco):</strong>
+Erros e inconsistências impactam confiança, porém o domínio (dados públicos do INPE) permite validações externas. </p>
+</li>
+<li>
+<p><strong>Segurança (1 de Impacto e 2 de Risco):</strong>
+O sistema consome e exibe dados públicos, não há tratamento de dados sensíveis ou autenticação complexa explicitada.</p>
+</li>
+<li>
+<p><strong>Compatibilidade (1 de Impacto e 2 de Risco 2):</strong>
+A compatibilidade é desejável, mas não crítica para o propósito imediato.</p>
+</li>
+<li>
+<p><strong>Portabilidade (1 de Impactoe 2 de Risco 2):</strong>
+Migrar para outro ambiente não é prioridade agora, logo impacto baixo.</p>
+</li>
+<li>
+<p><strong>Funcionalidade (1 de Impacto e 2 de Risco 2):</strong>
+As funcionalidades essenciais já existem (scrapers, API, frontend). O foco atual é eficiência/manutenibilidade; portanto funcionalidade tem baixa prioridade relativa, com risco operacional baixo-moderado.</p>
+</li>
+</ul>
+<p>A partir da <em><a href="#tabela-impacto-x-risco">Tabela 1</a></em>, com o intuito de ajustar o escopo ao semestre letivo, decidimos priorizar as características de acordo com a soma e definir intervalos de prioridades, sendo eles:</p>
+<ul>
+<li>Alta prioridade: soma &gt;= 8</li>
+<li>Média prioridade: soma entre 5 e 7</li>
+<li>Baixa prioridade: soma &lt;= 4</li>
+</ul>
+<p>Com os intervalos, selecionamos as características que estão em "Alta Prioridade". Sendo a tabela final de priorização:</p>
+<h3 id="tabela-final-de-priorizacao-das-caracteristicas">Tabela Final de Priorização das Características</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Soma</th>
+<th>Prioridade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eficiência de Desempenho</td>
+<td>9</td>
+<td><strong>Alta prioridade</strong></td>
+</tr>
+<tr>
+<td>Manutenibilidade</td>
+<td>9</td>
+<td><strong>Alta prioridade</strong></td>
+</tr>
+<tr>
+<td>Usabilidade</td>
+<td>6</td>
+<td>Média prioridade</td>
+</tr>
+<tr>
+<td>Confiabilidade</td>
+<td>4</td>
+<td>Baixa prioridade</td>
+</tr>
+<tr>
+<td>Segurança</td>
+<td>3</td>
+<td>Baixa prioridade</td>
+</tr>
+<tr>
+<td>Compatibilidade</td>
+<td>3</td>
+<td>Baixa prioridade</td>
+</tr>
+<tr>
+<td>Portabilidade</td>
+<td>3</td>
+<td>Baixa prioridade</td>
+</tr>
+<tr>
+<td>Funcionalidade</td>
+<td>3</td>
+<td>Baixa prioridade</td>
+</tr>
+</tbody>
+</table>
+<div align="center">
+<p><em>Tabela 2: Definição das Características de Qualidade a serem avaliadas</em></p>
+</div>
+
+<p>Essa priorização servirá como base para a definição das métricas e critérios de avaliação, garantindo o foco nos aspectos mais relevantes para a análise do sistema. Considerando as características priorizadas, foram elicitadas as seguintes subcaracterísticas, de acordo com o modelo de qualidade <a href="#referencias-bibliograficas"><strong>ISO/IEC 25010 <sup>[3]</sup></strong></a>:</p>
+<div align="center">
+  <img src="../assets/caracteristicas.jpg" alt="Características de qualidade">
+  <p><em>Figura 2: Características de qualidade escolhidas conforme priorização</em></p>
+</div>
+
 <h4 id="objetivo-da-avaliacao"><strong>Objetivo da avaliação</strong></h4>
-<p>A análise de qualidade do ChamaControl busca verificar se o sistema atende aos padrões definidos pelo modelo ISO/IEC 25010, considerando atributos como Eficiência de Desempenho e Manutenibilidade.Entre os objetivos específicos destacam-se:</p>
+<p>A análise de qualidade do ChamaControl busca verificar se o sistema atende aos padrões definidos pelo modelo <a href="#referencias-bibliograficas"><strong>ISO/IEC 25010 <sup>[3]</sup></strong></a>, considerando atributos de Eficiência de Desempenho e Manutenibilidade. Entre os objetivos específicos destacam-se:</p>
 <ul>
 <li>
 <p>Avaliar se o sistema utiliza os recursos computacionais de forma adequada e se responde dentro de prazos aceitáveis, considerando seu propósito de monitoramento ambiental;</p>
@@ -916,58 +1163,6 @@
 </li>
 </ul>
 <p>Portanto, ao final do processo de avaliação, procura-se produzir diagnóstico técnico direcionado a essas duas características e relatórios de comparações com sistemas de propósito semelhante, que servirão como base para ajustes futuros e possível continuação do software.</p>
-<h2 id="classificacao-e-enfase-das-caracteristicas-de-qualidade">Classificação e Ênfase das Características de Qualidade</h2>
-<p>Nesta etapa inicial do processo de avaliação, foram definidas as características de qualidade a serem analisadas com base nos objetivos do trabalho e no perfil do público-alvo do ChamaControl. A escolha levou em conta tanto a necessidade de garantir o bom desempenho do sistema quanto a importância de facilitar sua manutenção e evolução futura.</p>
-<p>A seguir, apresenta-se a classificação das características de qualidade, conforme a abordagem SQuaRE (ISO/IEC 25010), em uma escala de 1 a 5:</p>
-<div align="center">
-<table>
-<tr>
-<th>Característica</th>
-<th>Ênfase (1-5)</th>
-</tr>
-<tr>
-<td>Eficiência de Desempenho</td>
-<td>5 – Alta prioridade</td>
-</tr>
-<tr>
-<td>Manutenibilidade</td>
-<td>5 – Alta prioridade</td>
-</tr>
-<tr>
-<td>Usabilidade</td>
-<td>4 – Média prioridade</td>
-</tr>
-<tr>
-<td>Confiabilidade</td>
-<td>2 – Baixa prioridade</td>
-</tr>
-<tr>
-<td>Segurança</td>
-<td>1 – Baixa prioridade</td>
-</tr>
-<tr>
-<td>Compatibilidade</td>
-<td>1 – Baixa prioridade</td>
-</tr>
-<tr>
-<td>Portabilidade</td>
-<td>1 – Baixa prioridade</td>
-</tr>
-<tr>
-<td>Funcionalidade</td>
-<td>1 – Baixa prioridade</td>
-</tr>
-</table>
-<p><em>Tabela: Ênfase das Características de Qualidade</em></p>
-</div>
-
-<p>Foram priorizadas as características de <strong>Eficiência de Desempenho</strong> e <strong>Manutenibilidade</strong>, pois estão diretamente relacionadas à capacidade do sistema de processar e apresentar dados atualizados do INPE em tempo adequado, além de permitir que sua estrutura seja mantida e modificada de forma confiável pelos desenvolvedores.</p>
-<p>Essa priorização servirá como base para a definição das métricas e critérios de avaliação, garantindo o foco nos aspectos mais relevantes para a análise do sistema. Considerando as características priorizadas, foram elicitadas as seguintes subcaracterísticas, de acordo com o modelo de qualidade ISO/IEC 25010:</p>
-<div align="center">
-  <img src="../assets/caracteristicas.jpg" alt="Características de qualidade">
-  <p><em>Figura 1: Características de qualidade priorizadas conforme ISO/IEC 25010</em></p>
-</div>
-
 <h2 id="escopo-profundidade-e-objetos-de-avaliacao">Escopo, Profundidade e Objetos de Avaliação</h2>
 <h3 id="escopo">Escopo</h3>
 <p>A avaliação abrangerá os <strong>principais módulos</strong> do sistema <strong>ChamaControl</strong>, a saber:</p>
@@ -1010,33 +1205,76 @@
 <li>Visualização de notícias integradas ao sistema.  </li>
 </ul>
 <h2 id="ods-relacionados-e-metas-associadas">ODS Relacionados e Metas Associadas</h2>
-<p>A avaliação do <strong>ChamaControl</strong> também se conecta a objetivos mais amplos, especialmente aos <strong>Objetivos de Desenvolvimento Sustentável (ODS) da ONU</strong>, reforçando a relevância social e ambiental do sistema.</p>
+<p>A avaliação do <strong>ChamaControl</strong> também se conecta a objetivos mais amplos, especialmente aos <a href="#referencias-bibliograficas"><strong>Objetivos de Desenvolvimento Sustentável (ODS) da ONU <sup>[4]</sup></strong></a> , reforçando a relevância social e ambiental do sistema.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 800px; margin: auto;">
+  <!-- Linha 1: 3 imagens -->
+  <div style="flex: 0 0 30%; text-align: center;">
+    <a href="https://brasil.un.org/pt-br/sdgs/3" target="_blank">
+      <img src="../assets/ods3.svg" alt="ODS 3" style="width: 100%; height: auto;">
+    </a>
+  </div>
+  <div style="flex: 0 0 30%; text-align: center;">
+    <a href="https://brasil.un.org/pt-br/sdgs/9" target="_blank">
+      <img src="../assets/ods9.svg" alt="ODS 9" style="width: 100%; height: auto;">
+    </a>
+  </div>
+  <div style="flex: 0 0 30%; text-align: center;">
+    <a href="https://brasil.un.org/pt-br/sdgs/11" target="_blank">
+      <img src="../assets/ods11.svg" alt="ODS 11" style="width: 100%; height: auto;">
+    </a>
+  </div>
+
+  <!-- Linha 2: 2 imagens -->
+  <div style="flex: 0 0 30%; text-align: center;">
+    <a href="https://brasil.un.org/pt-br/sdgs/13" target="_blank">
+      <img src="../assets/ods13.svg" alt="ODS 13" style="width: 100%; height: auto;">
+    </a>
+  </div>
+  <div style="flex: 0 0 30%; text-align: center;">
+    <a href="https://brasil.un.org/pt-br/sdgs/15" target="_blank">
+      <img src="../assets/ods15.svg" alt="ODS 15" style="width: 100%; height: auto;">
+    </a>
+  </div>
+</div>
+
 <h3 id="principal">Principal</h3>
 <ul>
-<li>
-<p><strong>ODS 13 – Ação contra a mudança global do clima</strong><br />
-  Ao disponibilizar informações sobre a ocorrência e a intensidade dos incêndios, o projeto contribui para a compreensão dos impactos do fogo nas emissões de gases de efeito estufa, apoiando estratégias de mitigação e adaptação às mudanças climáticas e fortalecendo políticas de resiliência ambiental.</p>
-</li>
-<li>
-<p><strong>ODS 15 – Vida Terrestre</strong><br />
-  Ao monitorar os incêndios que afetam florestas, áreas de vegetação nativa e ecossistemas sensíveis, a iniciativa favorece a preservação da biodiversidade, o manejo sustentável da terra e a recuperação de áreas degradadas, colaborando com a conservação da vida terrestre.</p>
-</li>
+<li><a href="#referencias-bibliograficas"><strong>ODS 13 - Ação contra a mudança global do clima <sup>[5]</sup></strong></a></li>
 </ul>
+<p><strong>Meta 13.1:</strong> Reforçar a resiliência e a capacidade de adaptação a riscos relacionados ao clima e desastres naturais.<br />
+<strong>Indicador:</strong> Frequência de atualização dos focos de incêndio por estado/região (diária, às 10h).<br />
+<strong>Pertinência:</strong> O ChamaControl fornece dados atualizados diariamente, permitindo respostas rápidas a novos incêndios e fortalecendo a adaptação a eventos climáticos, mesmo no nível estadual.</p>
+<p><strong>Meta 13.3:</strong> Melhorar a conscientização e a capacidade institucional sobre mitigação e adaptação.<br />
+<strong>Indicador:</strong> Número de acessos ao painel e notícias relacionadas a incêndios.<br />
+<strong>Pertinência:</strong> Ao disponibilizar dashboards interativos e notícias atuais integradas, o software amplia a conscientização da população e de órgãos públicos sobre os impactos ambientais dos incêndios.</p>
+<ul>
+<li><a href="#referencias-bibliograficas"><strong>ODS 15 - Vida Terrestre <sup>[6]</sup></strong></a></li>
+</ul>
+<p><strong>Meta 15.1:</strong> Assegurar a conservação e uso sustentável de ecossistemas terrestres.<br />
+<strong>Indicador:</strong> Áreas impactadas monitoradas por estado/região (dados INPE).<br />
+<strong>Pertinência:</strong> O sistema organiza informações históricas (2003–2024) e diárias, permitindo avaliar danos ambientais e subsidiar políticas de preservação da biodiversidade em nível regional.</p>
+<p><strong>Meta 15.5:</strong> Reduzir a degradação de habitats naturais e perda de biodiversidade.<br />
+<strong>Indicador:</strong> Número de focos detectados em regiões com proteção ambiental.<br />
+<strong>Pertinência:</strong> O monitoramento estadual permite identificar incêndios em ecossistemas sensíveis, podendo fornecer dados úteis para ações de proteção ambiental.</p>
 <h3 id="secundaria">Secundária</h3>
 <ul>
-<li>
-<p><strong>ODS 3 – Saúde e Bem-estar</strong><br />
-  Ao evidenciar os riscos da fumaça e da poluição atmosférica gerada pelos incêndios, o projeto reforça a importância da prevenção de doenças respiratórias e cardiovasculares, além de subsidiar ações de proteção à saúde de comunidades expostas aos efeitos do fogo.</p>
-</li>
-<li>
-<p><strong>ODS 9 – Indústria, Inovação e Infraestrutura</strong><br />
-  Ao desenvolver um software de monitoramento de incêndios, a aplicação promove a inovação tecnológica e fortalece a infraestrutura digital para coleta, processamento e análise de dados ambientais, apoiando decisões rápidas e eficazes e contribuindo para soluções mais resilientes frente aos desafios climáticos.</p>
-</li>
-<li>
-<p><strong>ODS 11 – Cidades e Comunidades Sustentáveis</strong><br />
-  Ao mapear incêndios que atingem áreas urbanas e periurbanas, a aplicação fortalece o planejamento de cidades mais seguras, resilientes e preparadas para lidar com riscos ambientais, contribuindo para a proteção de pessoas, habitações e infraestrutura.</p>
-</li>
+<li><a href="#referencias-bibliograficas"><strong>ODS 3 – Saúde e Bem-estar <sup>[7]</sup></strong></a></li>
 </ul>
+<p><strong>Meta 3.9:</strong> Reduzir mortes e doenças causadas pela poluição do ar.<br />
+<strong>Indicador:</strong> Quantidade de focos em regiões urbanas e notícias sobre impactos à saúde.<br />
+<strong>Pertinência:</strong> O software evidencia a relação entre queimadas e risco à saúde em escala estadual, apoiando políticas de prevenção e conscientização.</p>
+<ul>
+<li><a href="#referencias-bibliograficas"><strong>ODS 9 – Indústria, Inovação e Infraestrutura <sup>[8]</sup></strong></a></li>
+</ul>
+<p><strong>Meta 9.5:</strong> Melhorar a capacidade tecnológica de setores relevantes.<br />
+<strong>Indicador:</strong> Volume de dados processados pelos scrapers e funcionalidades implementadas.<br />
+<strong>Pertinência:</strong> O ChamaControl aplica inovação tecnológica ao coletar, organizar e exibir dados ambientais em tempo real, fortalecendo a infraestrutura digital para análise e tomada de decisão.</p>
+<ul>
+<li><a href="#referencias-bibliograficas"><strong>ODS 11 – Cidades e Comunidades Sustentáveis <sup>[9]</sup></strong></a></li>
+</ul>
+<p><strong>Meta 11.5:</strong> Reduzir perdas humanas e econômicas por desastres relacionados ao clima.<br />
+<strong>Indicador:</strong> Número de focos de incêndio próximos a regiões urbanas por estado.<br />
+<strong>Pertinência:</strong> Ao mapear incêndios próximos a áreas urbanas em nível estadual, o sistema ajuda gestores públicos a planejar ações preventivas, mesmo sem detalhamento municipal.</p>
 <h2 id="conclusao">Conclusão</h2>
 <p>A Fase 1 permitiu estruturar de forma clara o processo de avaliação do ChamaControl, definindo o contexto, objetivos, escopo, métricas e alinhamento com os ODS da ONU.<br />
 Esse trabalho inicial fornece a base para análises mais aprofundadas nas próximas etapas, garantindo que o sistema seja avaliado de maneira sistemática e orientada a melhorias contínuas.</p>
@@ -1047,7 +1285,16 @@ Esse trabalho inicial fornece a base para análises mais aprofundadas nas próxi
 <p>Todas as sugestões foram revisadas e, quando apropriado, editadas manualmente pela(s) pessoa(s) responsável(is) pelo trabalho.</p>
 <h2 id="referencias-bibliograficas">Referências Bibliográficas</h2>
 <blockquote>
-<p>[1] ChamaControl. Disponível em: <a href="https://github.com/unb-mds/2024-2-ChamaControl">https://github.com/unb-mds/2024-2-ChamaControl</a>. Acesso em: 29 de setembro de 2025  </p>
+<p>[1] ChamaControl. Disponível em: <a href="https://github.com/unb-mds/2024-2-ChamaControl">https://github.com/unb-mds/2024-2-ChamaControl</a>. Acesso em: 29 de setembro de 2025 </p>
+<p>[2] PRESSMAN, Roger S. Engenharia de Software: Uma Abordagem Profissional. 6. ed. São Paulo: McGraw-Hill, 2002. Disponível em: <a href="https://archive.org/details/pressman-engenharia-de-software-uma-abordagem-profissional-8a/mode/2up">https://archive.org/details/pressman-engenharia-de-software-uma-abordagem-profissional-8a/mode/2up</a>. Acesso em:  29 de setembro de 2025. </p>
+<p>[3] ISO/IEC 25010:2011. Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models. Geneva: ISO, 2011. Disponível em: <a href="https://iso25000.com/index.php/en/iso-25000-standards/iso-25010">https://iso25000.com/index.php/en/iso-25000-standards/iso-25010</a>. Acesso em: 29 de setembro de 2025.</p>
+<p>[4] ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivos de Desenvolvimento Sustentável. As Nações Unidas no Brasil, 2025. Disponível em: <a href="https://brasil.un.org/pt-br/sdgs">https://brasil.un.org/pt-br/sdgs</a>. Acesso em: 29 de setembro de 2025.</p>
+<p>[5] ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivo de Desenvolvimento Sustentável 13: Ação contra a mudança global do clima. Disponível em: <a href="https://brasil.un.org/pt-br/sdgs/13">https://brasil.un.org/pt-br/sdgs/13</a>. Acesso em: 29 set. 2025.</p>
+<p>[6] ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivo de Desenvolvimento Sustentável 15: Vida terrestre. Disponível em: <a href="https://brasil.un.org/pt-br/sdgs/15">https://brasil.un.org/pt-br/sdgs/15</a>. Acesso em: 29 set. 2025.</p>
+<p>[7] ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivo de Desenvolvimento Sustentável 3: Saúde e Bem-Estar. Disponível em: <a href="https://brasil.un.org/pt-br/sdgs/3">https://brasil.un.org/pt-br/sdgs/3</a>. Acesso em: 29 set. 2025.</p>
+<p>[8] ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivo de Desenvolvimento Sustentável 9: Indústria, Inovação e Infraestrutura. Disponível em: <a href="https://brasil.un.org/pt-br/sdgs/9">https://brasil.un.org/pt-br/sdgs/9</a>. Acesso em: 29 set. 2025.</p>
+<p>[9] ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivo de Desenvolvimento Sustentável 11: Cidades e Comunidades Sustentáveis. Disponível em: <a href="https://brasil.un.org/pt-br/sdgs/11">https://brasil.un.org/pt-br/sdgs/11</a>. Acesso em: 29 set. 2025.</p>
+<p>INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. ISO/IEC 25010:2023 – Systems and software engineering – Systems and software Quality Requirements and Evaluation (SQuaRE) – System and software quality models. Disponível em: <a href="https://iso25000.com/index.php/en/iso-25000-standards/iso-25010">https://iso25000.com/index.php/en/iso-25000-standards/iso-25010</a>. Acesso em: 29 set. 2025.</p>
 </blockquote>
 <h2 id="contribuicao-dos-integrantes">Contribuição dos Integrantes</h2>
 <table>
@@ -1119,6 +1366,18 @@ Esse trabalho inicial fornece a base para análises mais aprofundadas nas próxi
 <td>01/10/2025</td>
 <td>Adição do tópico "Uso de IA" e reajuste do código md para melhorias na visualização e organização dos tópicosv</td>
 <td><a href="https://github.com/SAnjos3">Gabriel Soares</a></td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>01/10/2025</td>
+<td>Adicionando priorização Impacto x Risco</td>
+<td><a href="https://github.com/leohssjr">Leonardo Sauma</a></td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>01/10/2025</td>
+<td>Ajustando ODS, adicionando meta/indicadores e persistência no software</td>
+<td><a href="https://github.com/leohssjr">Leonardo Sauma</a></td>
 </tr>
 </tbody>
 </table>
