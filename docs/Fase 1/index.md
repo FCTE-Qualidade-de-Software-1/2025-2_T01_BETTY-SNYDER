@@ -22,7 +22,7 @@ O sistema se insere no domínio de **monitoramento ambiental**, oferecendo uma i
 
 #### **Classificação Técnica**
 
-Assim, o ChamaControl foi classificado como **Software de Tempo Real** conforme Pressman (2002), devido à sua função de monitoramento contínuo de incêndios e necessidade de resposta em tempo útil. 
+Assim, o ChamaControl foi classificado como **Software de Tempo Real** conforme [**Pressman <sup>[2]</sup>**](#referencias-bibliograficas) (2002), devido à sua função de monitoramento contínuo de incêndios e necessidade de resposta em tempo útil. 
 
 #### **Funcionalidades do Sistema**
 
@@ -34,9 +34,109 @@ Para manter a base de dados atualizada, o ChamaControl conta com **três scraper
 - **processaDadosDiarios30Dias**, que insere os focos registrados diariamente nos últimos 30 dias;
 - **processaDadoDiario**, responsável por atualizar a aplicação diariamente com os dados mais recentes.
 
+
+## Modelo de Qualidade
+O modelo de qualidade utilizado nesta avaliação fundamenta-se na norma [**ISO/IEC 25010 <sup>[3]</sup>**](#referencias-bibliograficas), integrante da série SQuaRE (Systems and Software Quality Requirements and Evaluation). Esta norma foi desenvolvida para fornecer critérios claros e abrangentes na avaliação de sistemas e softwares.
+
+![iso25010](../assets/iso25010.png)
+<div align="center">
+<p><em>Figura 1: Características do modelo de qualidade</em></p>
+</div>
+
+### Caracterísitcas de Qualidade
+Para a avaliação de qualidade do software ChamaControl, foram selecionadas e priorizadas as características **Manutenibilidade** e **Eficiência de Desempenho**, com base no modelo de qualidade da norma [**ISO/IEC 25010 <sup>[3]</sup>**](#referencias-bibliograficas). A escolha dessas características foi realizada utilizando a matriz impacto x risco, permitindo uma análise quantitativa e estruturada que assegura decisões robustas, alinhadas aos objetivos do sistema e às necessidades dos stakeholders. Essa abordagem garante que os aspectos críticos do software, tanto em termos de manutenção quanto de desempenho, sejam cuidadosamente monitorados e aprimorados.
+
+
+### Classificação e Ênfase das Características de Qualidade
+
+Nesta etapa inicial do processo de avaliação, foram definidas as características de qualidade a serem analisadas com base nos objetivos do trabalho e no perfil do público-alvo do ChamaControl. 
+
+Para apoiar a priorização das características de qualidade, foi utilizada a **Matriz Impacto x Risco**. Esse método permite classificar cada característica considerando não apenas sua importância para o sucesso do sistema (impacto), mas também a probabilidade de gerar problemas ou dificultar a evolução do software (risco). A análise garante que as escolhas não sejam subjetivas, mas fundamentadas em critérios objetivos.
+
+A pontuação foi calculada pela soma simples entre Impacto e Risco.
+
+``Soma = Impacto + Risco``
+
+A seguir a tabela com as informações de Impacto e Risco atribuídas a cada característica de qualidade com seus devidos resultados.
+
+#### Tabela Impacto x Risco
+
+| Característica               | Impacto (1-5) | Risco (1-5) | Soma |
+|------------------------------|---------------:|------------:|-----:|
+| Eficiência de Desempenho     | 5              | 4           | 9    | 
+| Manutenibilidade             | 5              | 4           | 9    | 
+| Usabilidade                  | 3              | 3           | 6    | 
+| Confiabilidade               | 2              | 2           | 4    | 
+| Segurança                    | 1              | 2           | 3    | 
+| Compatibilidade              | 1              | 2           | 3    | 
+| Portabilidade                | 1              | 2           | 3    | 
+| Funcionalidade               | 1              | 2           | 3    |
+<div align="center">
+<p><em>Tabela 1: Impacto x Risco Características de Qualidade com Soma Final</em></p>
+</div>
+
+#### Motivação para Definição dos Pesos
+
+- **Eficiência de Desempenho (5 de Impacto e 4 de Risco):** 
+O ChamaControl é um sistema de monitoramento que precisa atualizar e exibir dados em tempo útil, atrasos ou processamento lento comprometem a utilidade para os usuários. O risco é elevado porque os scrapers e o pipeline de dados podem se tornar gargalos, além disso a arquitetura é acadêmica e pode não estar otimizada.
+
+- **Manutenibilidade (5 de Impacto e 4 de Risco):**
+Como projeto open-source, mantido por estudantes e com potencial continuidade, a capacidade de entender, modificar e testar o código é crítica. Risco alto porque código acadêmico frequentemente falta documentação, testes e modularidade suficientes, dificultando evolução e correções rápidas.
+
+- **Usabilidade (3 de Impacto e 3 de Risco):** 
+A interface afeta diretamente a aceitação pelos usuários finais, mas não impede a funcionalidade básica (dados continuam disponíveis). Risco moderado: se a interface for confusa, usuários não aproveitarão os dados, mas isso não "quebra" o sistema.
+
+- **Confiabilidade (2 de Impacto e 2 de Risco):**
+Erros e inconsistências impactam confiança, porém o domínio (dados públicos do INPE) permite validações externas. 
+
+- **Segurança (1 de Impacto e 2 de Risco):**
+O sistema consome e exibe dados públicos, não há tratamento de dados sensíveis ou autenticação complexa explicitada.
+
+- **Compatibilidade (1 de Impacto e 2 de Risco 2):**
+A compatibilidade é desejável, mas não crítica para o propósito imediato.
+
+- **Portabilidade (1 de Impactoe 2 de Risco 2):**
+Migrar para outro ambiente não é prioridade agora, logo impacto baixo.
+
+- **Funcionalidade (1 de Impacto e 2 de Risco 2):**
+As funcionalidades essenciais já existem (scrapers, API, frontend). O foco atual é eficiência/manutenibilidade; portanto funcionalidade tem baixa prioridade relativa, com risco operacional baixo-moderado.
+
+A partir da *[Tabela 1](#tabela-impacto-x-risco)*, com o intuito de ajustar o escopo ao semestre letivo, decidimos priorizar as características de acordo com a soma e definir intervalos de prioridades, sendo eles:
+
+- Alta prioridade: soma >= 8
+- Média prioridade: soma entre 5 e 7
+- Baixa prioridade: soma <= 4
+
+Com os intervalos, selecionamos as características que estão em "Alta Prioridade". Sendo a tabela final de priorização:
+
+
+### Tabela Final de Priorização das Características
+| Característica               | Soma | Prioridade        |
+|-------------------------------|------|-------------------|
+| Eficiência de Desempenho      | 9    | **Alta prioridade** |
+| Manutenibilidade              | 9    | **Alta prioridade** |
+| Usabilidade                   | 6    | Média prioridade   |
+| Confiabilidade                | 4    | Baixa prioridade   |
+| Segurança                     | 3    | Baixa prioridade   |
+| Compatibilidade               | 3    | Baixa prioridade   |
+| Portabilidade                 | 3    | Baixa prioridade   |
+| Funcionalidade                | 3    | Baixa prioridade   |
+
+<div align="center">
+<p><em>Tabela 2: Definição das Características de Qualidade a serem avaliadas</em></p>
+</div>
+
+Essa priorização servirá como base para a definição das métricas e critérios de avaliação, garantindo o foco nos aspectos mais relevantes para a análise do sistema. Considerando as características priorizadas, foram elicitadas as seguintes subcaracterísticas, de acordo com o modelo de qualidade [**ISO/IEC 25010 <sup>[3]</sup>**](#referencias-bibliograficas):
+
+
+<div align="center">
+  <img src="../assets/caracteristicas.jpg" alt="Características de qualidade">
+  <p><em>Figura 2: Características de qualidade escolhidas conforme priorização</em></p>
+</div>
+
 #### **Objetivo da avaliação**
 
-A análise de qualidade do ChamaControl busca verificar se o sistema atende aos padrões definidos pelo modelo ISO/IEC 25010, considerando atributos como Eficiência de Desempenho e Manutenibilidade.Entre os objetivos específicos destacam-se:
+A análise de qualidade do ChamaControl busca verificar se o sistema atende aos padrões definidos pelo modelo [**ISO/IEC 25010 <sup>[3]</sup>**](#referencias-bibliograficas), considerando atributos de Eficiência de Desempenho e Manutenibilidade. Entre os objetivos específicos destacam-se:
 
 - Avaliar se o sistema utiliza os recursos computacionais de forma adequada e se responde dentro de prazos aceitáveis, considerando seu propósito de monitoramento ambiental;
 
@@ -45,65 +145,6 @@ A análise de qualidade do ChamaControl busca verificar se o sistema atende aos 
 - Examinar o grau de modularidade, testabilidade e modificabilidade do software, verificando se sua estrutura favorece manutenção e evolução;
 
 Portanto, ao final do processo de avaliação, procura-se produzir diagnóstico técnico direcionado a essas duas características e relatórios de comparações com sistemas de propósito semelhante, que servirão como base para ajustes futuros e possível continuação do software.
-
-## Classificação e Ênfase das Características de Qualidade
-
-Nesta etapa inicial do processo de avaliação, foram definidas as características de qualidade a serem analisadas com base nos objetivos do trabalho e no perfil do público-alvo do ChamaControl. A escolha levou em conta tanto a necessidade de garantir o bom desempenho do sistema quanto a importância de facilitar sua manutenção e evolução futura.
-
-A seguir, apresenta-se a classificação das características de qualidade, conforme a abordagem SQuaRE (ISO/IEC 25010), em uma escala de 1 a 5:
-
-<div align="center">
-<table>
-<tr>
-<th>Característica</th>
-<th>Ênfase (1-5)</th>
-</tr>
-<tr>
-<td>Eficiência de Desempenho</td>
-<td>5 – Alta prioridade</td>
-</tr>
-<tr>
-<td>Manutenibilidade</td>
-<td>5 – Alta prioridade</td>
-</tr>
-<tr>
-<td>Usabilidade</td>
-<td>4 – Média prioridade</td>
-</tr>
-<tr>
-<td>Confiabilidade</td>
-<td>2 – Baixa prioridade</td>
-</tr>
-<tr>
-<td>Segurança</td>
-<td>1 – Baixa prioridade</td>
-</tr>
-<tr>
-<td>Compatibilidade</td>
-<td>1 – Baixa prioridade</td>
-</tr>
-<tr>
-<td>Portabilidade</td>
-<td>1 – Baixa prioridade</td>
-</tr>
-<tr>
-<td>Funcionalidade</td>
-<td>1 – Baixa prioridade</td>
-</tr>
-</table>
-<p><em>Tabela: Ênfase das Características de Qualidade</em></p>
-</div>
-
-Foram priorizadas as características de **Eficiência de Desempenho** e **Manutenibilidade**, pois estão diretamente relacionadas à capacidade do sistema de processar e apresentar dados atualizados do INPE em tempo adequado, além de permitir que sua estrutura seja mantida e modificada de forma confiável pelos desenvolvedores.
-
-Essa priorização servirá como base para a definição das métricas e critérios de avaliação, garantindo o foco nos aspectos mais relevantes para a análise do sistema. Considerando as características priorizadas, foram elicitadas as seguintes subcaracterísticas, de acordo com o modelo de qualidade ISO/IEC 25010:
-
-
-<div align="center">
-  <img src="../assets/caracteristicas.jpg" alt="Características de qualidade">
-  <p><em>Figura 1: Características de qualidade priorizadas conforme ISO/IEC 25010</em></p>
-</div>
-
 
 ## Escopo, Profundidade e Objetos de Avaliação
 
@@ -149,24 +190,82 @@ O nível de análise será **intermediário**, contemplando:
 
 ## ODS Relacionados e Metas Associadas
 
-A avaliação do **ChamaControl** também se conecta a objetivos mais amplos, especialmente aos **Objetivos de Desenvolvimento Sustentável (ODS) da ONU**, reforçando a relevância social e ambiental do sistema.
+A avaliação do **ChamaControl** também se conecta a objetivos mais amplos, especialmente aos [**Objetivos de Desenvolvimento Sustentável (ODS) da ONU <sup>[4]</sup>**](#referencias-bibliograficas) , reforçando a relevância social e ambiental do sistema.
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 800px; margin: auto;">
+  <!-- Linha 1: 3 imagens -->
+  <div style="flex: 0 0 30%; text-align: center;">
+    <a href="https://brasil.un.org/pt-br/sdgs/3" target="_blank">
+      <img src="../assets/ods3.svg" alt="ODS 3" style="width: 100%; height: auto;">
+    </a>
+  </div>
+  <div style="flex: 0 0 30%; text-align: center;">
+    <a href="https://brasil.un.org/pt-br/sdgs/9" target="_blank">
+      <img src="../assets/ods9.svg" alt="ODS 9" style="width: 100%; height: auto;">
+    </a>
+  </div>
+  <div style="flex: 0 0 30%; text-align: center;">
+    <a href="https://brasil.un.org/pt-br/sdgs/11" target="_blank">
+      <img src="../assets/ods11.svg" alt="ODS 11" style="width: 100%; height: auto;">
+    </a>
+  </div>
+
+  <!-- Linha 2: 2 imagens -->
+  <div style="flex: 0 0 30%; text-align: center;">
+    <a href="https://brasil.un.org/pt-br/sdgs/13" target="_blank">
+      <img src="../assets/ods13.svg" alt="ODS 13" style="width: 100%; height: auto;">
+    </a>
+  </div>
+  <div style="flex: 0 0 30%; text-align: center;">
+    <a href="https://brasil.un.org/pt-br/sdgs/15" target="_blank">
+      <img src="../assets/ods15.svg" alt="ODS 15" style="width: 100%; height: auto;">
+    </a>
+  </div>
+</div>
+
+
 
 ### Principal
-- **ODS 13 – Ação contra a mudança global do clima**  
-  Ao disponibilizar informações sobre a ocorrência e a intensidade dos incêndios, o projeto contribui para a compreensão dos impactos do fogo nas emissões de gases de efeito estufa, apoiando estratégias de mitigação e adaptação às mudanças climáticas e fortalecendo políticas de resiliência ambiental.
+- [**ODS 13 - Ação contra a mudança global do clima <sup>[5]</sup>**](#referencias-bibliograficas)
 
-- **ODS 15 – Vida Terrestre**  
-  Ao monitorar os incêndios que afetam florestas, áreas de vegetação nativa e ecossistemas sensíveis, a iniciativa favorece a preservação da biodiversidade, o manejo sustentável da terra e a recuperação de áreas degradadas, colaborando com a conservação da vida terrestre.
+**Meta 13.1:** Reforçar a resiliência e a capacidade de adaptação a riscos relacionados ao clima e desastres naturais.  
+**Indicador:** Frequência de atualização dos focos de incêndio por estado/região (diária, às 10h).  
+**Pertinência:** O ChamaControl fornece dados atualizados diariamente, permitindo respostas rápidas a novos incêndios e fortalecendo a adaptação a eventos climáticos, mesmo no nível estadual.
+
+**Meta 13.3:** Melhorar a conscientização e a capacidade institucional sobre mitigação e adaptação.  
+**Indicador:** Número de acessos ao painel e notícias relacionadas a incêndios.  
+**Pertinência:** Ao disponibilizar dashboards interativos e notícias atuais integradas, o software amplia a conscientização da população e de órgãos públicos sobre os impactos ambientais dos incêndios.
+
+- [**ODS 15 - Vida Terrestre <sup>[6]</sup>**](#referencias-bibliograficas)
+
+**Meta 15.1:** Assegurar a conservação e uso sustentável de ecossistemas terrestres.  
+**Indicador:** Áreas impactadas monitoradas por estado/região (dados INPE).  
+**Pertinência:** O sistema organiza informações históricas (2003–2024) e diárias, permitindo avaliar danos ambientais e subsidiar políticas de preservação da biodiversidade em nível regional.
+
+**Meta 15.5:** Reduzir a degradação de habitats naturais e perda de biodiversidade.  
+**Indicador:** Número de focos detectados em regiões com proteção ambiental.  
+**Pertinência:** O monitoramento estadual permite identificar incêndios em ecossistemas sensíveis, podendo fornecer dados úteis para ações de proteção ambiental.
+
 
 ### Secundária
-- **ODS 3 – Saúde e Bem-estar**  
-  Ao evidenciar os riscos da fumaça e da poluição atmosférica gerada pelos incêndios, o projeto reforça a importância da prevenção de doenças respiratórias e cardiovasculares, além de subsidiar ações de proteção à saúde de comunidades expostas aos efeitos do fogo.
+- [**ODS 3 – Saúde e Bem-estar <sup>[7]</sup>**](#referencias-bibliograficas)
 
-- **ODS 9 – Indústria, Inovação e Infraestrutura**  
-  Ao desenvolver um software de monitoramento de incêndios, a aplicação promove a inovação tecnológica e fortalece a infraestrutura digital para coleta, processamento e análise de dados ambientais, apoiando decisões rápidas e eficazes e contribuindo para soluções mais resilientes frente aos desafios climáticos.
+**Meta 3.9:** Reduzir mortes e doenças causadas pela poluição do ar.  
+**Indicador:** Quantidade de focos em regiões urbanas e notícias sobre impactos à saúde.  
+**Pertinência:** O software evidencia a relação entre queimadas e risco à saúde em escala estadual, apoiando políticas de prevenção e conscientização.
 
-- **ODS 11 – Cidades e Comunidades Sustentáveis**  
-  Ao mapear incêndios que atingem áreas urbanas e periurbanas, a aplicação fortalece o planejamento de cidades mais seguras, resilientes e preparadas para lidar com riscos ambientais, contribuindo para a proteção de pessoas, habitações e infraestrutura.
+- [**ODS 9 – Indústria, Inovação e Infraestrutura <sup>[8]</sup>**](#referencias-bibliograficas)
+
+**Meta 9.5:** Melhorar a capacidade tecnológica de setores relevantes.  
+**Indicador:** Volume de dados processados pelos scrapers e funcionalidades implementadas.  
+**Pertinência:** O ChamaControl aplica inovação tecnológica ao coletar, organizar e exibir dados ambientais em tempo real, fortalecendo a infraestrutura digital para análise e tomada de decisão.
+
+
+- [**ODS 11 – Cidades e Comunidades Sustentáveis <sup>[9]</sup>**](#referencias-bibliograficas)
+
+**Meta 11.5:** Reduzir perdas humanas e econômicas por desastres relacionados ao clima.  
+**Indicador:** Número de focos de incêndio próximos a regiões urbanas por estado.  
+**Pertinência:** Ao mapear incêndios próximos a áreas urbanas em nível estadual, o sistema ajuda gestores públicos a planejar ações preventivas, mesmo sem detalhamento municipal.
 
 ## Conclusão
 
@@ -182,7 +281,26 @@ Esse trabalho inicial fornece a base para análises mais aprofundadas nas próxi
 
 ## Referências Bibliográficas
 
-> [1] ChamaControl. Disponível em: <https://github.com/unb-mds/2024-2-ChamaControl>. Acesso em: 29 de setembro de 2025  
+> [1] ChamaControl. Disponível em: <https://github.com/unb-mds/2024-2-ChamaControl>. Acesso em: 29 de setembro de 2025 
+
+> [2] PRESSMAN, Roger S. Engenharia de Software: Uma Abordagem Profissional. 6. ed. São Paulo: McGraw-Hill, 2002. Disponível em: <https://archive.org/details/pressman-engenharia-de-software-uma-abordagem-profissional-8a/mode/2up>. Acesso em:  29 de setembro de 2025. 
+
+> [3] ISO/IEC 25010:2011. Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models. Geneva: ISO, 2011. Disponível em: <https://iso25000.com/index.php/en/iso-25000-standards/iso-25010>. Acesso em: 29 de setembro de 2025.
+
+> [4] ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivos de Desenvolvimento Sustentável. As Nações Unidas no Brasil, 2025. Disponível em: <https://brasil.un.org/pt-br/sdgs>. Acesso em: 29 de setembro de 2025.
+
+> [5] ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivo de Desenvolvimento Sustentável 13: Ação contra a mudança global do clima. Disponível em: <https://brasil.un.org/pt-br/sdgs/13>. Acesso em: 29 set. 2025.
+
+> [6] ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivo de Desenvolvimento Sustentável 15: Vida terrestre. Disponível em: <https://brasil.un.org/pt-br/sdgs/15>. Acesso em: 29 set. 2025.
+
+> [7] ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivo de Desenvolvimento Sustentável 3: Saúde e Bem-Estar. Disponível em: <https://brasil.un.org/pt-br/sdgs/3>. Acesso em: 29 set. 2025.
+
+> [8] ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivo de Desenvolvimento Sustentável 9: Indústria, Inovação e Infraestrutura. Disponível em: <https://brasil.un.org/pt-br/sdgs/9>. Acesso em: 29 set. 2025.
+
+> [9] ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivo de Desenvolvimento Sustentável 11: Cidades e Comunidades Sustentáveis. Disponível em: <https://brasil.un.org/pt-br/sdgs/11>. Acesso em: 29 set. 2025.
+
+> INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. ISO/IEC 25010:2023 – Systems and software engineering – Systems and software Quality Requirements and Evaluation (SQuaRE) – System and software quality models. Disponível em: <https://iso25000.com/index.php/en/iso-25000-standards/iso-25010>. Acesso em: 29 set. 2025.
+
 
 
 ## Contribuição dos Integrantes
@@ -202,4 +320,6 @@ Esse trabalho inicial fornece a base para análises mais aprofundadas nas próxi
 | ------ | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1.0    | 29/09/2025 | Criação da página inicial, inclusão de contexto e software, definição de escopo e profundidade, métricas, priorização das características de qualidade, revisão final, conclusão e formatação | [Breno Soares](https://github.com/Brenofrds), [Bruno Ricardo](https://github.com/EhOBruno), [Enrico Zoratto](https://github.com/sidts), [Filipe Azevedo](https://github.com/fbressa), [Gabriel dos Anjos](https://github.com/SAnjos3), [Leonardo Sauma Jr](https://github.com/leohssjr) |
 | 1.1    | 01/10/2025 | Ajustes, adição da representação visual das características escolhidas                                                                                                                        | [Filipe Azevedo](https://github.com/fbressa)                                                                                                                                                                                                                                            |
-| 1.2    | 01/10/2025 | Adição do tópico "Uso de IA" e reajuste do código md para melhorias na visualização e organização dos tópicosv                                                                                | [Gabriel Soares](https://github.com/SAnjos3)                                                                                                                                                                                                                                            |
+| 1.2    | 01/10/2025 | Adição do tópico "Uso de IA" e reajuste do código md para melhorias na visualização e organização dos tópicosv                                                                                | [Gabriel Soares](https://github.com/SAnjos3) |
+| 1.3    | 01/10/2025 | Adicionando priorização Impacto x Risco| [Leonardo Sauma](https://github.com/leohssjr) |
+| 1.4    | 01/10/2025 | Ajustando ODS, adicionando meta/indicadores e persistência no software | [Leonardo Sauma](https://github.com/leohssjr) |
