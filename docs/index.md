@@ -69,6 +69,10 @@ Betty Snyder Holberton foi uma das programadoras pioneiras do ENIAC, destacando-
   </tr>
 </table>
 
+## Referências Bibliográficas
+> 
+
+
 ## Histórico de versão
  
 | Versão | Data | Descrição  |  Autor |
