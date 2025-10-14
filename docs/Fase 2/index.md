@@ -61,8 +61,19 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 
 #### Métricas de Manutenabilidade
 
-| Métrica | Fórmula | Método de coleta | Interpretação / Observações |
-|---------|---------|------------------|----------------------------|
+[Nome da Métrica]
+
+Objetivo:
+Descreva o que se pretende avaliar com essa métrica.
+
+Fórmula:
+Apresente a fórmula matemática ou o método de cálculo da métrica.
+
+Método de Coleta:
+Explique como os dados serão obtidos (ex: ferramentas, logs, medições automáticas).
+
+Interpretação / Observações:
+Descreva como interpretar os resultados e o que eles indicam sobre o desempenho do sistema.
 
 
 ### Objetivo da Medição 2: Eficiência de Desempenho
@@ -110,11 +121,23 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 **Q6:** As consultas ao banco de dados e o processamento das informações sobre queimadas estão otimizados? 
 
 
+
 #### Métricas de Eficiência de Desempenho
 
-| Métrica | Fórmula | Método de coleta | Interpretação / Observações |
-|---------|---------|------------------|----------------------------|
-| **Transações, Latência e Custo** | • TPS = transações ÷ tempo total<br>• Latência = tempo médio de execução<br>• Custo = estimado via EXPLAIN ANALYZE | Coletadas pelo **SysBench** (consultas.lua) e **MySQL Workbench**, antes e depois da otimização. | Avaliam o desempenho das consultas; mais transações, menor latência e menor custo indicam melhor eficiência. |
+[Nome da Métrica]
+
+Objetivo:
+Descreva o que se pretende avaliar com essa métrica.
+
+Fórmula:
+Apresente a fórmula matemática ou o método de cálculo da métrica.
+
+Método de Coleta:
+Explique como os dados serão obtidos (ex: ferramentas, logs, medições automáticas).
+
+Interpretação / Observações:
+Descreva como interpretar os resultados e o que eles indicam sobre o desempenho do sistema.
+
 
 ## Referências Bibliográficas
 > LC00-GQM-Introducao. Disponível em: <https://aprender3.unb.br/pluginfile.php/3230283/mod_folder/content/0/LC00-GQM-Introducao.pdf?forcedownload=1>. Acesso em: 14 de outubro de 2025.
