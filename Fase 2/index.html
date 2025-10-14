@@ -686,10 +686,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Aplicação do GQM ao ChamaControl">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#objetivo-da-medicao-1-manutenibilidade" class="md-nav__link">
     <span class="md-ellipsis">
       Objetivo da Medição 1: Manutenibilidade
@@ -721,8 +720,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#objetivo-da-medicao-2-eficiencia-de-desempenho" class="md-nav__link">
     <span class="md-ellipsis">
       Objetivo da Medição 2: Eficiência de Desempenho
@@ -745,6 +744,25 @@
   <a href="#metricas-de-eficiencia-de-desempenho" class="md-nav__link">
     <span class="md-ellipsis">
       Métricas de Eficiência de Desempenho
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Métricas de Eficiência de Desempenho">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tempo-medio-de-resposta-tr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tempo Médio de Resposta (TR)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tempo-ate-primeiro-conteudo-fcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tempo até Primeiro Conteúdo (FCP)
     </span>
   </a>
   
@@ -815,7 +833,7 @@
 <h2 id="aplicacao-do-gqm-ao-chamacontrol">Aplicação do GQM ao ChamaControl</h2>
 <p>Com base na <a href="../Fase%201/">Fase 1 - Processo de Avaliação</a>, foram priorizadas as características de qualidade Manutenibilidade e Eficiência de Desempenho, conforme a ISO/IEC 25010.
 A seguir, são detalhados os objetivos, perguntas e métricas definidos para cada uma delas.</p>
-<h3 id="objetivo-da-medicao-1-manutenibilidade">Objetivo da Medição 1: Manutenibilidade</h3>
+<h2 id="objetivo-da-medicao-1-manutenibilidade">Objetivo da Medição 1: Manutenibilidade</h2>
 <table border="1">
   <tr>
     <td>Analisar</td>
@@ -839,7 +857,7 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
   </tr>
 </table>
 
-<h4 id="questoes-de-manutenabilidade">Questões de Manutenabilidade</h4>
+<h3 id="questoes-de-manutenabilidade">Questões de Manutenabilidade</h3>
 <p><strong>Q1:</strong> O código do ChamaControl é modular, com funções e classes bem organizadas?<br />
 <strong>Hipótese 1:</strong> Mais de 80% das funções estão agrupadas de forma coerente e com responsabilidade clara, facilitando modificações.  </p>
 <p><strong>Q2:</strong> É possível modificar um módulo sem impactar outros componentes do sistema?<br />
@@ -850,7 +868,7 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 <strong>Hipótese 4:</strong> Menos de 10% do código é duplicado, permitindo maior facilidade de manutenção e evolução.  </p>
 <p><strong>Q5:</strong> É possível compreender rapidamente a lógica do sistema para realizar diagnósticos ou correções?<br />
 <strong>Hipótese 5:</strong> Desenvolvedores conseguem identificar e modificar funções críticas em menos de 30 minutos, na média.  </p>
-<h4 id="metricas-de-manutenabilidade">Métricas de Manutenabilidade</h4>
+<h3 id="metricas-de-manutenabilidade">Métricas de Manutenabilidade</h3>
 <p>[Nome da Métrica]</p>
 <p>Objetivo:
 Descreva o que se pretende avaliar com essa métrica.</p>
@@ -860,7 +878,7 @@ Apresente a fórmula matemática ou o método de cálculo da métrica.</p>
 Explique como os dados serão obtidos (ex: ferramentas, logs, medições automáticas).</p>
 <p>Interpretação / Observações:
 Descreva como interpretar os resultados e o que eles indicam sobre o desempenho do sistema.</p>
-<h3 id="objetivo-da-medicao-2-eficiencia-de-desempenho">Objetivo da Medição 2: Eficiência de Desempenho</h3>
+<h2 id="objetivo-da-medicao-2-eficiencia-de-desempenho">Objetivo da Medição 2: Eficiência de Desempenho</h2>
 <table border="1">
   <tr>
     <td>Analisar</td>
@@ -884,19 +902,44 @@ Descreva como interpretar os resultados e o que eles indicam sobre o desempenho 
   </tr>
 </table>
 
-<h4 id="questoes-de-eficiencia-de-desempenho">Questões de Eficiência de Desempenho</h4>
+<h3 id="questoes-de-eficiencia-de-desempenho">Questões de Eficiência de Desempenho</h3>
 <p><strong>Q1:</strong> O sistema responde rapidamente às requisições da interface e da API?<br />
-<strong>Hipótese 1:</strong> O tempo médio de resposta das APIs e das páginas é inferior a 2 segundos em mais de 90% das consultas.  </p>
+<strong>Hipótese 1:</strong> O tempo médio de resposta das APIs e das páginas é inferior a <strong>2 segundos</strong> em mais de <strong>90% das consultas</strong>.<br />
+<strong>Métricas utilizadas:</strong> <em>Tempo Médio de Resposta (TR)</em>  </p>
+<hr />
 <p><strong>Q2:</strong> O carregamento dos dashboards e gráficos é ágil e sem travamentos?<br />
-<strong>Hipótese 2:</strong> Mais de 95% dos gráficos e dashboards carregam completamente em menos de 3 segundos.  </p>
+<strong>Hipótese 2:</strong> Mais de <strong>95%</strong> dos gráficos e dashboards carregam completamente em menos de <strong>3 segundos</strong>.<br />
+<strong>Métricas utilizadas:</strong> <em>Tempo até Primeiro Conteúdo (FCP)</em>  </p>
+<hr />
 <p><strong>Q3:</strong> O consumo de CPU e memória durante a execução do sistema está dentro de limites aceitáveis?<br />
-<strong>Hipótese 3:</strong> O uso de CPU não ultrapassa 70% e a memória utilizada não ultrapassa 80% da capacidade disponível durante operações críticas.  </p>
+<strong>Hipótese 3:</strong> O uso de CPU não ultrapassa <strong>70%</strong> e a memória utilizada não ultrapassa <strong>80%</strong> da capacidade disponível durante operações críticas.  </p>
+<hr />
 <p><strong>Q4:</strong> O sistema mantém desempenho estável com múltiplos usuários simultâneos?<br />
-<strong>Hipótese 4:</strong> Até 50 usuários simultâneos não causam degradação significativa no tempo de resposta ou erros de execução.  </p>
+<strong>Hipótese 4:</strong> Até <strong>50 usuários simultâneos</strong> não causam degradação significativa no tempo de resposta ou erros de execução.  </p>
+<hr />
 <p><strong>Q5:</strong> O processo de atualização diária de dados é concluído dentro do prazo esperado?<br />
-<strong>Hipótese 5:</strong> Os scrapers e pipelines processam os dados diários em menos de 30 minutos em 95% das execuções.</p>
-<p><strong>Q6:</strong> As consultas ao banco de dados e o processamento das informações sobre queimadas estão otimizados? </p>
-<h4 id="metricas-de-eficiencia-de-desempenho">Métricas de Eficiência de Desempenho</h4>
+<strong>Hipótese 5:</strong> Os <em>scrapers</em> e pipelines processam os dados diários em menos de <strong>30 minutos</strong> em <strong>95% das execuções</strong>.  </p>
+<hr />
+<p><strong>Q6:</strong> As consultas ao banco de dados e o processamento das informações sobre queimadas estão otimizados?<br />
+<strong>Métricas utilizadas:</strong> <em>Tempo até Primeiro Conteúdo (FCP)</em></p>
+<hr />
+<h3 id="metricas-de-eficiencia-de-desempenho">Métricas de Eficiência de Desempenho</h3>
+<h4 id="tempo-medio-de-resposta-tr">Tempo Médio de Resposta (TR)</h4>
+<p><strong>Objetivo:</strong><br />
+Avaliar a velocidade média de resposta das requisições da API e da interface web.  </p>
+<p><strong>Fórmula:</strong><br />
+TR = (Σ Tempo de Resposta das Requisições) / Número Total de Requisições</p>
+<p><strong>Método de Coleta:</strong><br />
+Medições realizadas com o <strong>DevTools</strong> ou <strong>Lighthouse</strong>, simulando cenários de uso típicos do sistema.  </p>
+<p><strong>Interpretação / Observações:</strong><br />
+Valores até <strong>2 segundos</strong> indicam desempenho ideal. Respostas mais lentas sugerem <strong>gargalos nas rotas da API</strong>, <strong>consultas SQL complexas</strong> ou <strong>ausência de cache</strong>. </p>
+<h4 id="tempo-ate-primeiro-conteudo-fcp">Tempo até Primeiro Conteúdo (FCP)</h4>
+<p><strong>Objetivo:</strong><br />
+Avaliar a rapidez com que o usuário visualiza o primeiro elemento do dashboard (gráfico, texto ou título), refletindo a percepção de desempenho do sistema.  </p>
+<p><strong>Método de Coleta:</strong><br />
+Medições via <strong>Lighthouse</strong> ou <strong>Chrome DevTools</strong>, na aba <em>Performance</em>, registrando o tempo até o primeiro conteúdo visível na tela.  </p>
+<p><strong>Interpretação / Observações:</strong><br />
+Valores até <strong>3 segundos</strong> indicam carregamento fluido e experiência satisfatória. Tempos superiores sugerem renderização ineficiente, scripts pesados ou sobrecarga no front-end.  </p>
 <p>[Nome da Métrica]</p>
 <p>Objetivo:
 Descreva o que se pretende avaliar com essa métrica.</p>
