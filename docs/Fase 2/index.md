@@ -60,7 +60,10 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 **Hipótese 5:** Desenvolvedores conseguem identificar e modificar funções críticas em menos de 30 minutos, na média.  
 
 #### Métricas de Manutenabilidade
-Em desenvolvimento...
+
+| Métrica | Fórmula | Método de coleta | Interpretação / Observações |
+|---------|---------|------------------|----------------------------|
+
 
 ### Objetivo da Medição 2: Eficiência de Desempenho
 
@@ -104,8 +107,14 @@ Em desenvolvimento...
 **Q5:** O processo de atualização diária de dados é concluído dentro do prazo esperado?  
 **Hipótese 5:** Os scrapers e pipelines processam os dados diários em menos de 30 minutos em 95% das execuções.
 
+**Q6:** As consultas ao banco de dados e o processamento das informações sobre queimadas estão otimizados? 
+
+
 #### Métricas de Eficiência de Desempenho
-Em desenvolvimento...
+
+| Métrica | Fórmula | Método de coleta | Interpretação / Observações |
+|---------|---------|------------------|----------------------------|
+| **Transações, Latência e Custo** | • TPS = transações ÷ tempo total<br>• Latência = tempo médio de execução<br>• Custo = estimado via EXPLAIN ANALYZE | Coletadas pelo **SysBench** (consultas.lua) e **MySQL Workbench**, antes e depois da otimização. | Avaliam o desempenho das consultas; mais transações, menor latência e menor custo indicam melhor eficiência. |
 
 ## Referências Bibliográficas
 > LC00-GQM-Introducao. Disponível em: <https://aprender3.unb.br/pluginfile.php/3230283/mod_folder/content/0/LC00-GQM-Introducao.pdf?forcedownload=1>. Acesso em: 14 de outubro de 2025.
