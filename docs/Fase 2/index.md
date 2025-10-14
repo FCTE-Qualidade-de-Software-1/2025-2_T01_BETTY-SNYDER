@@ -17,7 +17,7 @@ Essa abordagem garante que a medição da qualidade seja **focada, rastreável e
 Com base na [Fase 1 - Processo de Avaliação](../Fase%201/index.md), foram priorizadas as características de qualidade Manutenibilidade e Eficiência de Desempenho, conforme a ISO/IEC 25010.
 A seguir, são detalhados os objetivos, perguntas e métricas definidos para cada uma delas.
 
-### Objetivo da Medição 1: Manutenibilidade
+## Objetivo da Medição 1: Manutenibilidade
 
 <table border="1">
   <tr>
@@ -42,7 +42,7 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
   </tr>
 </table>
 
-#### Questões de Manutenabilidade
+### Questões de Manutenabilidade
 
 **Q1:** O código do ChamaControl é modular, com funções e classes bem organizadas?  
 **Hipótese 1:** Mais de 80% das funções estão agrupadas de forma coerente e com responsabilidade clara, facilitando modificações.  
@@ -59,7 +59,7 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 **Q5:** É possível compreender rapidamente a lógica do sistema para realizar diagnósticos ou correções?  
 **Hipótese 5:** Desenvolvedores conseguem identificar e modificar funções críticas em menos de 30 minutos, na média.  
 
-#### Métricas de Manutenabilidade
+### Métricas de Manutenabilidade
 
 [Nome da Métrica]
 
@@ -76,7 +76,7 @@ Interpretação / Observações:
 Descreva como interpretar os resultados e o que eles indicam sobre o desempenho do sistema.
 
 
-### Objetivo da Medição 2: Eficiência de Desempenho
+## Objetivo da Medição 2: Eficiência de Desempenho
 
 <table border="1">
   <tr>
@@ -101,28 +101,70 @@ Descreva como interpretar os resultados e o que eles indicam sobre o desempenho 
   </tr>
 </table>
 
-#### Questões de Eficiência de Desempenho
+### Questões de Eficiência de Desempenho
 
 **Q1:** O sistema responde rapidamente às requisições da interface e da API?  
-**Hipótese 1:** O tempo médio de resposta das APIs e das páginas é inferior a 2 segundos em mais de 90% das consultas.  
+**Hipótese 1:** O tempo médio de resposta das APIs e das páginas é inferior a **2 segundos** em mais de **90% das consultas**.  
+**Métricas utilizadas:** *Tempo Médio de Resposta (TR)*  
+
+---
 
 **Q2:** O carregamento dos dashboards e gráficos é ágil e sem travamentos?  
-**Hipótese 2:** Mais de 95% dos gráficos e dashboards carregam completamente em menos de 3 segundos.  
+**Hipótese 2:** Mais de **95%** dos gráficos e dashboards carregam completamente em menos de **3 segundos**.  
+**Métricas utilizadas:** *Tempo até Primeiro Conteúdo (FCP)*  
+
+---
 
 **Q3:** O consumo de CPU e memória durante a execução do sistema está dentro de limites aceitáveis?  
-**Hipótese 3:** O uso de CPU não ultrapassa 70% e a memória utilizada não ultrapassa 80% da capacidade disponível durante operações críticas.  
+**Hipótese 3:** O uso de CPU não ultrapassa **70%** e a memória utilizada não ultrapassa **80%** da capacidade disponível durante operações críticas.  
+
+---
 
 **Q4:** O sistema mantém desempenho estável com múltiplos usuários simultâneos?  
-**Hipótese 4:** Até 50 usuários simultâneos não causam degradação significativa no tempo de resposta ou erros de execução.  
+**Hipótese 4:** Até **50 usuários simultâneos** não causam degradação significativa no tempo de resposta ou erros de execução.  
+
+---
 
 **Q5:** O processo de atualização diária de dados é concluído dentro do prazo esperado?  
-**Hipótese 5:** Os scrapers e pipelines processam os dados diários em menos de 30 minutos em 95% das execuções.
+**Hipótese 5:** Os *scrapers* e pipelines processam os dados diários em menos de **30 minutos** em **95% das execuções**.  
 
-**Q6:** As consultas ao banco de dados e o processamento das informações sobre queimadas estão otimizados? 
+---
+
+**Q6:** As consultas ao banco de dados e o processamento das informações sobre queimadas estão otimizados?  
+**Métricas utilizadas:** *Tempo até Primeiro Conteúdo (FCP)*
+
+---
 
 
 
-#### Métricas de Eficiência de Desempenho
+### Métricas de Eficiência de Desempenho
+
+#### Tempo Médio de Resposta (TR)
+
+**Objetivo:**  
+Avaliar a velocidade média de resposta das requisições da API e da interface web.  
+
+**Fórmula:**  
+TR = (Σ Tempo de Resposta das Requisições) / Número Total de Requisições
+
+**Método de Coleta:**  
+Medições realizadas com o **DevTools** ou **Lighthouse**, simulando cenários de uso típicos do sistema.  
+
+**Interpretação / Observações:**  
+Valores até **2 segundos** indicam desempenho ideal. Respostas mais lentas sugerem **gargalos nas rotas da API**, **consultas SQL complexas** ou **ausência de cache**. 
+
+#### Tempo até Primeiro Conteúdo (FCP)
+
+**Objetivo:**  
+Avaliar a rapidez com que o usuário visualiza o primeiro elemento do dashboard (gráfico, texto ou título), refletindo a percepção de desempenho do sistema.  
+
+**Método de Coleta:**  
+Medições via **Lighthouse** ou **Chrome DevTools**, na aba *Performance*, registrando o tempo até o primeiro conteúdo visível na tela.  
+
+**Interpretação / Observações:**  
+Valores até **3 segundos** indicam carregamento fluido e experiência satisfatória. Tempos superiores sugerem renderização ineficiente, scripts pesados ou sobrecarga no front-end.  
+
+
 
 [Nome da Métrica]
 
