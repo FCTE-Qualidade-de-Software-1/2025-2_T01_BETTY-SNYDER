@@ -111,27 +111,30 @@ Descreva como interpretar os resultados e o que eles indicam sobre o desempenho 
 
 **Q2:** O carregamento dos dashboards e gráficos é ágil e sem travamentos?  
 **Hipótese 2:** Mais de **95%** dos gráficos e dashboards carregam completamente em menos de **3 segundos**.  
-**Métricas utilizadas:** *Tempo até Primeiro Conteúdo (FCP)*  
+**Métricas utilizadas:** *Tempo até Primeiro Conteúdo (FCP)*
 
 ---
 
 **Q3:** O consumo de CPU e memória durante a execução do sistema está dentro de limites aceitáveis?  
 **Hipótese 3:** O uso de CPU não ultrapassa **70%** e a memória utilizada não ultrapassa **80%** da capacidade disponível durante operações críticas.  
+**Métricas utilizadas:** *Uso de CPU (Ucpu)* e *Uso de Memória (Umem)*
 
 ---
 
 **Q4:** O sistema mantém desempenho estável com múltiplos usuários simultâneos?  
 **Hipótese 4:** Até **50 usuários simultâneos** não causam degradação significativa no tempo de resposta ou erros de execução.  
+**Métricas utilizadas:** *Tempo Médio de Resposta (TR)*, *Uso de CPU (Ucpu)* e *Uso de Memória (Umem)*
 
 ---
 
 **Q5:** O processo de atualização diária de dados é concluído dentro do prazo esperado?  
 **Hipótese 5:** Os *scrapers* e pipelines processam os dados diários em menos de **30 minutos** em **95% das execuções**.  
+**Métricas utilizadas:** *Tempo Médio de Resposta (TR)* e *Taxa de Disponibilidade (TD)*
 
 ---
 
 **Q6:** As consultas ao banco de dados e o processamento das informações sobre queimadas estão otimizados?  
-**Métricas utilizadas:** *Tempo até Primeiro Conteúdo (FCP)*
+**Métricas utilizadas:** *Tempo até Primeiro Conteúdo (FCP)* e *Uso de CPU (Ucpu)*
 
 ---
 
@@ -141,44 +144,71 @@ Descreva como interpretar os resultados e o que eles indicam sobre o desempenho 
 
 #### Tempo Médio de Resposta (TR)
 
-**Objetivo:**  
+- **Objetivo:**  
 Avaliar a velocidade média de resposta das requisições da API e da interface web.  
 
-**Fórmula:**  
+- **Fórmula:**  
 TR = (Σ Tempo de Resposta das Requisições) / Número Total de Requisições
 
-**Método de Coleta:**  
+- **Método de Coleta:**  
 Medições realizadas com o **DevTools** ou **Lighthouse**, simulando cenários de uso típicos do sistema.  
 
-**Interpretação / Observações:**  
+- **Interpretação / Observações:**  
 Valores até **2 segundos** indicam desempenho ideal. Respostas mais lentas sugerem **gargalos nas rotas da API**, **consultas SQL complexas** ou **ausência de cache**. 
 
 #### Tempo até Primeiro Conteúdo (FCP)
 
-**Objetivo:**  
+- **Objetivo:**  
 Avaliar a rapidez com que o usuário visualiza o primeiro elemento do dashboard (gráfico, texto ou título), refletindo a percepção de desempenho do sistema.  
 
-**Método de Coleta:**  
+- **Método de Coleta:**  
 Medições via **Lighthouse** ou **Chrome DevTools**, na aba *Performance*, registrando o tempo até o primeiro conteúdo visível na tela.  
 
-**Interpretação / Observações:**  
+- **Interpretação / Observações:**  
 Valores até **3 segundos** indicam carregamento fluido e experiência satisfatória. Tempos superiores sugerem renderização ineficiente, scripts pesados ou sobrecarga no front-end.  
 
+#### Uso de CPU (Ucpu)
 
+- **Objetivo:**  
+Avaliar a carga média de processamento utilizada durante a execução do sistema, identificando possíveis gargalos.
 
-[Nome da Métrica]
+- **Fórmula:**  
+Ucpu = (Tempo de CPU usado / Tempo total de execução) × 100
 
-Objetivo:
-Descreva o que se pretende avaliar com essa métrica.
+- **Método de Coleta:**  
+Monitoramento durante a execução de cenários reais, utilizando ferramentas como htop, Task Manager, Lighthouse ou logs do servidor.
 
-Fórmula:
-Apresente a fórmula matemática ou o método de cálculo da métrica.
+- **Interpretação / Observações:**  
+Valores sustentados acima de 70% indicam sobrecarga e necessidade de otimização de código, consultas SQL ou algoritmos.
 
-Método de Coleta:
-Explique como os dados serão obtidos (ex: ferramentas, logs, medições automáticas).
+#### Uso de Memória (Umem)
 
-Interpretação / Observações:
-Descreva como interpretar os resultados e o que eles indicam sobre o desempenho do sistema.
+- **Objetivo:**  
+Mensurar a eficiência no uso da memória do sistema durante a execução, prevenindo travamentos e lentidão.
+
+- **Fórmula:**  
+Umem = (Memória usada / Memória total disponível) × 100
+
+- **Método de Coleta:**  
+Monitoramento via navegador, servidor ou ferramentas como htop, Chrome DevTools e Monitor do Sistema.
+
+- **Interpretação / Observações:**  
+Picos acima de 80% indicam risco de instabilidade. Ideal manter consumo regular abaixo desse limite para garantir fluidez e estabilidade.
+
+#### Taxa de Disponibilidade (TD)
+
+- **Objetivo:**  
+Avaliar a estabilidade e a disponibilidade do sistema no tempo, garantindo operação contínua e confiável.
+
+- **Fórmula:**  
+TD = (Tempo disponível / Tempo total) × 100
+
+- **Método de Coleta:**  
+Logs de implantação e monitoramento da hospedagem (por exemplo, uptime monitor).
+
+- **Interpretação / Observações:**  
+Meta recomendada ≥ 99% de uptime. Quedas recorrentes reduzem a eficiência percebida e indicam falhas de infraestrutura.
+
 
 
 ## Referências Bibliográficas
