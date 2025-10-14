@@ -768,6 +768,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#uso-de-cpu-ucpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de CPU (Ucpu)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-memoria-umem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de Memória (Umem)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taxa-de-disponibilidade-td" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taxa de Disponibilidade (TD)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -909,46 +936,115 @@ Descreva como interpretar os resultados e o que eles indicam sobre o desempenho 
 <hr />
 <p><strong>Q2:</strong> O carregamento dos dashboards e gráficos é ágil e sem travamentos?<br />
 <strong>Hipótese 2:</strong> Mais de <strong>95%</strong> dos gráficos e dashboards carregam completamente em menos de <strong>3 segundos</strong>.<br />
-<strong>Métricas utilizadas:</strong> <em>Tempo até Primeiro Conteúdo (FCP)</em>  </p>
+<strong>Métricas utilizadas:</strong> <em>Tempo até Primeiro Conteúdo (FCP)</em></p>
 <hr />
 <p><strong>Q3:</strong> O consumo de CPU e memória durante a execução do sistema está dentro de limites aceitáveis?<br />
-<strong>Hipótese 3:</strong> O uso de CPU não ultrapassa <strong>70%</strong> e a memória utilizada não ultrapassa <strong>80%</strong> da capacidade disponível durante operações críticas.  </p>
+<strong>Hipótese 3:</strong> O uso de CPU não ultrapassa <strong>70%</strong> e a memória utilizada não ultrapassa <strong>80%</strong> da capacidade disponível durante operações críticas.<br />
+<strong>Métricas utilizadas:</strong> <em>Uso de CPU (Ucpu)</em> e <em>Uso de Memória (Umem)</em></p>
 <hr />
 <p><strong>Q4:</strong> O sistema mantém desempenho estável com múltiplos usuários simultâneos?<br />
-<strong>Hipótese 4:</strong> Até <strong>50 usuários simultâneos</strong> não causam degradação significativa no tempo de resposta ou erros de execução.  </p>
+<strong>Hipótese 4:</strong> Até <strong>50 usuários simultâneos</strong> não causam degradação significativa no tempo de resposta ou erros de execução.<br />
+<strong>Métricas utilizadas:</strong> <em>Tempo Médio de Resposta (TR)</em>, <em>Uso de CPU (Ucpu)</em> e <em>Uso de Memória (Umem)</em></p>
 <hr />
 <p><strong>Q5:</strong> O processo de atualização diária de dados é concluído dentro do prazo esperado?<br />
-<strong>Hipótese 5:</strong> Os <em>scrapers</em> e pipelines processam os dados diários em menos de <strong>30 minutos</strong> em <strong>95% das execuções</strong>.  </p>
+<strong>Hipótese 5:</strong> Os <em>scrapers</em> e pipelines processam os dados diários em menos de <strong>30 minutos</strong> em <strong>95% das execuções</strong>.<br />
+<strong>Métricas utilizadas:</strong> <em>Tempo Médio de Resposta (TR)</em> e <em>Taxa de Disponibilidade (TD)</em></p>
 <hr />
 <p><strong>Q6:</strong> As consultas ao banco de dados e o processamento das informações sobre queimadas estão otimizados?<br />
-<strong>Métricas utilizadas:</strong> <em>Tempo até Primeiro Conteúdo (FCP)</em></p>
+<strong>Métricas utilizadas:</strong> <em>Tempo até Primeiro Conteúdo (FCP)</em> e <em>Uso de CPU (Ucpu)</em></p>
 <hr />
 <h3 id="metricas-de-eficiencia-de-desempenho">Métricas de Eficiência de Desempenho</h3>
 <h4 id="tempo-medio-de-resposta-tr">Tempo Médio de Resposta (TR)</h4>
+<ul>
+<li>
 <p><strong>Objetivo:</strong><br />
 Avaliar a velocidade média de resposta das requisições da API e da interface web.  </p>
+</li>
+<li>
 <p><strong>Fórmula:</strong><br />
 TR = (Σ Tempo de Resposta das Requisições) / Número Total de Requisições</p>
+</li>
+<li>
 <p><strong>Método de Coleta:</strong><br />
 Medições realizadas com o <strong>DevTools</strong> ou <strong>Lighthouse</strong>, simulando cenários de uso típicos do sistema.  </p>
+</li>
+<li>
 <p><strong>Interpretação / Observações:</strong><br />
 Valores até <strong>2 segundos</strong> indicam desempenho ideal. Respostas mais lentas sugerem <strong>gargalos nas rotas da API</strong>, <strong>consultas SQL complexas</strong> ou <strong>ausência de cache</strong>. </p>
+</li>
+</ul>
 <h4 id="tempo-ate-primeiro-conteudo-fcp">Tempo até Primeiro Conteúdo (FCP)</h4>
+<ul>
+<li>
 <p><strong>Objetivo:</strong><br />
 Avaliar a rapidez com que o usuário visualiza o primeiro elemento do dashboard (gráfico, texto ou título), refletindo a percepção de desempenho do sistema.  </p>
+</li>
+<li>
 <p><strong>Método de Coleta:</strong><br />
 Medições via <strong>Lighthouse</strong> ou <strong>Chrome DevTools</strong>, na aba <em>Performance</em>, registrando o tempo até o primeiro conteúdo visível na tela.  </p>
+</li>
+<li>
 <p><strong>Interpretação / Observações:</strong><br />
 Valores até <strong>3 segundos</strong> indicam carregamento fluido e experiência satisfatória. Tempos superiores sugerem renderização ineficiente, scripts pesados ou sobrecarga no front-end.  </p>
-<p>[Nome da Métrica]</p>
-<p>Objetivo:
-Descreva o que se pretende avaliar com essa métrica.</p>
-<p>Fórmula:
-Apresente a fórmula matemática ou o método de cálculo da métrica.</p>
-<p>Método de Coleta:
-Explique como os dados serão obtidos (ex: ferramentas, logs, medições automáticas).</p>
-<p>Interpretação / Observações:
-Descreva como interpretar os resultados e o que eles indicam sobre o desempenho do sistema.</p>
+</li>
+</ul>
+<h4 id="uso-de-cpu-ucpu">Uso de CPU (Ucpu)</h4>
+<ul>
+<li>
+<p><strong>Objetivo:</strong><br />
+Avaliar a carga média de processamento utilizada durante a execução do sistema, identificando possíveis gargalos.</p>
+</li>
+<li>
+<p><strong>Fórmula:</strong><br />
+Ucpu = (Tempo de CPU usado / Tempo total de execução) × 100</p>
+</li>
+<li>
+<p><strong>Método de Coleta:</strong><br />
+Monitoramento durante a execução de cenários reais, utilizando ferramentas como htop, Task Manager, Lighthouse ou logs do servidor.</p>
+</li>
+<li>
+<p><strong>Interpretação / Observações:</strong><br />
+Valores sustentados acima de 70% indicam sobrecarga e necessidade de otimização de código, consultas SQL ou algoritmos.</p>
+</li>
+</ul>
+<h4 id="uso-de-memoria-umem">Uso de Memória (Umem)</h4>
+<ul>
+<li>
+<p><strong>Objetivo:</strong><br />
+Mensurar a eficiência no uso da memória do sistema durante a execução, prevenindo travamentos e lentidão.</p>
+</li>
+<li>
+<p><strong>Fórmula:</strong><br />
+Umem = (Memória usada / Memória total disponível) × 100</p>
+</li>
+<li>
+<p><strong>Método de Coleta:</strong><br />
+Monitoramento via navegador, servidor ou ferramentas como htop, Chrome DevTools e Monitor do Sistema.</p>
+</li>
+<li>
+<p><strong>Interpretação / Observações:</strong><br />
+Picos acima de 80% indicam risco de instabilidade. Ideal manter consumo regular abaixo desse limite para garantir fluidez e estabilidade.</p>
+</li>
+</ul>
+<h4 id="taxa-de-disponibilidade-td">Taxa de Disponibilidade (TD)</h4>
+<ul>
+<li>
+<p><strong>Objetivo:</strong><br />
+Avaliar a estabilidade e a disponibilidade do sistema no tempo, garantindo operação contínua e confiável.</p>
+</li>
+<li>
+<p><strong>Fórmula:</strong><br />
+TD = (Tempo disponível / Tempo total) × 100</p>
+</li>
+<li>
+<p><strong>Método de Coleta:</strong><br />
+Logs de implantação e monitoramento da hospedagem (por exemplo, uptime monitor).</p>
+</li>
+<li>
+<p><strong>Interpretação / Observações:</strong><br />
+Meta recomendada ≥ 99% de uptime. Quedas recorrentes reduzem a eficiência percebida e indicam falhas de infraestrutura.</p>
+</li>
+</ul>
 <h2 id="referencias-bibliograficas">Referências Bibliográficas</h2>
 <blockquote>
 <p>LC00-GQM-Introducao. Disponível em: <a href="https://aprender3.unb.br/pluginfile.php/3230283/mod_folder/content/0/LC00-GQM-Introducao.pdf?forcedownload=1">https://aprender3.unb.br/pluginfile.php/3230283/mod_folder/content/0/LC00-GQM-Introducao.pdf?forcedownload=1</a>. Acesso em: 14 de outubro de 2025.</p>
