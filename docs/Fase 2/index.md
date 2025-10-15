@@ -83,9 +83,9 @@ Verificar no **SonarQube** os indicadores:
 - *Technical Debt Ratio*
 
 **Interpretação:**  
-≥ 80% → boa modularidade  
-60–79% → aceitável  
-< 60% → modularidade fraca, possível acoplamento
+- ≥ 80% → boa modularidade  
+- 60–79% → aceitável  
+- < 60% → modularidade fraca, possível acoplamento
 
 ---
 
@@ -104,9 +104,9 @@ Usar o **SonarQube** para identificar:
 - *Complexity by file*
 
 **Interpretação:**  
-≤ 10 → baixo acoplamento  
-11–25 → moderado  
-`>` 25 → alto, difícil de manter
+- ≤ 10 → baixo acoplamento  
+- 11–25 → moderado  
+- > 25 → alto, difícil de manter
 
 ---
 
@@ -130,6 +130,7 @@ Realizar uma avaliação qualitativa do projeto, considerando:
 3 - Documentação mediana: explicações básicas e estrutura parcialmente clara.  
 4 - Documentação boa: código comentado e instruções compreensíveis.  
 5 - Documentação completa: comentários consistentes, README detalhado e guias claros.
+
 ---
 
 #### Percentual de Código Duplicado (DUP) — *Q4*
@@ -144,9 +145,9 @@ Valor de **Duplicated Lines (%)** reportado pelo SonarQube.
 Consultar no **SonarQube** a métrica *Duplicated Lines (%)*.
 
 **Interpretação:**  
-< 10% → ótima reutilização  
-10–20% → aceitável  
-`>` 20% → exige refatoração
+- < 10% → ótima reutilização  
+- 10–20% → aceitável  
+- > 20% → exige refatoração
 
 ---
 
@@ -162,9 +163,9 @@ CTA = Percentual de **Linhas cobertas (% Lines)** reportado pelo Jest no relató
 Ferramenta de análise de cobertura de testes **Jest**, para gerar relatórios automáticos.  
 
 **Interpretação / Observações:**
-≥ 80% → excelente cobertura
-60–79% → aceitável
-< 60% → baixa testabilidade
+- ≥ 80% → excelente cobertura
+- 60–79% → aceitável
+- < 60% → baixa testabilidade
 
 ---
 
