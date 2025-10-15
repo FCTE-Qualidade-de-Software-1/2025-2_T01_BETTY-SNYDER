@@ -45,6 +45,9 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 # Diagrama Manutenibilidade
 
 ![diagramaManutenibilidade](../assets/metricasManutenibilidade.jpg)
+<div align="center">
+<p><em>Figura 1: Estrutura de avaliação da manutenibilidade com base em questões e métricas.</em></p>
+</div>
 
 ### Questões de Manutenabilidade
 
@@ -206,6 +209,9 @@ Ferramenta de análise de cobertura de testes **Jest**, para gerar relatórios a
 # Diagrama Eficiência de Desempenho
 
 ![diagramaEficiênciaDesempenho](../assets/metricasDesempenho.jpg)
+<div align="center">
+<p><em>Figura 2: Estrutura de avaliação da eficiência de desempenho com base em questões e métricas.</em></p>
+</div>
 
 ### Questões de Eficiência de Desempenho
 
