@@ -42,6 +42,10 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
   </tr>
 </table>
 
+# Diagrama Manutenibilidade
+
+![diagramaManutenibilidade](../assets/metricasManutenibilidade.jpg)
+
 ### Questões de Manutenabilidade
 
 **Q1:** O código do ChamaControl é modular, com funções e classes bem organizadas?  
@@ -198,6 +202,10 @@ Ferramenta de análise de cobertura de testes **Jest**, para gerar relatórios a
     <td>disciplina de Qualidade de Software</td>
   </tr>
 </table>
+
+# Diagrama Eficiência de Desempenho
+
+![diagramaEficiênciaDesempenho](../assets/metricasDesempenho.jpg)
 
 ### Questões de Eficiência de Desempenho
 
