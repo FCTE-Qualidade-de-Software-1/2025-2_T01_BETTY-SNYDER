@@ -45,36 +45,128 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 ### Questões de Manutenabilidade
 
 **Q1:** O código do ChamaControl é modular, com funções e classes bem organizadas?  
+**Subcaracterística:** *Modularidade*  
 **Hipótese 1:** Mais de 80% das funções estão agrupadas de forma coerente e com responsabilidade clara, facilitando modificações.  
 
 **Q2:** É possível modificar um módulo sem impactar outros componentes do sistema?  
+**Subcaracterística:** *Modificabilidade*  
 **Hipótese 2:** Alterações em módulos independentes afetam menos de 10% de outros módulos, indicando baixo acoplamento. 
 
 **Q3:** O código contém documentação suficiente (comentários, README, guias de execução)?  
+**Subcaracterística:** *Analisabilidade*  
 **Hipótese 3:** Pelo menos 90% das funções e módulos críticos possuem comentários e instruções básicas de manutenção.
 
 **Q4:** Existe duplicação de código ou funções repetidas que possam dificultar manutenção?  
+**Subcaracterística:** *Reutilização*  
 **Hipótese 4:** Menos de 10% do código é duplicado, permitindo maior facilidade de manutenção e evolução.  
 
-**Q5:** É possível compreender rapidamente a lógica do sistema para realizar diagnósticos ou correções?  
-**Hipótese 5:** Desenvolvedores conseguem identificar e modificar funções críticas em menos de 30 minutos, na média.  
+**Q5:** O código permite a criação e execução eficiente de testes automatizados?  
+**Subcaracterística:** *Testabilidade*  
+**Hipótese 5:** As funções principais possuem cobertura de teste automatizado superior a 80%. 
 
-### Métricas de Manutenabilidade
+---
 
-[Nome da Métrica]
+### Métricas de Manutenibilidade
 
-Objetivo:
-Descreva o que se pretende avaliar com essa métrica.
+#### Grau de Modularidade (GM) — *Q1*
 
-Fórmula:
-Apresente a fórmula matemática ou o método de cálculo da métrica.
+**Objetivo:**  
+Verificar se o sistema possui módulos bem definidos e organizados, com responsabilidades claras.
 
-Método de Coleta:
-Explique como os dados serão obtidos (ex: ferramentas, logs, medições automáticas).
+**Fórmula:**  
+Percentual de módulos com *Maintainability Rating* “A” ou “B” no SonarQube.
 
-Interpretação / Observações:
-Descreva como interpretar os resultados e o que eles indicam sobre o desempenho do sistema.
+**Coleta:**  
+Verificar no **SonarQube** os indicadores:  
+- *Maintainability Rating (A–E)*  
+- *Code Smells* de baixa coesão  
+- *Technical Debt Ratio*
 
+**Interpretação:**  
+≥ 80% → boa modularidade  
+60–79% → aceitável  
+< 60% → modularidade fraca, possível acoplamento
+
+---
+
+#### Índice de Acoplamento entre Módulos (CBO) — *Q2*
+
+**Objetivo:**  
+Avaliar o grau de dependência entre classes e módulos, medindo o impacto de alterações no sistema.
+
+**Fórmula:**  
+Valor médio do *Coupling Between Objects (CBO)* reportado pelo SonarQube.
+
+**Coleta:**  
+Usar o **SonarQube** para identificar:  
+- *CBO* por classe  
+- *Code Smells* de “Excessive coupling”  
+- *Complexity by file*
+
+**Interpretação:**  
+≤ 10 → baixo acoplamento  
+11–25 → moderado  
+`>` 25 → alto, difícil de manter
+
+---
+
+#### Cobertura de Documentação (CD) — *Q3*
+
+**Objetivo:**  
+Verificar se o código está bem documentado, com proporção adequada de comentários, README e guias de manutenção.
+
+**Fórmula:**  
+CD = Nível de documentação atribuído na escala de 1 a 5
+
+**Coleta:**  
+Realizar uma avaliação qualitativa do projeto, considerando:  
+- Presença e qualidade dos **comentários no código**;  
+- Existência e clareza do **README**;  
+- Disponibilidade de **guias de instalação ou execução**.  
+
+**Interpretação / Observações:**  
+1 - Documentação muito baixa: quase inexistente; ausência de comentários e guias.  
+2 - Documentação insuficiente: poucos comentários e README incompleto.  
+3 - Documentação mediana: explicações básicas e estrutura parcialmente clara.  
+4 - Documentação boa: código comentado e instruções compreensíveis.  
+5 - Documentação completa: comentários consistentes, README detalhado e guias claros.
+---
+
+#### Percentual de Código Duplicado (DUP) — *Q4*
+
+**Objetivo:**  
+Avaliar a taxa de duplicação de código, que reduz a reutilização e aumenta o esforço de manutenção.
+
+**Fórmula:**  
+Valor de **Duplicated Lines (%)** reportado pelo SonarQube.
+
+**Coleta:**  
+Consultar no **SonarQube** a métrica *Duplicated Lines (%)*.
+
+**Interpretação:**  
+< 10% → ótima reutilização  
+10–20% → aceitável  
+`>` 20% → exige refatoração
+
+---
+
+#### Cobertura de Testes Automatizados (CTA) — *Q5*
+
+**Objetivo:**  
+Avaliar a extensão dos testes automatizados sobre o código do sistema, medindo o quanto das funções e módulos principais estão cobertos por testes de unidade ou integração.
+
+**Fórmula:**  
+CTA = Percentual de **Linhas cobertas (% Lines)** reportado pelo Jest no relatório de cobertura.
+
+**Método de Coleta:**  
+Ferramenta de análise de cobertura de testes **Jest**, para gerar relatórios automáticos.  
+
+**Interpretação / Observações:**
+≥ 80% → excelente cobertura
+60–79% → aceitável
+< 60% → baixa testabilidade
+
+---
 
 ## Objetivo da Medição 2: Eficiência de Desempenho
 
