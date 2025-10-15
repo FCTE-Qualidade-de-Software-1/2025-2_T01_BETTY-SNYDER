@@ -708,11 +708,62 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#metricas-de-manutenabilidade" class="md-nav__link">
+  <a href="#metricas-de-manutenibilidade" class="md-nav__link">
     <span class="md-ellipsis">
-      Métricas de Manutenabilidade
+      Métricas de Manutenibilidade
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Métricas de Manutenibilidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grau-de-modularidade-gm-q1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grau de Modularidade (GM) — Q1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indice-de-acoplamento-entre-modulos-cbo-q2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Índice de Acoplamento entre Módulos (CBO) — Q2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cobertura-de-documentacao-cd-q3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cobertura de Documentação (CD) — Q3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#percentual-de-codigo-duplicado-dup-q4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Percentual de Código Duplicado (DUP) — Q4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cobertura-de-testes-automatizados-cta-q5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cobertura de Testes Automatizados (CTA) — Q5
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -886,25 +937,93 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 
 <h3 id="questoes-de-manutenabilidade">Questões de Manutenabilidade</h3>
 <p><strong>Q1:</strong> O código do ChamaControl é modular, com funções e classes bem organizadas?<br />
+<strong>Subcaracterística:</strong> <em>Modularidade</em><br />
 <strong>Hipótese 1:</strong> Mais de 80% das funções estão agrupadas de forma coerente e com responsabilidade clara, facilitando modificações.  </p>
 <p><strong>Q2:</strong> É possível modificar um módulo sem impactar outros componentes do sistema?<br />
+<strong>Subcaracterística:</strong> <em>Modificabilidade</em><br />
 <strong>Hipótese 2:</strong> Alterações em módulos independentes afetam menos de 10% de outros módulos, indicando baixo acoplamento. </p>
 <p><strong>Q3:</strong> O código contém documentação suficiente (comentários, README, guias de execução)?<br />
+<strong>Subcaracterística:</strong> <em>Analisabilidade</em><br />
 <strong>Hipótese 3:</strong> Pelo menos 90% das funções e módulos críticos possuem comentários e instruções básicas de manutenção.</p>
 <p><strong>Q4:</strong> Existe duplicação de código ou funções repetidas que possam dificultar manutenção?<br />
+<strong>Subcaracterística:</strong> <em>Reutilização</em><br />
 <strong>Hipótese 4:</strong> Menos de 10% do código é duplicado, permitindo maior facilidade de manutenção e evolução.  </p>
-<p><strong>Q5:</strong> É possível compreender rapidamente a lógica do sistema para realizar diagnósticos ou correções?<br />
-<strong>Hipótese 5:</strong> Desenvolvedores conseguem identificar e modificar funções críticas em menos de 30 minutos, na média.  </p>
-<h3 id="metricas-de-manutenabilidade">Métricas de Manutenabilidade</h3>
-<p>[Nome da Métrica]</p>
-<p>Objetivo:
-Descreva o que se pretende avaliar com essa métrica.</p>
-<p>Fórmula:
-Apresente a fórmula matemática ou o método de cálculo da métrica.</p>
-<p>Método de Coleta:
-Explique como os dados serão obtidos (ex: ferramentas, logs, medições automáticas).</p>
-<p>Interpretação / Observações:
-Descreva como interpretar os resultados e o que eles indicam sobre o desempenho do sistema.</p>
+<p><strong>Q5:</strong> O código permite a criação e execução eficiente de testes automatizados?<br />
+<strong>Subcaracterística:</strong> <em>Testabilidade</em><br />
+<strong>Hipótese 5:</strong> As funções principais possuem cobertura de teste automatizado superior a 80%. </p>
+<hr />
+<h3 id="metricas-de-manutenibilidade">Métricas de Manutenibilidade</h3>
+<h4 id="grau-de-modularidade-gm-q1">Grau de Modularidade (GM) — <em>Q1</em></h4>
+<p><strong>Objetivo:</strong><br />
+Verificar se o sistema possui módulos bem definidos e organizados, com responsabilidades claras.</p>
+<p><strong>Fórmula:</strong><br />
+Percentual de módulos com <em>Maintainability Rating</em> “A” ou “B” no SonarQube.</p>
+<p><strong>Coleta:</strong><br />
+Verificar no <strong>SonarQube</strong> os indicadores:<br />
+- <em>Maintainability Rating (A–E)</em><br />
+- <em>Code Smells</em> de baixa coesão<br />
+- <em>Technical Debt Ratio</em></p>
+<p><strong>Interpretação:</strong><br />
+≥ 80% → boa modularidade<br />
+60–79% → aceitável<br />
+&lt; 60% → modularidade fraca, possível acoplamento</p>
+<hr />
+<h4 id="indice-de-acoplamento-entre-modulos-cbo-q2">Índice de Acoplamento entre Módulos (CBO) — <em>Q2</em></h4>
+<p><strong>Objetivo:</strong><br />
+Avaliar o grau de dependência entre classes e módulos, medindo o impacto de alterações no sistema.</p>
+<p><strong>Fórmula:</strong><br />
+Valor médio do <em>Coupling Between Objects (CBO)</em> reportado pelo SonarQube.</p>
+<p><strong>Coleta:</strong><br />
+Usar o <strong>SonarQube</strong> para identificar:<br />
+- <em>CBO</em> por classe<br />
+- <em>Code Smells</em> de “Excessive coupling”<br />
+- <em>Complexity by file</em></p>
+<p><strong>Interpretação:</strong><br />
+≤ 10 → baixo acoplamento<br />
+11–25 → moderado<br />
+<code>&gt;</code> 25 → alto, difícil de manter</p>
+<hr />
+<h4 id="cobertura-de-documentacao-cd-q3">Cobertura de Documentação (CD) — <em>Q3</em></h4>
+<p><strong>Objetivo:</strong><br />
+Verificar se o código está bem documentado, com proporção adequada de comentários, README e guias de manutenção.</p>
+<p><strong>Fórmula:</strong><br />
+CD = Nível de documentação atribuído na escala de 1 a 5</p>
+<p><strong>Coleta:</strong><br />
+Realizar uma avaliação qualitativa do projeto, considerando:<br />
+- Presença e qualidade dos <strong>comentários no código</strong>;<br />
+- Existência e clareza do <strong>README</strong>;<br />
+- Disponibilidade de <strong>guias de instalação ou execução</strong>.  </p>
+<p><strong>Interpretação / Observações:</strong><br />
+1 - Documentação muito baixa: quase inexistente; ausência de comentários e guias.<br />
+2 - Documentação insuficiente: poucos comentários e README incompleto.<br />
+3 - Documentação mediana: explicações básicas e estrutura parcialmente clara.<br />
+4 - Documentação boa: código comentado e instruções compreensíveis.<br />
+5 - Documentação completa: comentários consistentes, README detalhado e guias claros.</p>
+<hr />
+<h4 id="percentual-de-codigo-duplicado-dup-q4">Percentual de Código Duplicado (DUP) — <em>Q4</em></h4>
+<p><strong>Objetivo:</strong><br />
+Avaliar a taxa de duplicação de código, que reduz a reutilização e aumenta o esforço de manutenção.</p>
+<p><strong>Fórmula:</strong><br />
+Valor de <strong>Duplicated Lines (%)</strong> reportado pelo SonarQube.</p>
+<p><strong>Coleta:</strong><br />
+Consultar no <strong>SonarQube</strong> a métrica <em>Duplicated Lines (%)</em>.</p>
+<p><strong>Interpretação:</strong><br />
+&lt; 10% → ótima reutilização<br />
+10–20% → aceitável<br />
+<code>&gt;</code> 20% → exige refatoração</p>
+<hr />
+<h4 id="cobertura-de-testes-automatizados-cta-q5">Cobertura de Testes Automatizados (CTA) — <em>Q5</em></h4>
+<p><strong>Objetivo:</strong><br />
+Avaliar a extensão dos testes automatizados sobre o código do sistema, medindo o quanto das funções e módulos principais estão cobertos por testes de unidade ou integração.</p>
+<p><strong>Fórmula:</strong><br />
+CTA = Percentual de <strong>Linhas cobertas (% Lines)</strong> reportado pelo Jest no relatório de cobertura.</p>
+<p><strong>Método de Coleta:</strong><br />
+Ferramenta de análise de cobertura de testes <strong>Jest</strong>, para gerar relatórios automáticos.  </p>
+<p><strong>Interpretação / Observações:</strong>
+≥ 80% → excelente cobertura
+60–79% → aceitável
+&lt; 60% → baixa testabilidade</p>
+<hr />
 <h2 id="objetivo-da-medicao-2-eficiencia-de-desempenho">Objetivo da Medição 2: Eficiência de Desempenho</h2>
 <table border="1">
   <tr>
