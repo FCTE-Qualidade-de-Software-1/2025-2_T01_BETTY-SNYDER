@@ -337,3 +337,4 @@ Meta recomendada ≥ 99% de uptime. Quedas recorrentes reduzem a eficiência per
 |-|-|-|-|-|
 |1.0 | 14/10/2025 | Criação do documento base|[Leonardo Sauma](https://github.com/leohssjr)||
 |1.1 | 14/10/2025 | Adição de objetivos e questões sobre as caracterísitcas Manutenabilidade e Eficiência de Desempenho|[Leonardo Sauma](https://github.com/leohssjr)||
+|1.2 | 15/10/2025 | Adição de diagramas para visualização das medições|[Filipe Bressanelli](https://github.com/fbressa)||
