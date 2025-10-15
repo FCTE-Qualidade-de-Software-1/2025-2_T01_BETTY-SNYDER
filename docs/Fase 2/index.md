@@ -42,13 +42,6 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
   </tr>
 </table>
 
-# Diagrama Manutenibilidade
-
-
-![diagramaManutenibilidade](../assets/metricasManutenibilidade.jpg)
-<div align="center">
-<p><em>Figura 1: Estrutura de avaliação da manutenibilidade com base em questões e métricas.</em></p>
-</div>
 
 ---
 
@@ -184,6 +177,13 @@ Ferramenta de análise de cobertura de testes **Jest**, para gerar relatórios a
 
 ---
 
+### Diagrama Manutenibilidade
+
+![diagramaManutenibilidade](../assets/metricasManutenibilidade.jpg)
+<div align="center">
+<p><em>Figura 1: Estrutura de avaliação da manutenibilidade com base em questões e métricas.</em></p>
+</div>
+
 ## Objetivo da Medição 2: Eficiência de Desempenho
 
 <table border="1">
@@ -201,7 +201,7 @@ Ferramenta de análise de cobertura de testes **Jest**, para gerar relatórios a
   </tr>
   <tr>
     <td>Do ponto de vista da</td>
-    <td>equipe de desenvolvimento</td>
+    <td>equipe de desenvolvimento e usuários finais</td>
   </tr>
   <tr>
     <td>No contexto da</td>
@@ -209,13 +209,7 @@ Ferramenta de análise de cobertura de testes **Jest**, para gerar relatórios a
   </tr>
 </table>
 
-# Diagrama Eficiência de Desempenho
 
-
-![diagramaEficiênciaDesempenho](../assets/metricasDesempenho.jpg)
-<div align="center">
-<p><em>Figura 2: Estrutura de avaliação da eficiência de desempenho com base em questões e métricas.</em></p>
-</div>
 
 ---
 
@@ -255,7 +249,6 @@ Ferramenta de análise de cobertura de testes **Jest**, para gerar relatórios a
 **Métricas utilizadas:** *Tempo até Primeiro Conteúdo (FCP)* e *Uso de CPU (Ucpu)*
 
 ---
-
 
 
 ### Métricas de Eficiência de Desempenho
@@ -327,6 +320,13 @@ Logs de implantação e monitoramento da hospedagem (por exemplo, uptime monitor
 - **Interpretação / Observações:**  
 Meta recomendada ≥ 99% de uptime. Quedas recorrentes reduzem a eficiência percebida e indicam falhas de infraestrutura.
 
+### Diagrama Eficiência de Desempenho
+
+
+![diagramaEficiênciaDesempenho](../assets/metricasDesempenho.jpg)
+<div align="center">
+<p><em>Figura 2: Estrutura de avaliação da eficiência de desempenho com base em questões e métricas.</em></p>
+</div>
 
 
 ## Referências Bibliográficas
