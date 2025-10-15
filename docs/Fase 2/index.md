@@ -47,28 +47,33 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 **Q1:** O código do ChamaControl é modular, com funções e classes bem organizadas?  
 **Subcaracterística:** *Modularidade*  
 **Hipótese 1:** Mais de 80% das funções estão agrupadas de forma coerente e com responsabilidade clara, facilitando modificações.  
+**Métricas utilizadas:** *Grau de Modularidade (GM)*
 
 **Q2:** É possível modificar um módulo sem impactar outros componentes do sistema?  
 **Subcaracterística:** *Modificabilidade*  
-**Hipótese 2:** Alterações em módulos independentes afetam menos de 10% de outros módulos, indicando baixo acoplamento. 
+**Hipótese 2:** Alterações em módulos independentes afetam menos de 10% de outros módulos, indicando baixo acoplamento.  
+**Métricas utilizadas:** *Índice de Acoplamento entre Módulos (CBO)*
 
 **Q3:** O código contém documentação suficiente (comentários, README, guias de execução)?  
 **Subcaracterística:** *Analisabilidade*  
-**Hipótese 3:** Pelo menos 90% das funções e módulos críticos possuem comentários e instruções básicas de manutenção.
+**Hipótese 3:** A maioria das funções possuem comentários e instruções de manutenção.  
+**Métricas utilizadas:** *Cobertura de Documentação (CD)*
 
 **Q4:** Existe duplicação de código ou funções repetidas que possam dificultar manutenção?  
 **Subcaracterística:** *Reutilização*  
 **Hipótese 4:** Menos de 10% do código é duplicado, permitindo maior facilidade de manutenção e evolução.  
+**Métricas utilizadas:** *Percentual de Código Duplicado (DUP)*
 
 **Q5:** O código permite a criação e execução eficiente de testes automatizados?  
 **Subcaracterística:** *Testabilidade*  
-**Hipótese 5:** As funções principais possuem cobertura de teste automatizado superior a 80%. 
+**Hipótese 5:** As funções principais possuem cobertura de teste automatizado superior a 80%.  
+**Métricas utilizadas:** *Cobertura de Testes Automatizados (CTA)* 
 
 ---
 
 ### Métricas de Manutenibilidade
 
-#### Grau de Modularidade (GM) — *Q1*
+#### Grau de Modularidade (GM)
 
 **Objetivo:**  
 Verificar se o sistema possui módulos bem definidos e organizados, com responsabilidades claras.
@@ -89,7 +94,7 @@ Verificar no **SonarQube** os indicadores:
 
 ---
 
-#### Índice de Acoplamento entre Módulos (CBO) — *Q2*
+#### Índice de Acoplamento entre Módulos (CBO)
 
 **Objetivo:**  
 Avaliar o grau de dependência entre classes e módulos, medindo o impacto de alterações no sistema.
@@ -110,7 +115,7 @@ Usar o **SonarQube** para identificar:
 
 ---
 
-#### Cobertura de Documentação (CD) — *Q3*
+#### Cobertura de Documentação (CD)
 
 **Objetivo:**  
 Verificar se o código está bem documentado, com proporção adequada de comentários, README e guias de manutenção.
@@ -133,7 +138,7 @@ Realizar uma avaliação qualitativa do projeto, considerando:
 
 ---
 
-#### Percentual de Código Duplicado (DUP) — *Q4*
+#### Percentual de Código Duplicado (DUP)
 
 **Objetivo:**  
 Avaliar a taxa de duplicação de código, que reduz a reutilização e aumenta o esforço de manutenção.
@@ -151,7 +156,7 @@ Consultar no **SonarQube** a métrica *Duplicated Lines (%)*.
 
 ---
 
-#### Cobertura de Testes Automatizados (CTA) — *Q5*
+#### Cobertura de Testes Automatizados (CTA)
 
 **Objetivo:**  
 Avaliar a extensão dos testes automatizados sobre o código do sistema, medindo o quanto das funções e módulos principais estão cobertos por testes de unidade ou integração.
