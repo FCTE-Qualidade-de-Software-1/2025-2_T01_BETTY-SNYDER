@@ -718,45 +718,45 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#grau-de-modularidade-gm-q1" class="md-nav__link">
+  <a href="#grau-de-modularidade-gm" class="md-nav__link">
     <span class="md-ellipsis">
-      Grau de Modularidade (GM) — Q1
+      Grau de Modularidade (GM)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#indice-de-acoplamento-entre-modulos-cbo-q2" class="md-nav__link">
+  <a href="#indice-de-acoplamento-entre-modulos-cbo" class="md-nav__link">
     <span class="md-ellipsis">
-      Índice de Acoplamento entre Módulos (CBO) — Q2
+      Índice de Acoplamento entre Módulos (CBO)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cobertura-de-documentacao-cd-q3" class="md-nav__link">
+  <a href="#cobertura-de-documentacao-cd" class="md-nav__link">
     <span class="md-ellipsis">
-      Cobertura de Documentação (CD) — Q3
+      Cobertura de Documentação (CD)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#percentual-de-codigo-duplicado-dup-q4" class="md-nav__link">
+  <a href="#percentual-de-codigo-duplicado-dup" class="md-nav__link">
     <span class="md-ellipsis">
-      Percentual de Código Duplicado (DUP) — Q4
+      Percentual de Código Duplicado (DUP)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cobertura-de-testes-automatizados-cta-q5" class="md-nav__link">
+  <a href="#cobertura-de-testes-automatizados-cta" class="md-nav__link">
     <span class="md-ellipsis">
-      Cobertura de Testes Automatizados (CTA) — Q5
+      Cobertura de Testes Automatizados (CTA)
     </span>
   </a>
   
@@ -938,22 +938,27 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 <h3 id="questoes-de-manutenabilidade">Questões de Manutenabilidade</h3>
 <p><strong>Q1:</strong> O código do ChamaControl é modular, com funções e classes bem organizadas?<br />
 <strong>Subcaracterística:</strong> <em>Modularidade</em><br />
-<strong>Hipótese 1:</strong> Mais de 80% das funções estão agrupadas de forma coerente e com responsabilidade clara, facilitando modificações.  </p>
+<strong>Hipótese 1:</strong> Mais de 80% das funções estão agrupadas de forma coerente e com responsabilidade clara, facilitando modificações.<br />
+<strong>Métricas utilizadas:</strong> <em>Grau de Modularidade (GM)</em></p>
 <p><strong>Q2:</strong> É possível modificar um módulo sem impactar outros componentes do sistema?<br />
 <strong>Subcaracterística:</strong> <em>Modificabilidade</em><br />
-<strong>Hipótese 2:</strong> Alterações em módulos independentes afetam menos de 10% de outros módulos, indicando baixo acoplamento. </p>
+<strong>Hipótese 2:</strong> Alterações em módulos independentes afetam menos de 10% de outros módulos, indicando baixo acoplamento.<br />
+<strong>Métricas utilizadas:</strong> <em>Índice de Acoplamento entre Módulos (CBO)</em></p>
 <p><strong>Q3:</strong> O código contém documentação suficiente (comentários, README, guias de execução)?<br />
 <strong>Subcaracterística:</strong> <em>Analisabilidade</em><br />
-<strong>Hipótese 3:</strong> Pelo menos 90% das funções e módulos críticos possuem comentários e instruções básicas de manutenção.</p>
+<strong>Hipótese 3:</strong> A maioria das funções possuem comentários e instruções de manutenção.<br />
+<strong>Métricas utilizadas:</strong> <em>Cobertura de Documentação (CD)</em></p>
 <p><strong>Q4:</strong> Existe duplicação de código ou funções repetidas que possam dificultar manutenção?<br />
 <strong>Subcaracterística:</strong> <em>Reutilização</em><br />
-<strong>Hipótese 4:</strong> Menos de 10% do código é duplicado, permitindo maior facilidade de manutenção e evolução.  </p>
+<strong>Hipótese 4:</strong> Menos de 10% do código é duplicado, permitindo maior facilidade de manutenção e evolução.<br />
+<strong>Métricas utilizadas:</strong> <em>Percentual de Código Duplicado (DUP)</em></p>
 <p><strong>Q5:</strong> O código permite a criação e execução eficiente de testes automatizados?<br />
 <strong>Subcaracterística:</strong> <em>Testabilidade</em><br />
-<strong>Hipótese 5:</strong> As funções principais possuem cobertura de teste automatizado superior a 80%. </p>
+<strong>Hipótese 5:</strong> As funções principais possuem cobertura de teste automatizado superior a 80%.<br />
+<strong>Métricas utilizadas:</strong> <em>Cobertura de Testes Automatizados (CTA)</em> </p>
 <hr />
 <h3 id="metricas-de-manutenibilidade">Métricas de Manutenibilidade</h3>
-<h4 id="grau-de-modularidade-gm-q1">Grau de Modularidade (GM) — <em>Q1</em></h4>
+<h4 id="grau-de-modularidade-gm">Grau de Modularidade (GM)</h4>
 <p><strong>Objetivo:</strong><br />
 Verificar se o sistema possui módulos bem definidos e organizados, com responsabilidades claras.</p>
 <p><strong>Fórmula:</strong><br />
@@ -968,7 +973,7 @@ Verificar no <strong>SonarQube</strong> os indicadores:<br />
 - 60–79% → aceitável<br />
 - &lt; 60% → modularidade fraca, possível acoplamento</p>
 <hr />
-<h4 id="indice-de-acoplamento-entre-modulos-cbo-q2">Índice de Acoplamento entre Módulos (CBO) — <em>Q2</em></h4>
+<h4 id="indice-de-acoplamento-entre-modulos-cbo">Índice de Acoplamento entre Módulos (CBO)</h4>
 <p><strong>Objetivo:</strong><br />
 Avaliar o grau de dependência entre classes e módulos, medindo o impacto de alterações no sistema.</p>
 <p><strong>Fórmula:</strong><br />
@@ -983,7 +988,7 @@ Usar o <strong>SonarQube</strong> para identificar:<br />
 - 11–25 → moderado<br />
 - &gt; 25 → alto, difícil de manter</p>
 <hr />
-<h4 id="cobertura-de-documentacao-cd-q3">Cobertura de Documentação (CD) — <em>Q3</em></h4>
+<h4 id="cobertura-de-documentacao-cd">Cobertura de Documentação (CD)</h4>
 <p><strong>Objetivo:</strong><br />
 Verificar se o código está bem documentado, com proporção adequada de comentários, README e guias de manutenção.</p>
 <p><strong>Fórmula:</strong><br />
@@ -1000,7 +1005,7 @@ Realizar uma avaliação qualitativa do projeto, considerando:<br />
 4 - Documentação boa: código comentado e instruções compreensíveis.<br />
 5 - Documentação completa: comentários consistentes, README detalhado e guias claros.</p>
 <hr />
-<h4 id="percentual-de-codigo-duplicado-dup-q4">Percentual de Código Duplicado (DUP) — <em>Q4</em></h4>
+<h4 id="percentual-de-codigo-duplicado-dup">Percentual de Código Duplicado (DUP)</h4>
 <p><strong>Objetivo:</strong><br />
 Avaliar a taxa de duplicação de código, que reduz a reutilização e aumenta o esforço de manutenção.</p>
 <p><strong>Fórmula:</strong><br />
@@ -1012,7 +1017,7 @@ Consultar no <strong>SonarQube</strong> a métrica <em>Duplicated Lines (%)</em>
 - 10–20% → aceitável<br />
 - &gt; 20% → exige refatoração</p>
 <hr />
-<h4 id="cobertura-de-testes-automatizados-cta-q5">Cobertura de Testes Automatizados (CTA) — <em>Q5</em></h4>
+<h4 id="cobertura-de-testes-automatizados-cta">Cobertura de Testes Automatizados (CTA)</h4>
 <p><strong>Objetivo:</strong><br />
 Avaliar a extensão dos testes automatizados sobre o código do sistema, medindo o quanto das funções e módulos principais estão cobertos por testes de unidade ou integração.</p>
 <p><strong>Fórmula:</strong><br />
