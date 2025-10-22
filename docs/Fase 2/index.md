@@ -54,7 +54,7 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 
 ### Questões de Manutenabilidade
 
-**Q1:** O código do ChamaControl é modular, com funções e classes bem organizadas?  
+**Q1:** O código do ChamaControl é modular?  
 **Subcaracterística:** *Modularidade*  
 **Hipótese 1:** Mais de 80% das funções estão agrupadas de forma coerente e com responsabilidade clara, facilitando modificações.  
 **Métricas utilizadas:** *Grau de Modularidade (GM)*
@@ -64,7 +64,7 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 **Hipótese 2:** Alterações em módulos independentes afetam menos de 10% de outros módulos, indicando baixo acoplamento.  
 **Métricas utilizadas:** *Índice de Acoplamento entre Módulos (CBO)*
 
-**Q3:** O código contém documentação suficiente (comentários, README, guias de execução)?  
+**Q3:** O código contém documentação suficiente?  
 **Subcaracterística:** *Analisabilidade*  
 **Hipótese 3:** A maioria das funções possuem comentários e instruções de manutenção.  
 **Métricas utilizadas:** *Cobertura de Documentação (CD)*
@@ -78,6 +78,12 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 **Subcaracterística:** *Testabilidade*  
 **Hipótese 5:** As funções principais possuem cobertura de teste automatizado superior a 80%.  
 **Métricas utilizadas:** *Cobertura de Testes Automatizados (CTA)* 
+
+**Q6:** O nível de complexidade do código impacta a facilidade de manutenção e evolução do sistema?
+
+**Subcaracterística:** Analisabilidade
+**Hipótese 6:** As funções apresentam complexidade ciclomática média inferior a 10, indicando que o código é de fácil compreensão e exige menor esforço para manutenção.
+**Métricas utilizadas:** Complexidade Ciclomática Média (CCM)
 
 ---
 
@@ -139,6 +145,12 @@ Realizar uma avaliação qualitativa do projeto, considerando:
 - Existência e clareza do **README**;  
 - Disponibilidade de **guias de instalação ou execução**.  
 
+**Um bom comentário é aquele que:**
+
+- Explica o **motivo** da escolha, não o óbvio.  
+- Está **atualizado** e **coerente** com o código.  
+- Segue **padrões consistentes** e contribui para a **manutenibilidade**.  
+
 **Interpretação / Observações:**  
 1 - Documentação muito baixa: quase inexistente; ausência de comentários e guias.  
 2 - Documentação insuficiente: poucos comentários e README incompleto.  
@@ -182,6 +194,53 @@ Ferramenta de análise de cobertura de testes **Jest**, para gerar relatórios a
 - 60–79% → aceitável
 - < 60% → baixa testabilidade
 
+#### Complexidade Ciclomática Média (CCM)
+
+**Objetivo:**   
+Avaliar o nível de complexidade lógica das funções e métodos do sistema, medindo o esforço necessário para compreender, testar e manter o código.
+
+**Fórmula:**   
+
+Complexidade por função (McCabe):
+\[
+CC = E - N + 2P
+\]
+
+Onde:  
+- *E* = número de arestas (fluxos de controle entre blocos de código)  
+- *N* = número de nós (blocos de código ou instruções)  
+- *P* = número de componentes conectados (geralmente 1 por função)
+
+Simplificação prática:
+\[
+CC = \text{Número de estruturas de decisão} + 1
+\]
+
+Complexidade Ciclomática Média do sistema:
+\[
+CCM = \frac{\sum_{i=1}^{n} CC_i}{n}
+\]
+
+Onde:  
+- *CCM* = Complexidade Ciclomática Média do sistema  
+- *CC_i* = Complexidade Ciclomática da função i  
+- *n* = número total de funções ou métodos analisados
+
+**Método de Coleta:** 
+Verificar no SonarQube os seguintes indicadores:  
+- Cyclomatic Complexity por função, classe ou arquivo  
+- Cognitive Complexity (para análise complementar de legibilidade)  
+- Code Smells relacionados a estruturas de decisão excessivas (if, switch, for, while aninhados)
+
+**Interpretação / Observações:**  
+- *≤ 10* → Boa manutenibilidade: código simples, fácil de entender e testar  
+- *11–20* → Complexidade moderada: manutenção possível, mas requer atenção em revisões  
+- *> 20* → Alta complexidade: difícil de entender e testar, recomenda-se refatoração
+
+Oservações:  
+- Valores altos de CCM indicam funções com muitos caminhos de execução, dificultando a testabilidade e aumentando o risco de falhas  
+- Recomenda-se refatorar métodos com CCM acima de 15, dividindo-os em funções menores e mais coesas  
+- Essa métrica está diretamente relacionada às subcaracterísticas *Analisabilidade* e *Modificabilidade, ambas da **Manutenibilidade*
 ---
 
 ## Objetivo da Medição 2: Eficiência de Desempenho
@@ -221,19 +280,19 @@ Ferramenta de análise de cobertura de testes **Jest**, para gerar relatórios a
 
 ### Questões de Eficiência de Desempenho
 
-**Q1:** O sistema responde rapidamente às requisições da interface e da API?  
+**Q1:** O sistema responde rapidamente?  
 **Hipótese 1:** O tempo médio de resposta das APIs e das páginas é inferior a **2 segundos** em mais de **90% das consultas**.  
 **Métricas utilizadas:** *Tempo Médio de Resposta (TR)*  
 
 ---
 
-**Q2:** O carregamento dos dashboards e gráficos é ágil e sem travamentos?  
+**Q2:** O carregamento é ágil e sem travamentos?  
 **Hipótese 2:** Mais de **95%** dos gráficos e dashboards carregam completamente em menos de **3 segundos**.  
 **Métricas utilizadas:** *Tempo até Primeiro Conteúdo (FCP)*
 
 ---
 
-**Q3:** O consumo de CPU e memória durante a execução do sistema está dentro de limites aceitáveis?  
+**Q3:** O sistema consome muita memória e CPU?  
 **Hipótese 3:** O uso de CPU não ultrapassa **70%** e a memória utilizada não ultrapassa **80%** da capacidade disponível durante operações críticas.  
 **Métricas utilizadas:** *Uso de CPU (Ucpu)* e *Uso de Memória (Umem)*
 
