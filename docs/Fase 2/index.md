@@ -75,7 +75,9 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 **Q6:** O nível de complexidade do código impacta a facilidade de manutenção e evolução do sistema?
 
 **Subcaracterística:** Analisabilidade
+
 **Hipótese 6:** As funções apresentam complexidade ciclomática média inferior a 10, indicando que o código é de fácil compreensão e exige menor esforço para manutenção.
+
 **Métricas utilizadas:** Complexidade Ciclomática Média (CCM)
 
 ---
