@@ -42,13 +42,6 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
   </tr>
 </table>
 
-# Diagrama Manutenibilidade
-
-
-![diagramaManutenibilidade](../assets/metricasManutenibilidade.jpg)
-<div align="center">
-<p><em>Figura 1: Estrutura de avaliação da manutenibilidade com base em questões e métricas.</em></p>
-</div>
 
 ---
 
@@ -243,6 +236,13 @@ Oservações:
 - Essa métrica está diretamente relacionada às subcaracterísticas *Analisabilidade* e *Modificabilidade, ambas da **Manutenibilidade*
 ---
 
+### Diagrama Manutenibilidade
+
+![diagramaManutenibilidade](../assets/metricasManutenibilidade.jpg)
+<div align="center">
+<p><em>Figura 1: Estrutura de avaliação da manutenibilidade com base em questões e métricas.</em></p>
+</div>
+
 ## Objetivo da Medição 2: Eficiência de Desempenho
 
 <table border="1">
@@ -260,7 +260,7 @@ Oservações:
   </tr>
   <tr>
     <td>Do ponto de vista da</td>
-    <td>equipe de desenvolvimento</td>
+    <td>equipe de desenvolvimento e usuários finais</td>
   </tr>
   <tr>
     <td>No contexto da</td>
@@ -268,13 +268,7 @@ Oservações:
   </tr>
 </table>
 
-# Diagrama Eficiência de Desempenho
 
-
-![diagramaEficiênciaDesempenho](../assets/metricasDesempenho.jpg)
-<div align="center">
-<p><em>Figura 2: Estrutura de avaliação da eficiência de desempenho com base em questões e métricas.</em></p>
-</div>
 
 ---
 
@@ -314,7 +308,6 @@ Oservações:
 **Métricas utilizadas:** *Tempo até Primeiro Conteúdo (FCP)* e *Uso de CPU (Ucpu)*
 
 ---
-
 
 
 ### Métricas de Eficiência de Desempenho
@@ -386,6 +379,13 @@ Logs de implantação e monitoramento da hospedagem (por exemplo, uptime monitor
 - **Interpretação / Observações:**  
 Meta recomendada ≥ 99% de uptime. Quedas recorrentes reduzem a eficiência percebida e indicam falhas de infraestrutura.
 
+### Diagrama Eficiência de Desempenho
+
+
+![diagramaEficiênciaDesempenho](../assets/metricasDesempenho.jpg)
+<div align="center">
+<p><em>Figura 2: Estrutura de avaliação da eficiência de desempenho com base em questões e métricas.</em></p>
+</div>
 
 
 ## Referências Bibliográficas
@@ -408,4 +408,5 @@ Meta recomendada ≥ 99% de uptime. Quedas recorrentes reduzem a eficiência per
 |-|-|-|-|-|
 |1.0 | 14/10/2025 | Criação do documento base|[Leonardo Sauma](https://github.com/leohssjr)||
 |1.1 | 14/10/2025 | Adição de objetivos e questões sobre as caracterísitcas Manutenabilidade e Eficiência de Desempenho|[Leonardo Sauma](https://github.com/leohssjr)||
-|1.2 | 15/10/2025 | Adição de diagramas para visualização das medições|[Filipe Bressanelli](https://github.com/fbressa)||
+|1.2 | 14/10/2025 | Inclusão das métricas detalhadas de Eficiência de Desempenho (TR, FCP, Ucpu, Umem, TD) e revisão da estrutura GQM|[Breno Fernandes](https://github.com/BrenoFrds)||
+|1.3 | 15/10/2025 | Adição de diagramas para visualização das medições|[Filipe Bressanelli](https://github.com/fbressa)||
