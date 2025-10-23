@@ -197,9 +197,7 @@ Avaliar o nível de complexidade lógica das funções e métodos do sistema, me
 
 Complexidade por função (McCabe):
 
-$$
-CC = E - N + 2P
-$$
+*CC = E - N + 2P*  
 
 Onde:  
 - *E* = número de arestas (fluxos de controle entre blocos de código)  
@@ -207,14 +205,14 @@ Onde:
 - *P* = número de componentes conectados (geralmente 1 por função)
 
 Simplificação prática:
-$$
-CC = \text{Número de estruturas de decisão} + 1
-$$
+
+*CC = Número de estruturas de decisão + 1*  
+
 
 Complexidade Ciclomática Média do sistema:
-$$
-CCM = \frac{\sum_{i=1}^{n} CC_i}{n}
-$$
+
+*CCM = (Σ CCᵢ) / n*  
+
 
 Onde:  
 - *CCM* = Complexidade Ciclomática Média do sistema  
