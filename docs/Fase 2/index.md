@@ -72,12 +72,9 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 **Hipótese 5:** As funções principais possuem cobertura de teste automatizado superior a 80%.  
 **Métricas utilizadas:** *Cobertura de Testes Automatizados (CTA)* 
 
-**Q6:** O nível de complexidade do código impacta a facilidade de manutenção e evolução do sistema?
-
-**Subcaracterística:** Analisabilidade
-
-**Hipótese 6:** As funções apresentam complexidade ciclomática média inferior a 10, indicando que o código é de fácil compreensão e exige menor esforço para manutenção.
-
+**Q6:** O nível de complexidade do código impacta a facilidade de manutenção e evolução do sistema?   
+**Subcaracterística:** *Analisabilidade*  
+**Hipótese 6:** As funções apresentam complexidade ciclomática média inferior a 10, indicando que o código é de fácil compreensão e exige menor esforço para manutenção.  
 **Métricas utilizadas:** Complexidade Ciclomática Média (CCM)
 
 ---
@@ -197,9 +194,10 @@ Avaliar o nível de complexidade lógica das funções e métodos do sistema, me
 **Fórmula:**   
 
 Complexidade por função (McCabe):
-\[
+
+$$
 CC = E - N + 2P
-\]
+$$
 
 Onde:  
 - *E* = número de arestas (fluxos de controle entre blocos de código)  
@@ -207,14 +205,14 @@ Onde:
 - *P* = número de componentes conectados (geralmente 1 por função)
 
 Simplificação prática:
-\[
+$$
 CC = \text{Número de estruturas de decisão} + 1
-\]
+$$
 
 Complexidade Ciclomática Média do sistema:
-\[
+$$
 CCM = \frac{\sum_{i=1}^{n} CC_i}{n}
-\]
+$$
 
 Onde:  
 - *CCM* = Complexidade Ciclomática Média do sistema  
