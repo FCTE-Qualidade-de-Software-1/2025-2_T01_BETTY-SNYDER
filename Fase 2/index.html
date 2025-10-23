@@ -776,15 +776,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#diagrama-manutenibilidade" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diagrama Manutenibilidade
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -870,9 +861,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#diagrama-eficiencia-de-desempenho" class="md-nav__link">
+  <a href="#diagrama-gqm" class="md-nav__link">
     <span class="md-ellipsis">
-      Diagrama Eficiência de Desempenho
+      Diagrama GQM
     </span>
   </a>
   
@@ -987,7 +978,7 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 <p><strong>Q6:</strong> O nível de complexidade do código impacta a facilidade de manutenção e evolução do sistema? <br />
 <strong>Subcaracterística:</strong> <em>Analisabilidade</em><br />
 <strong>Hipótese 6:</strong> As funções apresentam complexidade ciclomática média inferior a 10, indicando que o código é de fácil compreensão e exige menor esforço para manutenção.<br />
-<strong>Métricas utilizadas:</strong> Complexidade Ciclomática Média (CCM)</p>
+<strong>Métricas utilizadas:</strong> <em>Complexidade Ciclomática Média (CCM)</em></p>
 <hr />
 <h3 id="metricas-de-manutenibilidade">Métricas de Manutenibilidade</h3>
 <h4 id="grau-de-modularidade-gm">Grau de Modularidade (GM)</h4>
@@ -1099,12 +1090,6 @@ Verificar no SonarQube os seguintes indicadores:<br />
 - Recomenda-se refatorar métodos com CCM acima de 15, dividindo-os em funções menores e mais coesas<br />
 - Essa métrica está diretamente relacionada às subcaracterísticas <em>Analisabilidade</em> e <em>Modificabilidade, ambas da </em><em>Manutenibilidade</em></p>
 <hr />
-<h3 id="diagrama-manutenibilidade">Diagrama Manutenibilidade</h3>
-<p><img alt="diagramaManutenibilidade" src="../assets/metricasManutenibilidade.jpg" /></p>
-<div align="center">
-<p><em>Figura 1: Estrutura de avaliação da manutenibilidade com base em questões e métricas.</em></p>
-</div>
-
 <h2 id="objetivo-da-medicao-2-eficiencia-de-desempenho">Objetivo da Medição 2: Eficiência de Desempenho</h2>
 <table border="1">
   <tr>
@@ -1131,27 +1116,34 @@ Verificar no SonarQube os seguintes indicadores:<br />
 
 <hr />
 <h3 id="questoes-de-eficiencia-de-desempenho">Questões de Eficiência de Desempenho</h3>
-<p><strong>Q1:</strong> O sistema responde rapidamente?<br />
+<p><strong>Q1:</strong> O sistema responde rapidamente no lado do servidor? 
+<strong>Subcaracterística:</strong> <em>Comportamento em Relação ao Tempo</em> 
 <strong>Hipótese 1:</strong> O tempo médio de resposta das APIs e das páginas é inferior a <strong>2 segundos</strong> em mais de <strong>90% das consultas</strong>.<br />
 <strong>Métricas utilizadas:</strong> <em>Tempo Médio de Resposta (TR)</em>  </p>
 <hr />
-<p><strong>Q2:</strong> O carregamento é ágil e sem travamentos?<br />
+<p><strong>Q2:</strong> O carregamento é ágil e sem travamentos no lado do cliente?
+<strong>Subcaracterística:</strong> <em>Comportamento em Relação ao Tempo</em><br />
 <strong>Hipótese 2:</strong> Mais de <strong>95%</strong> dos gráficos e dashboards carregam completamente em menos de <strong>3 segundos</strong>.<br />
 <strong>Métricas utilizadas:</strong> <em>Tempo até Primeiro Conteúdo (FCP)</em></p>
 <hr />
-<p><strong>Q3:</strong> O sistema consome muita memória e CPU?<br />
+<p><strong>Q3:</strong> O sistema consome muita memória e CPU?
+<strong>Subcaracterística:</strong> <em>Utilização de Recursos</em><br />
 <strong>Hipótese 3:</strong> O uso de CPU não ultrapassa <strong>70%</strong> e a memória utilizada não ultrapassa <strong>80%</strong> da capacidade disponível durante operações críticas.<br />
 <strong>Métricas utilizadas:</strong> <em>Uso de CPU (Ucpu)</em> e <em>Uso de Memória (Umem)</em></p>
 <hr />
-<p><strong>Q4:</strong> O sistema mantém desempenho estável com múltiplos usuários simultâneos?<br />
+<p><strong>Q4:</strong> O sistema mantém desempenho estável com múltiplos usuários simultâneos?
+<strong>Subcaracterística:</strong> <em>Capacidade</em><br />
 <strong>Hipótese 4:</strong> Até <strong>50 usuários simultâneos</strong> não causam degradação significativa no tempo de resposta ou erros de execução.<br />
 <strong>Métricas utilizadas:</strong> <em>Tempo Médio de Resposta (TR)</em>, <em>Uso de CPU (Ucpu)</em> e <em>Uso de Memória (Umem)</em></p>
 <hr />
-<p><strong>Q5:</strong> O processo de atualização diária de dados é concluído dentro do prazo esperado?<br />
+<p><strong>Q5:</strong> O processo de atualização diária de dados é concluído dentro do prazo esperado? 
+<strong>Subcaracterística:</strong> <em>Comportamento em Relação ao Tempo</em> 
 <strong>Hipótese 5:</strong> Os <em>scrapers</em> e pipelines processam os dados diários em menos de <strong>30 minutos</strong> em <strong>95% das execuções</strong>.<br />
 <strong>Métricas utilizadas:</strong> <em>Tempo Médio de Resposta (TR)</em> e <em>Taxa de Disponibilidade (TD)</em></p>
 <hr />
-<p><strong>Q6:</strong> As consultas ao banco de dados e o processamento das informações sobre queimadas estão otimizados?<br />
+<p><strong>Q6:</strong> As consultas ao banco de dados e o processamento das informações sobre queimadas estão otimizados? 
+<strong>Subcaracterística:</strong> <em>Utilização de Recursos</em> 
+<strong>Hipótese 6:</strong> As consultas ao banco e o processamento dos dados de queimadas estão otimizados quando <strong>FCP &lt; 1,5 s</strong> e <strong>Ucpu &lt; 65%</strong> em <strong>95%</strong> das execuções.
 <strong>Métricas utilizadas:</strong> <em>Tempo até Primeiro Conteúdo (FCP)</em> e <em>Uso de CPU (Ucpu)</em></p>
 <hr />
 <h3 id="metricas-de-eficiencia-de-desempenho">Métricas de Eficiência de Desempenho</h3>
@@ -1246,10 +1238,19 @@ Logs de implantação e monitoramento da hospedagem (por exemplo, uptime monitor
 Meta recomendada ≥ 99% de uptime. Quedas recorrentes reduzem a eficiência percebida e indicam falhas de infraestrutura.</p>
 </li>
 </ul>
-<h3 id="diagrama-eficiencia-de-desempenho">Diagrama Eficiência de Desempenho</h3>
-<p><img alt="diagramaEficiênciaDesempenho" src="../assets/metricasDesempenho.jpg" /></p>
+<h3 id="diagrama-gqm">Diagrama GQM</h3>
 <div align="center">
-<p><em>Figura 2: Estrutura de avaliação da eficiência de desempenho com base em questões e métricas.</em></p>
+  <a href="../assets/GQM-VersaoFinal.svg" target="_blank" rel="noopener noreferrer">
+    <img src="../assets/GQM-VersaoFinal.svg" alt="diagramaEficiênciaDesempenho" style="max-width:100%;height:auto;border:1px solid #ddd;">
+  </a>
+
+  <div id="gqm-lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);align-items:center;justify-content:center;z-index:9999;">
+    <button id="gqm-close" aria-label="Fechar" style="position:absolute;top:1rem;right:1rem;font-size:2rem;color:#fff;background:transparent;border:none;cursor:pointer;">&times;</button>
+    <img id="gqm-full" src="../assets/GQM-VersaoFinal.svg" alt="Diagrama ampliado" style="max-width:92%;max-height:92%;box-shadow:0 0 16px rgba(0,0,0,.5);">
+  </div>
+</div>
+<div align="center">
+  <p><em>Figura 1: Estrutura de avaliação ds características com base em questões e métricas.</em></p>
 </div>
 
 <h2 id="referencias-bibliograficas">Referências Bibliográficas</h2>
@@ -1300,6 +1301,13 @@ Meta recomendada ≥ 99% de uptime. Quedas recorrentes reduzem a eficiência per
 <td>Adição de diagramas para visualização das medições</td>
 <td><a href="https://github.com/fbressa">Filipe Bressanelli</a></td>
 <td></td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>22/10/2025</td>
+<td>Correção de detalhes nas questoes e adiçao do diagrama geral GQM</td>
+<td><a href="https://github.com/SAnjos3">Gabriel Soares</a></td>
+<td><a href="https://github.com/sidts">Enrico Zoratto</a></td>
 </tr>
 </tbody>
 </table>
