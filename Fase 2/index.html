@@ -1072,21 +1072,15 @@ Ferramenta de análise de cobertura de testes <strong>Jest</strong>, para gerar 
 Avaliar o nível de complexidade lógica das funções e métodos do sistema, medindo o esforço necessário para compreender, testar e manter o código.</p>
 <p><strong>Fórmula:</strong>   </p>
 <p>Complexidade por função (McCabe):</p>
-<p>$$
-CC = E - N + 2P
-$$</p>
+<p><em>CC = E - N + 2P</em>  </p>
 <p>Onde:<br />
 - <em>E</em> = número de arestas (fluxos de controle entre blocos de código)<br />
 - <em>N</em> = número de nós (blocos de código ou instruções)<br />
 - <em>P</em> = número de componentes conectados (geralmente 1 por função)</p>
-<p>Simplificação prática:
-$$
-CC = \text{Número de estruturas de decisão} + 1
-$$</p>
-<p>Complexidade Ciclomática Média do sistema:
-$$
-CCM = \frac{\sum_{i=1}^{n} CC_i}{n}
-$$</p>
+<p>Simplificação prática:</p>
+<p><em>CC = Número de estruturas de decisão + 1</em>  </p>
+<p>Complexidade Ciclomática Média do sistema:</p>
+<p><em>CCM = (Σ CCᵢ) / n</em>  </p>
 <p>Onde:<br />
 - <em>CCM</em> = Complexidade Ciclomática Média do sistema<br />
 - <em>CC_i</em> = Complexidade Ciclomática da função i<br />
