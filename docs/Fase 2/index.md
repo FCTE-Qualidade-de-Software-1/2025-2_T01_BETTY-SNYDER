@@ -186,6 +186,8 @@ Ferramenta de análise de cobertura de testes **Jest**, para gerar relatórios a
 - 60–79% → aceitável
 - < 60% → baixa testabilidade
 
+---
+
 #### Complexidade Ciclomática Média (CCM)
 
 **Objetivo:**   
