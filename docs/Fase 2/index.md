@@ -75,7 +75,7 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 **Q6:** O nível de complexidade do código impacta a facilidade de manutenção e evolução do sistema?   
 **Subcaracterística:** *Analisabilidade*  
 **Hipótese 6:** As funções apresentam complexidade ciclomática média inferior a 10, indicando que o código é de fácil compreensão e exige menor esforço para manutenção.  
-**Métricas utilizadas:** Complexidade Ciclomática Média (CCM)
+**Métricas utilizadas:** *Complexidade Ciclomática Média (CCM)*
 
 ---
 
@@ -236,13 +236,6 @@ Oservações:
 - Essa métrica está diretamente relacionada às subcaracterísticas *Analisabilidade* e *Modificabilidade, ambas da **Manutenibilidade*
 ---
 
-### Diagrama Manutenibilidade
-
-![diagramaManutenibilidade](../assets/metricasManutenibilidade.jpg)
-<div align="center">
-<p><em>Figura 1: Estrutura de avaliação da manutenibilidade com base em questões e métricas.</em></p>
-</div>
-
 ## Objetivo da Medição 2: Eficiência de Desempenho
 
 <table border="1">
@@ -274,37 +267,44 @@ Oservações:
 
 ### Questões de Eficiência de Desempenho
 
-**Q1:** O sistema responde rapidamente?  
+**Q1:** O sistema responde rapidamente no lado do servidor? 
+**Subcaracterística:** *Comportamento em Relação ao Tempo* 
 **Hipótese 1:** O tempo médio de resposta das APIs e das páginas é inferior a **2 segundos** em mais de **90% das consultas**.  
 **Métricas utilizadas:** *Tempo Médio de Resposta (TR)*  
 
 ---
 
-**Q2:** O carregamento é ágil e sem travamentos?  
+**Q2:** O carregamento é ágil e sem travamentos no lado do cliente?
+**Subcaracterística:** *Comportamento em Relação ao Tempo*  
 **Hipótese 2:** Mais de **95%** dos gráficos e dashboards carregam completamente em menos de **3 segundos**.  
 **Métricas utilizadas:** *Tempo até Primeiro Conteúdo (FCP)*
 
 ---
 
-**Q3:** O sistema consome muita memória e CPU?  
+**Q3:** O sistema consome muita memória e CPU?
+**Subcaracterística:** *Utilização de Recursos*  
 **Hipótese 3:** O uso de CPU não ultrapassa **70%** e a memória utilizada não ultrapassa **80%** da capacidade disponível durante operações críticas.  
 **Métricas utilizadas:** *Uso de CPU (Ucpu)* e *Uso de Memória (Umem)*
 
 ---
 
-**Q4:** O sistema mantém desempenho estável com múltiplos usuários simultâneos?  
+**Q4:** O sistema mantém desempenho estável com múltiplos usuários simultâneos?
+**Subcaracterística:** *Capacidade*  
 **Hipótese 4:** Até **50 usuários simultâneos** não causam degradação significativa no tempo de resposta ou erros de execução.  
 **Métricas utilizadas:** *Tempo Médio de Resposta (TR)*, *Uso de CPU (Ucpu)* e *Uso de Memória (Umem)*
 
 ---
 
-**Q5:** O processo de atualização diária de dados é concluído dentro do prazo esperado?  
+**Q5:** O processo de atualização diária de dados é concluído dentro do prazo esperado? 
+**Subcaracterística:** *Comportamento em Relação ao Tempo* 
 **Hipótese 5:** Os *scrapers* e pipelines processam os dados diários em menos de **30 minutos** em **95% das execuções**.  
 **Métricas utilizadas:** *Tempo Médio de Resposta (TR)* e *Taxa de Disponibilidade (TD)*
 
 ---
 
-**Q6:** As consultas ao banco de dados e o processamento das informações sobre queimadas estão otimizados?  
+**Q6:** As consultas ao banco de dados e o processamento das informações sobre queimadas estão otimizados? 
+**Subcaracterística:** *Utilização de Recursos* 
+**Hipótese 6:** As consultas ao banco e o processamento dos dados de queimadas estão otimizados quando **FCP < 1,5 s** e **Ucpu < 65%** em **95%** das execuções.
 **Métricas utilizadas:** *Tempo até Primeiro Conteúdo (FCP)* e *Uso de CPU (Ucpu)*
 
 ---
@@ -379,12 +379,20 @@ Logs de implantação e monitoramento da hospedagem (por exemplo, uptime monitor
 - **Interpretação / Observações:**  
 Meta recomendada ≥ 99% de uptime. Quedas recorrentes reduzem a eficiência percebida e indicam falhas de infraestrutura.
 
-### Diagrama Eficiência de Desempenho
+### Diagrama GQM
 
-
-![diagramaEficiênciaDesempenho](../assets/metricasDesempenho.jpg)
 <div align="center">
-<p><em>Figura 2: Estrutura de avaliação da eficiência de desempenho com base em questões e métricas.</em></p>
+  <a href="../assets/GQM-VersaoFinal.svg" target="_blank" rel="noopener noreferrer">
+    <img src="../assets/GQM-VersaoFinal.svg" alt="diagramaEficiênciaDesempenho" style="max-width:100%;height:auto;border:1px solid #ddd;">
+  </a>
+
+  <div id="gqm-lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);align-items:center;justify-content:center;z-index:9999;">
+    <button id="gqm-close" aria-label="Fechar" style="position:absolute;top:1rem;right:1rem;font-size:2rem;color:#fff;background:transparent;border:none;cursor:pointer;">&times;</button>
+    <img id="gqm-full" src="../assets/GQM-VersaoFinal.svg" alt="Diagrama ampliado" style="max-width:92%;max-height:92%;box-shadow:0 0 16px rgba(0,0,0,.5);">
+  </div>
+</div>
+<div align="center">
+  <p><em>Figura 1: Estrutura de avaliação ds características com base em questões e métricas.</em></p>
 </div>
 
 
@@ -404,9 +412,10 @@ Meta recomendada ≥ 99% de uptime. Quedas recorrentes reduzem a eficiência per
 
 ## Histórico de versão
 
-|Versão|Data|Descrição|Autor(es)|Revisor(es)|
-|-|-|-|-|-|
-|1.0 | 14/10/2025 | Criação do documento base|[Leonardo Sauma](https://github.com/leohssjr)||
-|1.1 | 14/10/2025 | Adição de objetivos e questões sobre as caracterísitcas Manutenabilidade e Eficiência de Desempenho|[Leonardo Sauma](https://github.com/leohssjr)||
-|1.2 | 14/10/2025 | Inclusão das métricas detalhadas de Eficiência de Desempenho (TR, FCP, Ucpu, Umem, TD) e revisão da estrutura GQM|[Breno Fernandes](https://github.com/BrenoFrds)||
-|1.3 | 15/10/2025 | Adição de diagramas para visualização das medições|[Filipe Bressanelli](https://github.com/fbressa)||
+| Versão | Data       | Descrição                                                                                                         | Autor(es)                                        | Revisor(es)                                |
+| ------ | ---------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------ |
+| 1.0    | 14/10/2025 | Criação do documento base                                                                                         | [Leonardo Sauma](https://github.com/leohssjr)    |                                            |
+| 1.1    | 14/10/2025 | Adição de objetivos e questões sobre as caracterísitcas Manutenabilidade e Eficiência de Desempenho               | [Leonardo Sauma](https://github.com/leohssjr)    |                                            |
+| 1.2    | 14/10/2025 | Inclusão das métricas detalhadas de Eficiência de Desempenho (TR, FCP, Ucpu, Umem, TD) e revisão da estrutura GQM | [Breno Fernandes](https://github.com/BrenoFrds)  |                                            |
+| 1.3    | 15/10/2025 | Adição de diagramas para visualização das medições                                                                | [Filipe Bressanelli](https://github.com/fbressa) |                                            |
+| 1.3    | 22/10/2025 | Correção de detalhes nas questoes e adiçao do diagrama geral GQM                                                  | [Gabriel Soares](https://github.com/SAnjos3)     | [Enrico Zoratto](https://github.com/sidts) |
