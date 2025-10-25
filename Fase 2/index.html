@@ -771,6 +771,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#relacao-entre-objetivos-de-medicao-questoes-e-metricas-de-manutenabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relação entre Objetivos de Medição - Questões e Métricas de Manutenabilidade
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -855,15 +864,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#relacao-entre-objetivos-de-medicao-questoes-e-metricas-de-eficiencia-de-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relação entre Objetivos de Medição - Questões e Métricas de Eficiência de Desempenho
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#diagrama-gqm" class="md-nav__link">
+  <a href="#diagrama-gqm-final" class="md-nav__link">
     <span class="md-ellipsis">
-      Diagrama GQM
+      Diagrama GQM Final
     </span>
   </a>
   
@@ -875,9 +893,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#referencias-bibliograficas" class="md-nav__link">
     <span class="md-ellipsis">
       Referências Bibliográficas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribuicao-dos-integrantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contribuição dos Integrantes
     </span>
   </a>
   
@@ -958,27 +994,27 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 <p><strong>Q1:</strong> O código do ChamaControl é modular?<br />
 <strong>Subcaracterística:</strong> <em>Modularidade</em><br />
 <strong>Hipótese 1:</strong> Mais de 80% das funções estão agrupadas de forma coerente e com responsabilidade clara, facilitando modificações.<br />
-<strong>Métricas utilizadas:</strong> <em>Grau de Modularidade (GM)</em></p>
+<strong>Métricas utilizadas:</strong> <a href="#grau-de-modularidade-gm">Grau de Modularidade (GM)</a></p>
 <p><strong>Q2:</strong> É possível modificar um módulo sem impactar outros componentes do sistema?<br />
 <strong>Subcaracterística:</strong> <em>Modificabilidade</em><br />
 <strong>Hipótese 2:</strong> Alterações em módulos independentes afetam menos de 10% de outros módulos, indicando baixo acoplamento.<br />
-<strong>Métricas utilizadas:</strong> <em>Índice de Acoplamento entre Módulos (CBO)</em></p>
+<strong>Métricas utilizadas:</strong> <a href="#indice-de-acoplamento-entre-modulos-cbo">Índice de Acoplamento entre Módulos (CBO)</a></p>
 <p><strong>Q3:</strong> O código contém documentação suficiente?<br />
 <strong>Subcaracterística:</strong> <em>Analisabilidade</em><br />
 <strong>Hipótese 3:</strong> A maioria das funções possuem comentários e instruções de manutenção.<br />
-<strong>Métricas utilizadas:</strong> <em>Cobertura de Documentação (CD)</em></p>
+<strong>Métricas utilizadas:</strong> <a href="#cobertura-de-documentacao-cd">Cobertura de Documentação (CD)</a></p>
 <p><strong>Q4:</strong> Existe duplicação de código ou funções repetidas que possam dificultar manutenção?<br />
 <strong>Subcaracterística:</strong> <em>Reutilização</em><br />
 <strong>Hipótese 4:</strong> Menos de 10% do código é duplicado, permitindo maior facilidade de manutenção e evolução.<br />
-<strong>Métricas utilizadas:</strong> <em>Percentual de Código Duplicado (DUP)</em></p>
+<strong>Métricas utilizadas:</strong> <a href="#percentual-de-codigo-duplicado-dup">Percentual de Código Duplicado (DUP)</a></p>
 <p><strong>Q5:</strong> O código permite a criação e execução eficiente de testes automatizados?<br />
 <strong>Subcaracterística:</strong> <em>Testabilidade</em><br />
 <strong>Hipótese 5:</strong> As funções principais possuem cobertura de teste automatizado superior a 80%.<br />
-<strong>Métricas utilizadas:</strong> <em>Cobertura de Testes Automatizados (CTA)</em> </p>
+<strong>Métricas utilizadas:</strong> <a href="#cobertura-de-testes-automatizados-cta">Cobertura de Testes Automatizados (CTA)</a></p>
 <p><strong>Q6:</strong> O nível de complexidade do código impacta a facilidade de manutenção e evolução do sistema? <br />
 <strong>Subcaracterística:</strong> <em>Analisabilidade</em><br />
 <strong>Hipótese 6:</strong> As funções apresentam complexidade ciclomática média inferior a 10, indicando que o código é de fácil compreensão e exige menor esforço para manutenção.<br />
-<strong>Métricas utilizadas:</strong> <em>Complexidade Ciclomática Média (CCM)</em></p>
+<strong>Métricas utilizadas:</strong> <a href="#complexidade-ciclomatica-media-ccm">Complexidade Ciclomática Média (CCM)</a></p>
 <hr />
 <h3 id="metricas-de-manutenibilidade">Métricas de Manutenibilidade</h3>
 <h4 id="grau-de-modularidade-gm">Grau de Modularidade (GM)</h4>
@@ -1085,11 +1121,26 @@ Verificar no SonarQube os seguintes indicadores:<br />
 - <em>≤ 10</em> → Boa manutenibilidade: código simples, fácil de entender e testar<br />
 - <em>11–20</em> → Complexidade moderada: manutenção possível, mas requer atenção em revisões<br />
 - <em>&gt; 20</em> → Alta complexidade: difícil de entender e testar, recomenda-se refatoração</p>
-<p>Oservações:<br />
+<p>Observações:<br />
 - Valores altos de CCM indicam funções com muitos caminhos de execução, dificultando a testabilidade e aumentando o risco de falhas<br />
 - Recomenda-se refatorar métodos com CCM acima de 15, dividindo-os em funções menores e mais coesas<br />
 - Essa métrica está diretamente relacionada às subcaracterísticas <em>Analisabilidade</em> e <em>Modificabilidade, ambas da </em><em>Manutenibilidade</em></p>
 <hr />
+<h4 id="relacao-entre-objetivos-de-medicao-questoes-e-metricas-de-manutenabilidade">Relação entre Objetivos de Medição - Questões e Métricas de Manutenabilidade</h4>
+<div align="center">
+  <a href="../assets/GQM-Manutenabilidade.svg" target="_blank" rel="noopener noreferrer">
+    <img src="../assets/GQM-Manutenabilidade.svg" alt="diagramaManutenabilidade" style="max-width:100%;height:auto;border:1px solid #ddd;">
+  </a>
+
+  <div id="gqm-lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);align-items:center;justify-content:center;z-index:9999;">
+    <button id="gqm-close" aria-label="Fechar" style="position:absolute;top:1rem;right:1rem;font-size:2rem;color:#fff;background:transparent;border:none;cursor:pointer;">&times;</button>
+    <img id="gqm-full" src="../assets/GQM-Manutenabilidade.svg" alt="Diagrama ampliado" style="max-width:92%;max-height:92%;box-shadow:0 0 16px rgba(0,0,0,.5);">
+  </div>
+</div>
+<div align="center">
+  <p><em>Figura 1: Relação entre Objetivos de Medição - Questões e Métricas de Manutenabilidade.</em></p>
+</div>
+
 <h2 id="objetivo-da-medicao-2-eficiencia-de-desempenho">Objetivo da Medição 2: Eficiência de Desempenho</h2>
 <table border="1">
   <tr>
@@ -1119,32 +1170,32 @@ Verificar no SonarQube os seguintes indicadores:<br />
 <p><strong>Q1:</strong> O sistema responde rapidamente no lado do servidor? 
 <strong>Subcaracterística:</strong> <em>Comportamento em Relação ao Tempo</em> 
 <strong>Hipótese 1:</strong> O tempo médio de resposta das APIs e das páginas é inferior a <strong>2 segundos</strong> em mais de <strong>90% das consultas</strong>.<br />
-<strong>Métricas utilizadas:</strong> <em>Tempo Médio de Resposta (TR)</em>  </p>
+<strong>Métricas utilizadas:</strong> <a href="#tempo-medio-de-resposta-tr">Tempo Médio de Resposta (TR)</a></p>
 <hr />
 <p><strong>Q2:</strong> O carregamento é ágil e sem travamentos no lado do cliente?
 <strong>Subcaracterística:</strong> <em>Comportamento em Relação ao Tempo</em><br />
 <strong>Hipótese 2:</strong> Mais de <strong>95%</strong> dos gráficos e dashboards carregam completamente em menos de <strong>3 segundos</strong>.<br />
-<strong>Métricas utilizadas:</strong> <em>Tempo até Primeiro Conteúdo (FCP)</em></p>
+<strong>Métricas utilizadas:</strong> <a href="#tempo-ate-primeiro-conteudo-fcp">Tempo até Primeiro Conteúdo (FCP)</a></p>
 <hr />
 <p><strong>Q3:</strong> O sistema consome muita memória e CPU?
 <strong>Subcaracterística:</strong> <em>Utilização de Recursos</em><br />
 <strong>Hipótese 3:</strong> O uso de CPU não ultrapassa <strong>70%</strong> e a memória utilizada não ultrapassa <strong>80%</strong> da capacidade disponível durante operações críticas.<br />
-<strong>Métricas utilizadas:</strong> <em>Uso de CPU (Ucpu)</em> e <em>Uso de Memória (Umem)</em></p>
+<strong>Métricas utilizadas:</strong> <a href="#uso-de-cpu-ucpu">Uso de CPU (Ucpu)</a> e <a href="#uso-de-memoria-umem">Uso de Memória (Umem)</a></p>
 <hr />
 <p><strong>Q4:</strong> O sistema mantém desempenho estável com múltiplos usuários simultâneos?
 <strong>Subcaracterística:</strong> <em>Capacidade</em><br />
 <strong>Hipótese 4:</strong> Até <strong>50 usuários simultâneos</strong> não causam degradação significativa no tempo de resposta ou erros de execução.<br />
-<strong>Métricas utilizadas:</strong> <em>Tempo Médio de Resposta (TR)</em>, <em>Uso de CPU (Ucpu)</em> e <em>Uso de Memória (Umem)</em></p>
+<strong>Métricas utilizadas:</strong> <a href="#tempo-medio-de-resposta-tr">Tempo Médio de Resposta (TR)</a>, <a href="#uso-de-cpu-ucpu">Uso de CPU (Ucpu)</a> e <a href="#uso-de-memoria-umem">Uso de Memória (Umem)</a></p>
 <hr />
 <p><strong>Q5:</strong> O processo de atualização diária de dados é concluído dentro do prazo esperado? 
 <strong>Subcaracterística:</strong> <em>Comportamento em Relação ao Tempo</em> 
 <strong>Hipótese 5:</strong> Os <em>scrapers</em> e pipelines processam os dados diários em menos de <strong>30 minutos</strong> em <strong>95% das execuções</strong>.<br />
-<strong>Métricas utilizadas:</strong> <em>Tempo Médio de Resposta (TR)</em> e <em>Taxa de Disponibilidade (TD)</em></p>
+<strong>Métricas utilizadas:</strong> <a href="#tempo-medio-de-resposta-tr">Tempo Médio de Resposta (TR)</a> e <a href="#taxa-de-disponibilidade-td">Taxa de Disponibilidade (TD)</a></p>
 <hr />
 <p><strong>Q6:</strong> As consultas ao banco de dados e o processamento das informações sobre queimadas estão otimizados? 
 <strong>Subcaracterística:</strong> <em>Utilização de Recursos</em> 
-<strong>Hipótese 6:</strong> As consultas ao banco e o processamento dos dados de queimadas estão otimizados quando <strong>FCP &lt; 1,5 s</strong> e <strong>Ucpu &lt; 65%</strong> em <strong>95%</strong> das execuções.
-<strong>Métricas utilizadas:</strong> <em>Tempo até Primeiro Conteúdo (FCP)</em> e <em>Uso de CPU (Ucpu)</em></p>
+<strong>Hipótese 6:</strong> As consultas ao banco e o processamento dos dados de queimadas estão otimizados quando <strong>FCP &lt; 1,5 s</strong> e <strong>Ucpu &lt; 65%</strong> em <strong>95%</strong> das execuções.</p>
+<p><strong>Métricas utilizadas:</strong> <a href="#tempo-ate-primeiro-conteudo-fcp">Tempo até Primeiro Conteúdo (FCP)</a> e <a href="#uso-de-cpu-ucpu">Uso de CPU (Ucpu)</a></p>
 <hr />
 <h3 id="metricas-de-eficiencia-de-desempenho">Métricas de Eficiência de Desempenho</h3>
 <h4 id="tempo-medio-de-resposta-tr">Tempo Médio de Resposta (TR)</h4>
@@ -1238,21 +1289,44 @@ Logs de implantação e monitoramento da hospedagem (por exemplo, uptime monitor
 Meta recomendada ≥ 99% de uptime. Quedas recorrentes reduzem a eficiência percebida e indicam falhas de infraestrutura.</p>
 </li>
 </ul>
-<h3 id="diagrama-gqm">Diagrama GQM</h3>
+<h4 id="relacao-entre-objetivos-de-medicao-questoes-e-metricas-de-eficiencia-de-desempenho">Relação entre Objetivos de Medição - Questões e Métricas de Eficiência de Desempenho</h4>
 <div align="center">
-  <a href="../assets/GQM-VersaoFinal.svg" target="_blank" rel="noopener noreferrer">
-    <img src="../assets/GQM-VersaoFinal.svg" alt="diagramaEficiênciaDesempenho" style="max-width:100%;height:auto;border:1px solid #ddd;">
+  <a href="../assets/GQM-Eficiencia.svg" target="_blank" rel="noopener noreferrer">
+    <img src="../assets/GQM-Eficiencia.svg" alt="diagramaEficiênciaDesempenho" style="max-width:100%;height:auto;border:1px solid #ddd;">
   </a>
 
   <div id="gqm-lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);align-items:center;justify-content:center;z-index:9999;">
     <button id="gqm-close" aria-label="Fechar" style="position:absolute;top:1rem;right:1rem;font-size:2rem;color:#fff;background:transparent;border:none;cursor:pointer;">&times;</button>
-    <img id="gqm-full" src="../assets/GQM-VersaoFinal.svg" alt="Diagrama ampliado" style="max-width:92%;max-height:92%;box-shadow:0 0 16px rgba(0,0,0,.5);">
+    <img id="gqm-full" src="../assets/GQM-Eficiencia.svg" alt="Diagrama ampliado" style="max-width:92%;max-height:92%;box-shadow:0 0 16px rgba(0,0,0,.5);">
   </div>
 </div>
 <div align="center">
-  <p><em>Figura 1: Estrutura de avaliação ds características com base em questões e métricas.</em></p>
+  <p><em>Figura 2: Relação entre Objetivos de Medição - Questões e Métricas de Eficiência de Desempenho.</em></p>
 </div>
 
+<h3 id="diagrama-gqm-final">Diagrama GQM Final</h3>
+<div align="center">
+  <a href="../assets/GQM-Versao2.svg" target="_blank" rel="noopener noreferrer">
+    <img src="../assets/GQM-Versao2.svg" alt="diagramaGQM" style="max-width:100%;height:auto;border:1px solid #ddd;">
+  </a>
+
+  <div id="gqm-lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);align-items:center;justify-content:center;z-index:9999;">
+    <button id="gqm-close" aria-label="Fechar" style="position:absolute;top:1rem;right:1rem;font-size:2rem;color:#fff;background:transparent;border:none;cursor:pointer;">&times;</button>
+    <img id="gqm-full" src="../assets/GQM-Versao2.svg" alt="Diagrama ampliado" style="max-width:92%;max-height:92%;box-shadow:0 0 16px rgba(0,0,0,.5);">
+  </div>
+</div>
+<div align="center">
+  <p><em>Figura 3: Estrutura de avaliação das características com base em questões e métricas.</em></p>
+</div>
+
+<h2 id="conclusao">Conclusão</h2>
+<p>A Fase 2 consolidou a definição dos objetivos, questões e métricas de medição do projeto ChamaControl, seguindo rigorosamente o modelo GQM e as subcaracterísticas de qualidade da ISO/IEC 25010.
+Esta fase complementa o trabalho iniciado anteriormente (<a href="../Fase%201/">Fase 1</a>), proporcionando uma estrutura mensurável e rastreável para a avaliação do sistema, fortalecendo o alinhamento entre qualidade de software e melhoria contínua do produto.</p>
+<p><code>Declaração de Uso da IA: Durante a elaboração deste documento foram utilizadas ferramentas de inteligência artificial baseadas em modelos de linguagem como apoio para:</code><br>
+<code>(1) sugerir uma organização coerente dos tópicos;</code><br>
+<code>(2) revisar ortografia e gramática;</code><br>
+<code>(3) verificar a cobertura dos critérios do documento de avaliação.</code><br></p>
+<p>Todas as sugestões foram revisadas e, quando apropriado, editadas manualmente pela(s) pessoa(s) responsável(is) pelo trabalho.</p>
 <h2 id="referencias-bibliograficas">Referências Bibliográficas</h2>
 <blockquote>
 <p>LC00-GQM-Introducao. Disponível em: <a href="https://aprender3.unb.br/pluginfile.php/3230283/mod_folder/content/0/LC00-GQM-Introducao.pdf?forcedownload=1">https://aprender3.unb.br/pluginfile.php/3230283/mod_folder/content/0/LC00-GQM-Introducao.pdf?forcedownload=1</a>. Acesso em: 14 de outubro de 2025.</p>
@@ -1262,6 +1336,48 @@ Meta recomendada ≥ 99% de uptime. Quedas recorrentes reduzem a eficiência per
 <p>LC04-GQM-Interpretacao. Disponível em: <a href="https://aprender3.unb.br/pluginfile.php/3230283/mod_folder/content/0/LC04-GQM-Interpretacao.pdf?forcedownload=1">https://aprender3.unb.br/pluginfile.php/3230283/mod_folder/content/0/LC04-GQM-Interpretacao.pdf?forcedownload=1</a>. Acesso em: 14 de outubro de 2025.</p>
 <p>LC05-GQM-Exemplo. Disponível em: <a href="https://aprender3.unb.br/pluginfile.php/3230283/mod_folder/content/0/LC05-GQM-Exemplo.pdf?forcedownload=1">https://aprender3.unb.br/pluginfile.php/3230283/mod_folder/content/0/LC05-GQM-Exemplo.pdf?forcedownload=1</a>. Acesso em: 14 de outubro de 2025.</p>
 </blockquote>
+<h2 id="contribuicao-dos-integrantes">Contribuição dos Integrantes</h2>
+<table>
+<thead>
+<tr>
+<th>Integrante</th>
+<th>Matrícula</th>
+<th>Percentual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Breno Soares Fernandes</strong></td>
+<td>202017540</td>
+<td>16,6%</td>
+</tr>
+<tr>
+<td><strong>Bruno Ricardo de Menezes</strong></td>
+<td>221007680</td>
+<td>16,6%</td>
+</tr>
+<tr>
+<td><strong>Enrico Martins Mantoan Zoratto</strong></td>
+<td>222006688</td>
+<td>16,6%</td>
+</tr>
+<tr>
+<td><strong>Filipe Bressanelli Azevedo Filho</strong></td>
+<td>222024579</td>
+<td>16,6%</td>
+</tr>
+<tr>
+<td><strong>Gabriel Soares dos Anjos</strong></td>
+<td>231026625</td>
+<td>16,6%</td>
+</tr>
+<tr>
+<td><strong>Leonardo Henrique Sobral Sauma Junior</strong></td>
+<td>231035428</td>
+<td>16,6%</td>
+</tr>
+</tbody>
+</table>
 <h2 id="historico-de-versao">Histórico de versão</h2>
 <table>
 <thead>
@@ -1315,6 +1431,13 @@ Meta recomendada ≥ 99% de uptime. Quedas recorrentes reduzem a eficiência per
 <td>Correção de detalhes nas questoes e adiçao do diagrama geral GQM</td>
 <td><a href="https://github.com/SAnjos3">Gabriel Soares</a></td>
 <td><a href="https://github.com/sidts">Enrico Zoratto</a></td>
+</tr>
+<tr>
+<td>1.6</td>
+<td>25/10/2025</td>
+<td>Inclusão rastreabilidade nas métricas, inclusão declaração uso de IA e ajustes nos diagramas base</td>
+<td><a href="https://github.com/leohssjr">Leonardo Sauma</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
