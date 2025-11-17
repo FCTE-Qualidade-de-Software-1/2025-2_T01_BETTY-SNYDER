@@ -1900,13 +1900,12 @@
 <p>Este documento reúne o Plano de Avaliação (Fase 3) para o projeto ChamaControl com base nas decisões tomadas na Fase 2 (GQM: objetivos, questões e métricas). O objetivo é descrever como a avaliação será aplicada na prática, quais recursos serão necessários, o cronograma das atividades e os critérios de sucesso para interpretar os resultados.</p>
 <p>O plano segue a estrutura e o tom do exemplo utilizado como referência, adaptando os métodos e métricas à realidade e às prioridades definidas em Fase 2 (Manutenibilidade e Eficiência de Desempenho).</p>
 <h2 id="metodo-de-avaliacao">Método de Avaliação</h2>
-<p>A avaliação será conduzida usando uma combinação de medições quantitativas (métricas automáticas e monitoramento) e avaliações qualitativas (testes de usabilidade, análise heurística e observação). As métricas concretas foram definidas na Fase 2 e incluem indicadores de manutenibilidade (GM, CBO, CD, DUP, CTA, CCM) e de eficiência (TR, FCP, Ucpu, Umem, TD).</p>
+<p>A avaliação será conduzida usando uma combinação de medições quantitativas (métricas automáticas e monitoramento) e avaliações qualitativas (observação da documentação). As métricas utilizadas foram definidas na Fase 2 e abrangem indicadores de manutenibilidade (GM, CBO, CD, DUP, CTA, CCM) e eficiência de desempenho (TR, FCP, Ucpu, Umem, TD).</p>
 <h3 id="abordagem-selecionada">Abordagem selecionada</h3>
 <ul>
-<li>Coleta automatizada: relatórios do SonarQube (manutenibilidade, acoplamento, duplicação, complexidade) e relatórios de cobertura de testes (CTA);</li>
-<li>Medições de desempenho: Lighthouse / DevTools para TR e FCP; monitoramento de CPU e memória em ambiente de teste para Ucpu e Umem; logs e uptime monitor para TD;</li>
-<li>Testes de usabilidade: sessões observadas com membros da equipe e/ou usuários-alvo para avaliar eficiência, eficácia, satisfação e acessibilidade;</li>
-<li>Análise heurística: aplicação das heurísticas de Nielsen para identificar problemas de usabilidade que não aparecem nas métricas automáticas.</li>
+<li>Coleta automatizada: utilização do SonarQube para análise de manutenibilidade, acoplamento, duplicação de código, complexidade e demais métricas estruturais; além de ferramentas de cobertura de testes para cálculo do CTA.</li>
+<li>Medições de desempenho: uso do Lighthouse e do Chrome DevTools para mensurar TR e FCP; monitoramento de CPU e memória em ambiente de teste para avaliação de Ucpu e Umem; análise de logs e sistemas de uptime para a métrica TD.</li>
+<li>Análise estruturada: interpretação dos resultados com base nos limites definidos na Fase 2, priorizando identificação de pontos críticos e oportunidades de melhoria no código e no desempenho do sistema.</li>
 </ul>
 <h3 id="criterio-de-sucesso">Critério de sucesso</h3>
 <p>A avaliação será considerada satisfatória se pelo menos 70% das métricas-chave (definidas na Fase 2) atingirem níveis aceitáveis ou melhores, conforme as interpretações estabelecidas em cada métrica (por exemplo, CTA ≥ 80%, TR ≤ 2s em 90% das requisições, DUP &lt; 10%, CCM média ≤ 10, etc.).</p>
@@ -1915,8 +1914,6 @@
 <li>Preparação do ambiente de teste: provisionar instância(s) de teste que reproduzam, na medida do possível, o ambiente de produção (mesma versão do software, carga de dados representativa);</li>
 <li>Coleta automática: executar análise SonarQube e testes de cobertura; exportar os relatórios para a pasta de evidências;</li>
 <li>Medições de desempenho: executar rotinas de carga/fluxos típicos usando DevTools/Lighthouse e registrar TR e FCP; monitorar Ucpu/Umem durante os cenários;</li>
-<li>Sessões de usabilidade: planejar 5–8 tarefas representativas, conduzir sessões com observador, coletar tempos, erros, taxa de sucesso e feedback qualitativo;</li>
-<li>Análise heurística: aplicar as heurísticas de Nielsen em walkthroughs guiados por avaliadores;</li>
 <li>Consolidação: reunir todos os dados, aplicar mapas de pontuação (Níveis da Fase 2) e gerar o relatório final com recomendações priorizadas.</li>
 </ol>
 <p>Durante as sessões observadas, registrar: tempo por tarefa, sucesso/falha, erros encontrados, comentários relevantes e sugestões. Sempre que possível, gravar telas para análise posterior.</p>
@@ -1924,8 +1921,8 @@
 <h3 id="materiais-e-documentacao">Materiais e documentação</h3>
 <ul>
 <li>Documento de definição de métricas e critérios (Fase 2);</li>
-<li>Guias de execução de testes (roteiros de tarefas para usabilidade);</li>
-<li>Modelos de coleta (planilhas ou formulários para registrar tempos e observações).</li>
+<li>Relatórios SonarQube e arquivos de cobertura de testes;</li>
+<li>Modelos de coleta para registro de resultados das métricas.</li>
 </ul>
 <h3 id="ferramentas-tecnicas">Ferramentas técnicas</h3>
 <ul>
@@ -1963,12 +1960,6 @@
 <td>22/11/2025</td>
 <td>23/11/2025</td>
 <td>Equipe Técnica</td>
-</tr>
-<tr>
-<td>Sessões de usabilidade e análise heurística</td>
-<td>24/11/2025</td>
-<td>25/11/2025</td>
-<td>Avaliadores</td>
 </tr>
 <tr>
 <td>Consolidação e relatório final (Fase 3)</td>
