@@ -66,6 +66,269 @@ Adapte as semanas para datas concretas conforme o calendário do grupo.
 
 O relatório final deve conter, para cada métrica, a descrição da coleta, os resultados brutos, a interpretação segundo os limiares da Fase 2 e recomendações práticas (priorizadas por impacto e esforço). Incluir também evidências (relatórios SonarQube, logs, planilhas de observação e gravações se houver).
 
+## Plano por Métrica — Manutenibilidade
+
+---
+
+### M1 — Grau de Modularidade (GM)
+
+**Objetivo:**  
+Avaliar se o sistema possui módulos bem organizados e com responsabilidades bem definidas.
+
+#### Passos de Execução (preliminares)
+- Abrir o projeto no SonarQube.
+- Acessar o painel de *Maintainability Rating*.
+- Listar todos os módulos classificados como A ou B.
+- Registrar módulos com baixa coesão ou dívidas técnicas relacionadas.
+- Anotar evidências básicas (prints do SonarQube).
+
+**Entrada:** Relatório SonarQube (Maintainability)  
+**Saída:** Percentual de módulos com rating A/B  
+**Evidências:** Screenshots do dashboard + tabela de módulos
+
+#### Cálculo
+GM = (módulos A/B ÷ total de módulos) × 100
+
+#### Critério de Julgamento
+- ≥ 80% → Excelente modularidade  
+- 60–79% → Aceitável  
+- < 60% → Modularidade insuficiente  
+
+---
+
+### M2 — Índice de Acoplamento entre Módulos (CBO)
+
+**Objetivo:**  
+Verificar se as dependências entre módulos são baixas o suficiente para facilitar manutenção.
+
+#### Passos de Execução (preliminares)
+- Acessar no SonarQube as medições de CBO por classe.
+- Registrar os valores médios e extremos.
+- Identificar classes com CBO elevado.
+- Capturar prints de classes com acoplamento excessivo.
+
+**Entrada:** Relatório SonarQube (CBO)  
+**Saída:** Valor médio de CBO  
+**Evidências:** Prints das classes com alto acoplamento
+
+#### Cálculo
+Média dos valores de CBO.
+
+#### Critério de Julgamento
+- ≤ 10 → Excelente  
+- 11–25 → Moderado  
+- > 25 → Alto acoplamento  
+
+---
+
+### M3 — Cobertura de Documentação (CD)
+
+**Objetivo:**  
+Avaliar se o código está adequadamente documentado.
+
+#### Passos de Execução (preliminares)
+- Percorrer o repositório e analisar comentários em funções.
+- Avaliar README e guias de execução.
+- Atribuir nota qualitativa de 1 a 5.
+- Registrar exemplos positivos e negativos de documentação.
+
+**Entrada:** Código-fonte e documentação existente  
+**Saída:** Nota CD (1 a 5)  
+**Evidências:** Prints de trechos comentados, README etc.
+
+#### Cálculo
+Escala qualitativa previamente definida.
+
+#### Critério de Julgamento
+- 5 → Excelente  
+- 4 → Boa  
+- 3 → Mediana  
+- 2 → Insuficiente  
+- 1 → Muito baixa  
+
+---
+
+### M4 — Percentual de Código Duplicado (DUP)
+
+**Objetivo:**  
+Identificar duplicações de código que prejudicam reutilização e manutenção.
+
+#### Passos de Execução (preliminares)
+- Acessar no SonarQube a métrica *Duplicated Lines (%)*.
+- Registrar arquivos com maior duplicação.
+- Separar duplicações aceitáveis das problemáticas.
+
+**Entrada:** Relatório SonarQube — Duplicated Lines  
+**Saída:** Percentual de código duplicado  
+**Evidências:** Prints dos arquivos com duplicação
+
+#### Cálculo
+Valor direto do SonarQube.
+
+#### Critério de Julgamento
+- < 10% → Excelente  
+- 10–20% → Aceitável  
+- > 20% → Ruim / requer refatoração  
+
+---
+
+### M5 — Cobertura de Testes Automatizados (CTA)
+
+**Objetivo:**  
+Avaliar a cobertura de testes das funcionalidades principais.
+
+#### Passos de Execução (preliminares)
+- Executar Jest com cobertura ativada.
+- Registrar percentuais de *lines covered*.
+- Identificar módulos não cobertos.
+- Capturar relatório HTML ou terminal.
+
+**Entrada:** Arquivo de cobertura do Jest  
+**Saída:** Percentual total de cobertura  
+**Evidências:** Print do relatório de cobertura
+
+#### Cálculo
+Valor reportado pelo Jest.
+
+#### Critério de Julgamento
+- ≥ 80% → Excelente  
+- 60–79% → Aceitável  
+- < 60% → Baixa testabilidade  
+
+---
+
+### M6 — Complexidade Ciclomática Média (CCM)
+
+**Objetivo:**  
+Avaliar a complexidade lógica das funções.
+
+#### Passos de Execução (preliminares)
+- Abrir no SonarQube as métricas de *Cyclomatic Complexity*.
+- Registrar valores por função/arquivo.
+- Calcular média geral.
+- Registrar funções com CC > 15.
+
+**Entrada:** Relatório SonarQube (Complexity)  
+**Saída:** CCM média  
+**Evidências:** Prints das funções com maior CC
+
+#### Cálculo
+CCM = Σ CCᵢ / n
+
+#### Critério de Julgamento
+- ≤ 10 → Boa manutenibilidade  
+- 11–20 → Moderada  
+- > 20 → Alta complexidade  
+
+---
+
+## Plano por Métrica — Eficiência de Desempenho
+
+---
+
+### M7 — Tempo Médio de Resposta (TR)
+
+**Objetivo:**  
+Medir a velocidade de respostas das APIs e páginas.
+
+#### Passos de Execução (preliminares)
+- Abrir DevTools → aba *Network*.
+- Simular uso real do sistema.
+- Registrar tempos de resposta das requisições.
+- Calcular média geral.
+
+**Entrada:** Logs DevTools/Lighthouse  
+**Saída:** TR médio  
+**Evidências:** Capturas do *Network*
+
+#### Cálculo
+TR = Σ tempos ÷ total de requisições
+
+#### Critério de Julgamento
+- ≤ 2s → Excelente  
+- > 2s → Necessita análise  
+
+---
+
+### M8 — Tempo até Primeiro Conteúdo (FCP)
+
+**Objetivo:**  
+Avaliar quão rápido o usuário vê o primeiro conteúdo útil.
+
+#### Passos de Execução
+- Executar Lighthouse.
+- Registrar FCP em cenários típicos.
+- Comparar com o limite definido.
+
+**Entrada:** Relatório Lighthouse  
+**Saída:** Tempo FCP  
+**Evidências:** Screenshot da aba *Performance*
+
+#### Critério de Julgamento
+- ≤ 3s → Ótimo  
+- > 3s → Carregamento lento  
+
+---
+
+### M9 — Uso de CPU (Ucpu)
+
+**Objetivo:**  
+Identificar gargalos no uso de processamento.
+
+#### Passos de Execução
+- Monitorar o sistema via *htop* ou DevTools Performance.
+- Executar operações críticas.
+- Registrar valores máximos e médios.
+
+**Entrada:** Monitor do sistema / navegador  
+**Saída:** Porcentagem de CPU  
+**Evidências:** Capturas dos gráficos
+
+#### Critério de Julgamento
+- ≤ 70% → Adequado  
+- > 70% → Sobrecarga  
+
+---
+
+### M10 — Uso de Memória (Umem)
+
+**Objetivo:**  
+Avaliar se o sistema consome memória de forma eficiente.
+
+#### Passos de Execução
+- Monitorar consumo durante operações críticas.
+- Registrar valores médios.
+- Comparar com limites estabelecidos.
+
+**Entrada:** Monitor do sistema  
+**Saída:** % de memória usada  
+**Evidências:** Prints dos gráficos
+
+#### Critério de Julgamento
+- ≤ 80% → Adequado  
+- > 80% → Risco de instabilidade  
+
+---
+
+### M11 — Taxa de Disponibilidade (TD)
+
+**Objetivo:**  
+Verificar a estabilidade do sistema ao longo do tempo.
+
+#### Passos de Execução
+- Analisar logs de uptime do servidor.
+- Registrar janelas de indisponibilidade.
+- Calcular percentual.
+
+**Entrada:** Logs da hospedagem  
+**Saída:** % de disponibilidade  
+**Evidências:** Prints ou relatórios de uptime
+
+#### Critério de Julgamento
+- ≥ 99% → Excelente  
+- < 99% → Requer análise  
+
+
 ## Tabela de Contribuição
 
 | Integrante                                | Matrícula | Percentual |
@@ -88,4 +351,4 @@ Este Plano de Avaliação operacionaliza as decisões definidas na Fase 2, forne
 |--------|------------|---------------------------------------|----------------------------------------------|
 | 1.0    | 10/11/2025 | Inicio do Plano de Avaliação (Fase 3) |[Gabriel Soares](github.com/SAnjos3)|
 | 1.1    | 17/11/2025 | Atualização do cronograma com datas reais             | [Breno Fernandes](https://github.com/BrenoFrds) |
-
+| 1.2    | 20/11/2025 | Adicionada a estrutura preliminar do Plano por Métrica, incluindo seções e templates de execução para todas as métricas definidas na Fase 2 | [Breno Fernandes](https://github.com/BrenoFrds) |
