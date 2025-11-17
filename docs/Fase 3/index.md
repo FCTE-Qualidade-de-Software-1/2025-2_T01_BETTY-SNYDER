@@ -8,14 +8,13 @@ O plano segue a estrutura e o tom do exemplo utilizado como referência, adaptan
 
 ## Método de Avaliação
 
-A avaliação será conduzida usando uma combinação de medições quantitativas (métricas automáticas e monitoramento) e avaliações qualitativas (testes de usabilidade, análise heurística e observação). As métricas concretas foram definidas na Fase 2 e incluem indicadores de manutenibilidade (GM, CBO, CD, DUP, CTA, CCM) e de eficiência (TR, FCP, Ucpu, Umem, TD).
+A avaliação será conduzida usando uma combinação de medições quantitativas (métricas automáticas e monitoramento) e avaliações qualitativas (observação da documentação). As métricas utilizadas foram definidas na Fase 2 e abrangem indicadores de manutenibilidade (GM, CBO, CD, DUP, CTA, CCM) e eficiência de desempenho (TR, FCP, Ucpu, Umem, TD).
 
 ### Abordagem selecionada
 
-- Coleta automatizada: relatórios do SonarQube (manutenibilidade, acoplamento, duplicação, complexidade) e relatórios de cobertura de testes (CTA);
-- Medições de desempenho: Lighthouse / DevTools para TR e FCP; monitoramento de CPU e memória em ambiente de teste para Ucpu e Umem; logs e uptime monitor para TD;
-- Testes de usabilidade: sessões observadas com membros da equipe e/ou usuários-alvo para avaliar eficiência, eficácia, satisfação e acessibilidade;
-- Análise heurística: aplicação das heurísticas de Nielsen para identificar problemas de usabilidade que não aparecem nas métricas automáticas.
+- Coleta automatizada: utilização do SonarQube para análise de manutenibilidade, acoplamento, duplicação de código, complexidade e demais métricas estruturais; além de ferramentas de cobertura de testes para cálculo do CTA.
+- Medições de desempenho: uso do Lighthouse e do Chrome DevTools para mensurar TR e FCP; monitoramento de CPU e memória em ambiente de teste para avaliação de Ucpu e Umem; análise de logs e sistemas de uptime para a métrica TD.
+- Análise estruturada: interpretação dos resultados com base nos limites definidos na Fase 2, priorizando identificação de pontos críticos e oportunidades de melhoria no código e no desempenho do sistema.
 
 ### Critério de sucesso
 
@@ -26,9 +25,7 @@ A avaliação será considerada satisfatória se pelo menos 70% das métricas-ch
 1. Preparação do ambiente de teste: provisionar instância(s) de teste que reproduzam, na medida do possível, o ambiente de produção (mesma versão do software, carga de dados representativa);
 2. Coleta automática: executar análise SonarQube e testes de cobertura; exportar os relatórios para a pasta de evidências;
 3. Medições de desempenho: executar rotinas de carga/fluxos típicos usando DevTools/Lighthouse e registrar TR e FCP; monitorar Ucpu/Umem durante os cenários;
-4. Sessões de usabilidade: planejar 5–8 tarefas representativas, conduzir sessões com observador, coletar tempos, erros, taxa de sucesso e feedback qualitativo;
-5. Análise heurística: aplicar as heurísticas de Nielsen em walkthroughs guiados por avaliadores;
-6. Consolidação: reunir todos os dados, aplicar mapas de pontuação (Níveis da Fase 2) e gerar o relatório final com recomendações priorizadas.
+4. Consolidação: reunir todos os dados, aplicar mapas de pontuação (Níveis da Fase 2) e gerar o relatório final com recomendações priorizadas.
 
 Durante as sessões observadas, registrar: tempo por tarefa, sucesso/falha, erros encontrados, comentários relevantes e sugestões. Sempre que possível, gravar telas para análise posterior.
 
@@ -37,8 +34,8 @@ Durante as sessões observadas, registrar: tempo por tarefa, sucesso/falha, erro
 ### Materiais e documentação
 
 - Documento de definição de métricas e critérios (Fase 2);
-- Guias de execução de testes (roteiros de tarefas para usabilidade);
-- Modelos de coleta (planilhas ou formulários para registrar tempos e observações).
+- Relatórios SonarQube e arquivos de cobertura de testes;
+- Modelos de coleta para registro de resultados das métricas.
 
 ### Ferramentas técnicas
 
@@ -55,7 +52,6 @@ Durante as sessões observadas, registrar: tempo por tarefa, sucesso/falha, erro
 | Preparação do ambiente e scripts             | 18/11/2025     | 19/11/2025        | Equipe Técnica  |
 | Coleta automática (SonarQube, cobertura)     | 20/11/2025     | 21/11/2025        | Equipe Técnica  |
 | Testes de desempenho e monitoramento         | 22/11/2025     | 23/11/2025        | Equipe Técnica  |
-| Sessões de usabilidade e análise heurística  | 24/11/2025     | 25/11/2025        | Avaliadores     |
 | Consolidação e relatório final (Fase 3)      | 26/11/2025     | 27/11/2025        | Equipe Técnica  |
 
 
