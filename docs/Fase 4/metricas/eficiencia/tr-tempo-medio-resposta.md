@@ -56,7 +56,6 @@ Portanto, **a hipótese de que o sistema possui bom tempo de resposta foi confir
 
 ## Evidência da Coleta (Vídeo)
 
-Abaixo pode ser inserido o vídeo demonstrando o processo de coleta das amostras no DevTools:
 <iframe width="1351" height="480" src="https://www.youtube.com/embed/ZE89BVyEicw" title="Tempo Médio de Resposta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
