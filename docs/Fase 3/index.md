@@ -48,15 +48,16 @@ Durante as sessões observadas, registrar: tempo por tarefa, sucesso/falha, erro
 - Ferramentas de monitoramento (htop, ferramentas de APM ou logs do servidor) para Ucpu e Umem;
 - Ferramentas de gravação de tela (opcional) e cronômetro digital.
 
-## Cronograma (sugestão)
+## Cronograma
 
-| Tarefa                                  | Data de Início | Data de Conclusão | Responsável     |
-|-----------------------------------------|----------------|-------------------|-----------------|
-| Preparação do ambiente e scripts        | (semana 1)     | (semana 1)        | Equipe Técnica  |
-| Coleta automática (SonarQube, cobertura) | (semana 2)     | (semana 2)        | Equipe Técnica  |
-| Testes de desempenho e monitoramento    | (semana 3)     | (semana 3)        | Equipe Técnica  |
-| Sessões de usabilidade e análise heurística | (semana 4)  | (semana 4)        | Avaliadores     |
-| Consolidação e relatório final          | (semana 5)     | (semana 5)        | Equipe Técnica  |
+| Tarefa                                       | Data de Início | Data de Conclusão | Responsável     |
+|----------------------------------------------|----------------|-------------------|-----------------|
+| Preparação do ambiente e scripts             | 18/11/2025     | 19/11/2025        | Equipe Técnica  |
+| Coleta automática (SonarQube, cobertura)     | 20/11/2025     | 21/11/2025        | Equipe Técnica  |
+| Testes de desempenho e monitoramento         | 22/11/2025     | 23/11/2025        | Equipe Técnica  |
+| Sessões de usabilidade e análise heurística  | 24/11/2025     | 25/11/2025        | Avaliadores     |
+| Consolidação e relatório final (Fase 3)      | 26/11/2025     | 27/11/2025        | Equipe Técnica  |
+
 
 
 Adapte as semanas para datas concretas conforme o calendário do grupo.
@@ -86,4 +87,5 @@ Este Plano de Avaliação operacionaliza as decisões definidas na Fase 2, forne
 | Versão | Data       | Descrição                             | Autor(es)                                   |
 |--------|------------|---------------------------------------|----------------------------------------------|
 | 1.0    | 10/11/2025 | Inicio do Plano de Avaliação (Fase 3) |[Gabriel Soares](github.com/SAnjos3)|
+| 1.1    | 17/11/2025 | Atualização do cronograma com datas reais             | [Breno Fernandes](https://github.com/BrenoFrds) |
 
