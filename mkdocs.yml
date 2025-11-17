@@ -13,7 +13,22 @@ nav:
   - Fase 3:
     - Fase 3/index.md
   - Fase 4:
-    - Fase 4/index.md
+      - Fase 4: Fase 4/index.md
+
+      - Métricas - Manutenibilidade:
+          - Grau de Modularidade (GM): Fase 4/metricas/manutenibilidade/grau-modularidade-gm.md
+          - Acoplamento entre Módulos (CBO): Fase 4/metricas/manutenibilidade/acoplamento-cbo.md
+          - Cobertura de Documentação (CD): Fase 4/metricas/manutenibilidade/cobertura-documentacao-cd.md
+          - Código Duplicado (DUP): Fase 4/metricas/manutenibilidade/codigo-duplicado-dup.md
+          - Cobertura de Testes (CTA): Fase 4/metricas/manutenibilidade/cobertura-testes-cta.md
+          - Complexidade Ciclomática Média (CCM): Fase 4/metricas/manutenibilidade/complexidade-ciclomatica-ccm.md
+
+      - Métricas - Eficiência de Desempenho:
+          - Tempo Médio de Resposta (TR): Fase 4/metricas/eficiencia/tr-tempo-medio-resposta.md
+          - Tempo até Primeiro Conteúdo (FCP): Fase 4/metricas/eficiencia/fcp-primeiro-conteudo.md
+          - Uso de CPU (Ucpu): Fase 4/metricas/eficiencia/uso-cpu-ucpu.md
+          - Uso de Memória (Umem): Fase 4/metricas/eficiencia/uso-memoria-umem.md
+          - Taxa de Disponibilidade (TD): Fase 4/metricas/eficiencia/taxa-disponibilidade-td.md
     
 
 theme:
