@@ -7,6 +7,25 @@ O tempo de resposta influencia diretamente a experiência do usuário e a fluide
 
 ---
 
+## Condições de Coleta
+
+Para garantir reprodutibilidade e confiabilidade da medição, o experimento foi conduzido sob condições controladas, conforme descrito abaixo:
+
+- **Dispositivo utilizado:** Computador pessoal (desktop)  
+- **Sistema operacional:** Windows 10 Pro (64 bits)  
+- **Tipo de conexão:** Ethernet (cabo)  
+- **Velocidade da internet:** 70 Mb/s (download) / 70 Mb/s (upload)  
+- **Roteador / Provedor:** Conexão residencial estável (sem perda de pacote no momento do teste)  
+- **Navegador utilizado:** Google Chrome **131.0.6778.86** (versão estável mais recente disponível no momento)  
+- **Ferramentas utilizadas:** Chrome DevTools → Aba **Network**  
+- **Caches:** Cache do navegador limpo antes da primeira medição  
+- **Situação do sistema:**  
+    - Nenhuma aba adicional aberta  
+    - Sistema com baixo uso de CPU e memória  
+    - Sem downloads ou aplicações pesadas em execução  
+
+Essas condições asseguram que o tempo de resposta medido reflete principalmente o desempenho da aplicação, e não limitações do ambiente de teste.
+
 ## Método de Coleta
 A coleta foi realizada utilizando o **Chrome DevTools**, na aba **Network**, registrando o tempo total de finalização de cada requisição (campo **Finish**).  
 Foram capturadas **20 amostras reais**, executando o sistema em condições normais de uso.
@@ -19,10 +38,29 @@ As medições foram realizadas em sequência, atualizando a página e observando
 
 As 20 amostras coletadas foram:
 
-```
-595, 576, 552, 550, 577, 883, 564, 543, 549, 540,
-285, 556, 556, 555, 556, 557, 541, 563, 551, 566
-```
+| Coleta | Tempo (ms) |
+|--------|------------|
+| Coleta 1 | 595 |
+| Coleta 2 | 576 |
+| Coleta 3 | 552 |
+| Coleta 4 | 550 |
+| Coleta 5 | 577 |
+| Coleta 6 | 883 |
+| Coleta 7 | 564 |
+| Coleta 8 | 543 |
+| Coleta 9 | 549 |
+| Coleta 10 | 540 |
+| Coleta 11 | 285 |
+| Coleta 12 | 556 |
+| Coleta 13 | 556 |
+| Coleta 14 | 555 |
+| Coleta 15 | 556 |
+| Coleta 16 | 557 |
+| Coleta 17 | 541 |
+| Coleta 18 | 563 |
+| Coleta 19 | 551 |
+| Coleta 20 | 566 |
+
 
 ### Cálculo da Média
 
@@ -71,3 +109,4 @@ Com um tempo médio de **~0,56 s**, o sistema atende plenamente às expectativas
 | Versão | Data       | Descrição                                                                                                         | Autor(es)                                        | Revisor(es)                                |
 | ------ | ---------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------ |
 | 1.0    | 17/11/2025 | Criação do documento                                                                                        | [Leonardo Sauma](https://github.com/leohssjr)    |                                            |
+| 1.1    | 17/11/2025 | Adição condições de coleta                                                                                     | [Leonardo Sauma](https://github.com/leohssjr)    |                                            |
