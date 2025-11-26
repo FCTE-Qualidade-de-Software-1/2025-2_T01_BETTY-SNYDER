@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#complexidade-ciclomatica-media-ccm-analise-dos-resultados-no-sonarqube" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -908,6 +913,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complexidade Ciclomática Média (CCM)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -925,6 +950,208 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo-da-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivo da Métrica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-metodo-de-coleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Método de Coleta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-resultado-obtido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Resultado Obtido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Resultado Obtido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cyclomatic-complexity-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cyclomatic Complexity (Total)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-interpretacao-dos-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Interpretação dos Resultados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Interpretação dos Resultados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretacao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretação geral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-284" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend - 284
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-187" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web - 187
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobre-a-ccm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre a CCM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ligacao-entre-questao-e-hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ligação entre Questão e Hipótese
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Ligação entre Questão e Hipótese">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questao-gqm-q6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questão GQM Q6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipotese-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avaliacao-da-hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avaliação da hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-evidencia-da-coleta-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Evidência da Coleta (Vídeo)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1180,6 +1407,199 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo-da-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivo da Métrica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-metodo-de-coleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Método de Coleta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-resultado-obtido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Resultado Obtido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Resultado Obtido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cyclomatic-complexity-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cyclomatic Complexity (Total)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-interpretacao-dos-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Interpretação dos Resultados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Interpretação dos Resultados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretacao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretação geral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-284" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend - 284
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-187" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web - 187
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobre-a-ccm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre a CCM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ligacao-entre-questao-e-hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ligação entre Questão e Hipótese
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Ligação entre Questão e Hipótese">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questao-gqm-q6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questão GQM Q6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipotese-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avaliacao-da-hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avaliação da hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-evidencia-da-coleta-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Evidência da Coleta (Vídeo)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1199,9 +1619,113 @@
   
 
 
-  <h1>Complexidade Ciclomática Média (CCM)</h1>
-
-<p>Em desenvolvimento...</p>
+<h1 id="complexidade-ciclomatica-media-ccm-analise-dos-resultados-no-sonarqube">Complexidade Ciclomática Média (CCM) — Análise dos Resultados no SonarQube</h1>
+<h2 id="1-objetivo-da-metrica">1. Objetivo da Métrica</h2>
+<p>Avaliar o nível de complexidade lógica do ChamaControl por meio dos valores fornecidos pelo SonarQube.<br />
+A complexidade ciclomática indica a quantidade de caminhos independentes no código, influenciando diretamente:</p>
+<ul>
+<li>A facilidade de compreensão do sistema  </li>
+<li>O esforço de manutenção e evolução  </li>
+<li>A necessidade e dificuldade de criação de testes automatizados  </li>
+</ul>
+<p>A métrica está ligada às subcaracterísticas <strong>Analisabilidade</strong> e <strong>Modificabilidade</strong> da ISO/IEC 25010.</p>
+<hr />
+<h2 id="2-metodo-de-coleta">2. Método de Coleta</h2>
+<p>A análise foi feita exclusivamente pelos indicadores fornecidos automaticamente pelo <strong>SonarQube</strong>, sem cálculos manuais.</p>
+<p>Foram coletados os seguintes valores:</p>
+<ul>
+<li><strong>Cyclomatic Complexity (total)</strong>  </li>
+<li>Complexidade por módulo (<code>backend</code> e <code>web</code>)  </li>
+<li><em>Cognitive Complexity</em> (indicador complementar de legibilidade)  </li>
+<li><em>Code Smells</em> relacionados a estruturas de decisão complexas</li>
+</ul>
+<p>Procedimento:</p>
+<ol>
+<li>Acessar o projeto no SonarQube  </li>
+<li>Navegar para <strong>Measures → Complexity → Cyclomatic Complexity</strong>  </li>
+<li>Registrar os valores por módulo e o total consolidado  </li>
+<li>Analisar o nível de complexidade visível no relatório</li>
+</ol>
+<p>Condições:</p>
+<ul>
+<li>Branch: <code>main</code>  </li>
+<li>Data: 24/11/2025  </li>
+<li>Novo código considerado desde 17/11/2025  </li>
+</ul>
+<hr />
+<h2 id="3-resultado-obtido">3. Resultado Obtido</h2>
+<h3 id="cyclomatic-complexity-total">Cyclomatic Complexity (Total)</h3>
+<p><img alt="Cyclomatic Complexity" src="../../../../assets/cyclomaticComplexity.jpeg" /></p>
+<ul>
+<li><strong>Complexidade Total:</strong> 471</li>
+</ul>
+<p><strong>Distribuição por módulo:</strong>
+- Backend: <strong>284</strong>
+- Web: <strong>187</strong></p>
+<hr />
+<h2 id="4-interpretacao-dos-resultados">4. Interpretação dos Resultados</h2>
+<h3 id="interpretacao-geral">Interpretação geral</h3>
+<p>O valor total de <strong>471</strong> indica um sistema com complexidade considerável.<br />
+Valores altos sugerem:</p>
+<ul>
+<li>maior número de caminhos lógicos  </li>
+<li>necessidade maior de testes  </li>
+<li>maior esforço de manutenção  </li>
+<li>potencial para funções extensas ou com muitas decisões</li>
+</ul>
+<h3 id="backend-284">Backend - 284</h3>
+<ul>
+<li>Concentra a maior parte da complexidade  </li>
+<li>Regras de negócio provavelmente contêm estruturas condicionais extensas  </li>
+<li>Deverá ser priorizado em futuras refatorações</li>
+</ul>
+<h3 id="web-187">Web - 187</h3>
+<ul>
+<li>Também apresenta complexidade relevante  </li>
+<li>Pode refletir componentes com múltiplos fluxos de interação</li>
+</ul>
+<h3 id="sobre-a-ccm">Sobre a CCM</h3>
+<p>Como o SonarQube <strong>não fornece automaticamente o número de funções analisadas</strong>, a <strong>média exata (CCM)</strong> não pôde ser calculada.</p>
+<p>Assim, a análise assume exclusivamente os valores fornecidos pelo SonarQube.</p>
+<hr />
+<h2 id="5-ligacao-entre-questao-e-hipotese">5. Ligação entre Questão e Hipótese</h2>
+<h3 id="questao-gqm-q6">Questão GQM Q6</h3>
+<p>"<strong>O nível de complexidade do código impacta a facilidade de manutenção e evolução?</strong>"</p>
+<h3 id="hipotese-6">Hipótese 6</h3>
+<p>"<strong>As funções apresentam complexidade ciclomática média inferior a 10.</strong>"</p>
+<h3 id="avaliacao-da-hipotese">Avaliação da hipótese</h3>
+<ul>
+<li>Não foi possível obter a média exata devido aos dados disponíveis.  </li>
+<li>Contudo, a complexidade total elevada (<strong>471</strong>) sugere que partes do sistema ultrapassam limites ideais.  </li>
+<li>Assim, <strong>não há evidência para confirmar a hipótese</strong>.  </li>
+<li>A hipótese, portanto, <strong>é considerada não atendida</strong>.</li>
+</ul>
+<hr />
+<h2 id="6-evidencia-da-coleta-video">6. Evidência da Coleta (Vídeo)</h2>
+<blockquote>
+<p>Link do vídeo.</p>
+</blockquote>
+<h2 id="historico-de-versao">Histórico de versão</h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição</th>
+<th>Autor(es)</th>
+<th>Revisor(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>17/11/2025</td>
+<td>Criação do documento</td>
+<td><a href="https://github.com/leohssjr">Leonardo Sauma</a>, <a href="https://github.com/SAnjos3">Gabriel Soares</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 
