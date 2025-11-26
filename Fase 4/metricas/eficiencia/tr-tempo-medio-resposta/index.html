@@ -1083,6 +1083,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#condicoes-de-coleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Condições de Coleta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#metodo-de-coleta" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1350,6 +1361,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#condicoes-de-coleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Condições de Coleta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#metodo-de-coleta" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1468,6 +1490,25 @@
 <p>Avaliar a velocidade média com que o sistema ChamaControl responde às requisições realizadas durante o uso normal. Essa métrica está vinculada à subcaracterística <strong>Comportamento em Relação ao Tempo</strong>, pertencente à característica de qualidade <strong>Eficiência de Desempenho</strong> (ISO/IEC 25010).</p>
 <p>O tempo de resposta influencia diretamente a experiência do usuário e a fluidez da navegação, além de evidenciar possíveis gargalos no back-end, banco de dados ou frontend.</p>
 <hr />
+<h2 id="condicoes-de-coleta">Condições de Coleta</h2>
+<p>Para garantir reprodutibilidade e confiabilidade da medição, o experimento foi conduzido sob condições controladas, conforme descrito abaixo:</p>
+<ul>
+<li><strong>Dispositivo utilizado:</strong> Computador pessoal (desktop)  </li>
+<li><strong>Sistema operacional:</strong> Windows 10 Pro (64 bits)  </li>
+<li><strong>Tipo de conexão:</strong> Ethernet (cabo)  </li>
+<li><strong>Velocidade da internet:</strong> 70 Mb/s (download) / 70 Mb/s (upload)  </li>
+<li><strong>Roteador / Provedor:</strong> Conexão residencial estável (sem perda de pacote no momento do teste)  </li>
+<li><strong>Navegador utilizado:</strong> Google Chrome <strong>131.0.6778.86</strong> (versão estável mais recente disponível no momento)  </li>
+<li><strong>Ferramentas utilizadas:</strong> Chrome DevTools → Aba <strong>Network</strong>  </li>
+<li><strong>Caches:</strong> Cache do navegador limpo antes da primeira medição  </li>
+<li><strong>Situação do sistema:</strong>  <ul>
+<li>Nenhuma aba adicional aberta  </li>
+<li>Sistema com baixo uso de CPU e memória  </li>
+<li>Sem downloads ou aplicações pesadas em execução  </li>
+</ul>
+</li>
+</ul>
+<p>Essas condições asseguram que o tempo de resposta medido reflete principalmente o desempenho da aplicação, e não limitações do ambiente de teste.</p>
 <h2 id="metodo-de-coleta">Método de Coleta</h2>
 <p>A coleta foi realizada utilizando o <strong>Chrome DevTools</strong>, na aba <strong>Network</strong>, registrando o tempo total de finalização de cada requisição (campo <strong>Finish</strong>).<br />
 Foram capturadas <strong>20 amostras reais</strong>, executando o sistema em condições normais de uso.</p>
@@ -1475,9 +1516,96 @@ Foram capturadas <strong>20 amostras reais</strong>, executando o sistema em con
 <hr />
 <h2 id="amostragem-realizada">Amostragem Realizada</h2>
 <p>As 20 amostras coletadas foram:</p>
-<pre><code>595, 576, 552, 550, 577, 883, 564, 543, 549, 540,
-285, 556, 556, 555, 556, 557, 541, 563, 551, 566
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Coleta</th>
+<th>Tempo (ms)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coleta 1</td>
+<td>595</td>
+</tr>
+<tr>
+<td>Coleta 2</td>
+<td>576</td>
+</tr>
+<tr>
+<td>Coleta 3</td>
+<td>552</td>
+</tr>
+<tr>
+<td>Coleta 4</td>
+<td>550</td>
+</tr>
+<tr>
+<td>Coleta 5</td>
+<td>577</td>
+</tr>
+<tr>
+<td>Coleta 6</td>
+<td>883</td>
+</tr>
+<tr>
+<td>Coleta 7</td>
+<td>564</td>
+</tr>
+<tr>
+<td>Coleta 8</td>
+<td>543</td>
+</tr>
+<tr>
+<td>Coleta 9</td>
+<td>549</td>
+</tr>
+<tr>
+<td>Coleta 10</td>
+<td>540</td>
+</tr>
+<tr>
+<td>Coleta 11</td>
+<td>285</td>
+</tr>
+<tr>
+<td>Coleta 12</td>
+<td>556</td>
+</tr>
+<tr>
+<td>Coleta 13</td>
+<td>556</td>
+</tr>
+<tr>
+<td>Coleta 14</td>
+<td>555</td>
+</tr>
+<tr>
+<td>Coleta 15</td>
+<td>556</td>
+</tr>
+<tr>
+<td>Coleta 16</td>
+<td>557</td>
+</tr>
+<tr>
+<td>Coleta 17</td>
+<td>541</td>
+</tr>
+<tr>
+<td>Coleta 18</td>
+<td>563</td>
+</tr>
+<tr>
+<td>Coleta 19</td>
+<td>551</td>
+</tr>
+<tr>
+<td>Coleta 20</td>
+<td>566</td>
+</tr>
+</tbody>
+</table>
 <h3 id="calculo-da-media">Cálculo da Média</h3>
 <pre><code>(595 + 576 + 552 + 550 + 577 + 883 + 564 + 543 + 549 + 540 +
  285 + 556 + 556 + 555 + 556 + 557 + 541 + 563 + 551 + 566) / 20
@@ -1525,6 +1653,13 @@ Com um tempo médio de <strong>~0,56 s</strong>, o sistema atende plenamente às
 <td>1.0</td>
 <td>17/11/2025</td>
 <td>Criação do documento</td>
+<td><a href="https://github.com/leohssjr">Leonardo Sauma</a></td>
+<td></td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>17/11/2025</td>
+<td>Adição condições de coleta</td>
 <td><a href="https://github.com/leohssjr">Leonardo Sauma</a></td>
 <td></td>
 </tr>
