@@ -4,6 +4,8 @@ repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_BETTY-SNYDE
 repo_name: Betty Snyder
 site_description: Documentação do projeto do grupo Betty Snyder de Qualidade de Software (2025.2), Turma 1
 
+strict: false
+
 nav:
   - Início: index.md
   - Fase 1:
