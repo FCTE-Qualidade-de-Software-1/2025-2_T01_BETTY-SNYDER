@@ -67,16 +67,8 @@ Classificação obtida: **Carregamento lento**
 
 ## Evidência da Coleta (Imagem)
 
-> Screenshot do relatório do **Lighthouse**, na aba **Performance**, demonstrando o valor de **FCP = 6,7 s**.
-> *(Inserir imagem no relatório final)*
+![Screenshot do relatório do **Lighthouse**, na aba **Performance**, demonstrando o valor de **FCP = 6,7 s**.](../../../assets/FCP.png)
 
-
-## Evidência da Coleta (Vídeo)
-
-🔗 **Disponível em:**
-[Assistir no YouTube](https://www.youtube.com/watch?v=SEU_LINK_AQUI)
-
----
 
 ## Interpretação dos Resultados
 
@@ -121,5 +113,5 @@ Portanto, **a hipótese de carregamento inicial rápido não foi confirmada**.
 | Versão | Data       | Descrição                                           | Autor(es)                                  | Revisor(es) |
 | ------ | ---------- | --------------------------------------------------- | ------------------------------------------ | ----------- |
 | 1.0    | 26/11/2025 | Criação do documento da métrica FCP                 | [Enrico Zoratto](https://github.com/sidts) |             |
-| 1.1    | 26/11/2025 |  |  |             |
+| 1.1    | 27/11/2025 | Adição de informações importantes e print da medição | [Filipe Bressanelli](https://github.com/fbressa) |             |
 

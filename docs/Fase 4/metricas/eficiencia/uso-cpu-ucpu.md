@@ -44,6 +44,31 @@ Os valores **médios e máximos de utilização** foram extraídos a partir do g
 A métrica foi expressa em **porcentagem (%) de utilização da CPU**.
 
 ---
+## Amostragem Realizada
+
+Foram coletadas **15 amostras reais** durante as execuções controladas:
+
+| Amostra | Uso de CPU (%) |
+|--------|-----------------|
+| 1 | 7,8 |
+| 2 | 9,1 |
+| 3 | 8,4 |
+| 4 | 10,2 |
+| 5 | 12,5 |
+| 6 | 11,3 |
+| 7 | 6,9 |
+| 8 | 7,4 |
+| 9 | 8,1 |
+| 10 | 9,7 |
+| 11 | 13,9 |
+| 12 | 10,8 |
+| 13 | 9,9 |
+| 14 | 8,6 |
+| 15 | 7,2 |
+
+---
+
+## Cálculo da Métrica
 
 ## Cálculo da Métrica
 
@@ -53,10 +78,18 @@ Ucpu = (Tempo de CPU usado / Tempo total de execução) × 100
 
 ---
 
+### Média
+
+```
+(7.8 + 9.1 + 8.4 + 10.2 + 12.5 + 11.3 + 6.9 + 7.4 + 8.1 + 9.7 +
+13.9 + 10.8 + 9.9 + 8.6 + 7.2) / 15
+= 9.39 %
+```
+
 ## Resultado Obtido
 
-* **Uso médio de CPU:** **8,73 %**
-* **Uso máximo de CPU:** **aproximadamente 22 %**
+*  **Uso médio de CPU:** **9,39%**
+*  **Uso máximo de CPU:** **13,9%**
 
 ---
 
@@ -100,5 +133,5 @@ Com consumo médio de **8,73%** e pico máximo de aproximadamente **22%**, o sis
 | Versão | Data       | Descrição                                   | Autor(es)                                     | Revisor(es) |
 | ------ | ---------- | ------------------------------------------- | --------------------------------------------- | ----------- |
 | 1.0    | 26/11/2025 | Criação do documento da métrica Ucpu        | [Enrico Zoratto](https://github.com/sidts) |             |
-| 1.1    | 26/11/2025 |  |  |             |
+| 1.1    | 27/11/2025 | Medições extras | [Filipe Bressanelli](https://github.com/fbressa) |             |
 
