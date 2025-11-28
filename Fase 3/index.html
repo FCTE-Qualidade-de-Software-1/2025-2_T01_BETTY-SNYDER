@@ -2201,16 +2201,15 @@ Avaliar se o sistema consome memória de forma eficiente.</p>
 <li>Comparar com limites estabelecidos.</li>
 </ul>
 <p><strong>Entrada:</strong> Monitor do sistema<br />
-<strong>Saída:</strong> % de memória usada<br />
+<strong>Saída:</strong> Consumo de memória em MB (JS Heap)<br />
 <strong>Evidências:</strong> Prints dos gráficos</p>
 <h4 id="criterio-de-julgamento_9">Critério de Julgamento</h4>
 <ul>
-<li>≤ 80% → Adequado  </li>
-<li>
-<blockquote>
-<p>80% → Risco de instabilidade  </p>
-</blockquote>
-</li>
+<li>0 a 30 MB → Excelente</li>
+<li>30 a 70 MB → Alto, porém aceitável</li>
+<li>mais 100 MB → Ruim / risco de instabilidade</li>
+<li>mais 150 MB → Provável vazamento de memória</li>
+<li>mais 200 MB → Praticamente comprovado memory leak</li>
 </ul>
 <hr />
 <h3 id="m11-taxa-de-disponibilidade-td">M11 — Taxa de Disponibilidade (TD)</h3>

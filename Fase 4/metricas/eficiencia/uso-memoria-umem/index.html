@@ -1636,11 +1636,11 @@
 </tr>
 <tr>
 <td>Máximo</td>
-<td>~ 11.3 MB</td>
+<td>~ 9.7 MB</td>
 </tr>
 <tr>
 <td><strong>Média Aprox.</strong></td>
-<td><strong>~ 8.0 MB</strong></td>
+<td><strong>~ 7.0 MB</strong></td>
 </tr>
 </tbody>
 </table>
@@ -1653,9 +1653,9 @@
 <h2 id="interpretacao-dos-resultados">Interpretação dos Resultados</h2>
 <p>De acordo com os critérios definidos na Fase 2:</p>
 <blockquote>
-<p><em>"Valores ≤ 80% da memória disponível indicam consumo adequado. Valores &gt; 80% indicam risco de instabilidade."</em></p>
+<p><em>Para aplicações web, valores entre 0 e 30 MB indicam consumo excelente; entre 30 e 70 MB, consumo moderado; acima de 100 MB, risco de instabilidade e possível vazamento de memória.</em></p>
 </blockquote>
-<p>Como o consumo real registrado ficou entre <strong>4 MB e 11 MB</strong>, a aplicação apresenta:</p>
+<p>Como o consumo real registrado ficou entre <strong>4.3 MB e 9.7 MB</strong>, a aplicação apresenta:</p>
 <ul>
 <li><strong>Uso mínimo de memória</strong> em relação à capacidade atual de hardware.</li>
 <li><strong>Excelente estabilidade</strong> durante o uso.</li>
@@ -1668,19 +1668,19 @@
 <h3 id="questao-gqm-q6-eficiencia">Questão GQM Q6 (Eficiência)</h3>
 <p>"<strong>O sistema consome muita memória durante o uso normal?</strong>"</p>
 <h3 id="hipotese-6">Hipótese 6</h3>
-<p>"<strong>O consumo de memória não ultrapassa 80% da capacidade disponível durante operações críticas.</strong>"</p>
+<p>"<strong>O consumo de memória permanece dentro dos limites considerados normais para aplicações web (≤ 70 MB), sem ultrapassar faixas de risco (&gt; 100 MB)."</strong>"</p>
 <h3 id="avaliacao-da-hipotese">Avaliação da Hipótese</h3>
 <ul>
-<li><strong>Consumo real:</strong> ~8 MB (média).</li>
-<li><strong>Limiar crítico:</strong> 80% da capacidade disponível (o valor medido está muito distante desse limite).</li>
+<li><strong>Consumo real:</strong> ~7 MB (média).</li>
+<li><strong>Limiar crítico:</strong> Acima de 100 MB → muito distante do observado.</li>
 </ul>
 <h3 id="conclusao-da-hipotese">Conclusão da Hipótese</h3>
 <p>A hipótese foi <strong>CONFIRMADA</strong>.
 O ChamaControl utiliza memória de forma eficiente e segura, sem risco de saturação.</p>
 <hr />
 <h2 id="evidencia-da-coleta-print">Evidência da Coleta (Print)</h2>
-<p><img alt="Gráfico JS Heap" src="../../../assets/usoMemoria.jpeg" />
-<em>(JS Heap variando entre 4.3 MB e 11.3 MB, conforme registrado no Chrome DevTools)</em></p>
+<p><img alt="Gráfico JS Heap" src="../../../../assets/Mem%C3%B3ria%28Umem%29JSheap.png" />
+<em>(JS Heap variando entre 4.3 MB e 9.7 MB, conforme registrado no Chrome DevTools)</em></p>
 <hr />
 <h2 id="conclusao">Conclusão</h2>
 <p>A métrica <strong>Uso de Memória (Umem)</strong> demonstra que o ChamaControl apresenta um consumo de memória extremamente baixo.
