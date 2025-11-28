@@ -44,8 +44,8 @@ Durante o período monitorado, os valores coletados para o **JS Heap** foram:
 | Indicador | Valor (MB) |
 |-----------|------------|
 | Mínimo | ~ 4.3 MB |
-| Máximo | ~ 11.3 MB |
-| **Média Aprox.** | **~ 8.0 MB** |
+| Máximo | ~ 9.7 MB |
+| **Média Aprox.** | **~ 7.0 MB** |
 
 ### Observações
 - Os valores apresentados são extremamente baixos para uma aplicação web moderna.
@@ -57,9 +57,9 @@ Durante o período monitorado, os valores coletados para o **JS Heap** foram:
 
 De acordo com os critérios definidos na Fase 2:
 
-> *"Valores ≤ 80% da memória disponível indicam consumo adequado. Valores > 80% indicam risco de instabilidade."*
+> *Para aplicações web, valores entre 0 e 30 MB indicam consumo excelente; entre 30 e 70 MB, consumo moderado; acima de 100 MB, risco de instabilidade e possível vazamento de memória.*
 
-Como o consumo real registrado ficou entre **4 MB e 11 MB**, a aplicação apresenta:
+Como o consumo real registrado ficou entre **4.3 MB e 9.7 MB**, a aplicação apresenta:
 
 - **Uso mínimo de memória** em relação à capacidade atual de hardware.
 - **Excelente estabilidade** durante o uso.
@@ -75,11 +75,11 @@ Como o consumo real registrado ficou entre **4 MB e 11 MB**, a aplicação apres
 "**O sistema consome muita memória durante o uso normal?**"
 
 ### Hipótese 6
-"**O consumo de memória não ultrapassa 80% da capacidade disponível durante operações críticas.**"
+"**O consumo de memória permanece dentro dos limites considerados normais para aplicações web (≤ 70 MB), sem ultrapassar faixas de risco (> 100 MB)."**"
 
 ### Avaliação da Hipótese
-- **Consumo real:** ~8 MB (média).
-- **Limiar crítico:** 80% da capacidade disponível (o valor medido está muito distante desse limite).
+- **Consumo real:** ~7 MB (média).
+- **Limiar crítico:** Acima de 100 MB → muito distante do observado.
 
 ### Conclusão da Hipótese
 A hipótese foi **CONFIRMADA**.
@@ -89,8 +89,8 @@ O ChamaControl utiliza memória de forma eficiente e segura, sem risco de satura
 
 ## Evidência da Coleta (Print)
 
-![Gráfico JS Heap](../../../assets/usoMemoria.jpeg)
-*(JS Heap variando entre 4.3 MB e 11.3 MB, conforme registrado no Chrome DevTools)*
+![Gráfico JS Heap](../../../assets/Memória(Umem)JSheap.png)
+*(JS Heap variando entre 4.3 MB e 9.7 MB, conforme registrado no Chrome DevTools)*
 
 ---
 

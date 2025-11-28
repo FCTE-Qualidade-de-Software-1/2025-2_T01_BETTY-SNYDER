@@ -297,12 +297,15 @@ Avaliar se o sistema consome memória de forma eficiente.
 - Comparar com limites estabelecidos.
 
 **Entrada:** Monitor do sistema  
-**Saída:** % de memória usada  
+**Saída:** Consumo de memória em MB (JS Heap)  
 **Evidências:** Prints dos gráficos
 
 #### Critério de Julgamento
-- ≤ 80% → Adequado  
-- > 80% → Risco de instabilidade  
+- 0 a 30 MB → Excelente
+- 30 a 70 MB → Alto, porém aceitável
+- mais 100 MB → Ruim / risco de instabilidade
+- mais 150 MB → Provável vazamento de memória
+- mais 200 MB → Praticamente comprovado memory leak
 
 ---
 
