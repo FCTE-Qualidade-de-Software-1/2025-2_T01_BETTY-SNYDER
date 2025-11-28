@@ -103,4 +103,4 @@ O comportamento observado é consistente com uma aplicação otimizada, sem ind�
 
 | Versão | Data       | Descrição                                         | Autor(es)                                      | Revisor(es) |
 | ------ | ---------- | ------------------------------------------------- | ---------------------------------------------- | ----------- |
-| 1.0    | 25/11/2025 | Criação do documento da métrica M10 (Uso de Memória) | [Breno Fernandes](https://github.com/BrenoF3) |             |
+| 1.0    | 25/11/2025 | Criação do documento da métrica M10 (Uso de Memória) | [Breno Fernandes](https://github.com/BrenoFrds) |             |
