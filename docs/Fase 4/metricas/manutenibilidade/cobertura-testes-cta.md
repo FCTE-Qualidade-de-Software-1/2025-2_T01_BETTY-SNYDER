@@ -1,140 +1,156 @@
-# Cobertura de Testes Automatizados (CTA) — Análise dos Resultados no SonarQube
+# Cobertura de Testes Automatizados (CTA)
 
 ## 1. Objetivo da Métrica
-Avaliar o nível de cobertura de testes automatizados no código do ChamaControl, verificando se as funcionalidades principais estão sendo exercitadas por testes que garantem a qualidade, diminuem regressões e facilitam manutenção.
-
-A métrica CTA se relaciona diretamente à subcaracterística **Testabilidade**, dentro da **Manutenibilidade** da ISO/IEC 25010.
+Avaliar a extensão da cobertura de testes automatizados no sistema **ChamaControl**, verificando se as principais funcionalidades possuem testes suficientes para garantir robustez, prevenir regressões e melhorar a manutenibilidade.  
+A métrica está associada à subcaracterística **Testabilidade**, da característica **Manutenibilidade** (ISO/IEC 25010).
 
 ---
 
 ## 2. Método de Coleta
-A coleta foi realizada via **SonarQube**, utilizando os seguintes indicadores:
+A coleta foi realizada por meio da ferramenta **SonarQube**, utilizando as seguintes métricas:
 
 - **Coverage (%)**
 - **Line Coverage (%)**
 - **Lines to Cover**
 - **Uncovered Lines**
-- **Coverage Overview** (gráfico gerado pelo SonarQube)
+- **Uncovered Conditions**
+- **Coverage Overview (gráfico)**
 
-Procedimento:
+### Procedimentos:
+1. Executar análise do projeto no SonarQube (branch principal).  
+2. Navegar até **Measures → Coverage**.  
+3. Registrar os valores de cobertura global e por módulo (`backend` e `web`).  
+4. Registrar as métricas associadas às linhas não cobertas.  
+5. Observar o gráfico **Coverage Overview** para relacionar cobertura × complexidade.
 
-1. Acessar o projeto *ChamaControl* no SonarQube.  
-2. Navegar em **Measures → Coverage**.  
-3. Registrar o *Coverage (%)*  
-4. Registrar o *Line Coverage (%)*  
-5. Registrar o *Lines to Cover*  
-6. Registrar o *Uncovered Lines*  
-4. Registrar o gráfico **Coverage Overview**, que relaciona complexidade ciclomática × cobertura.  
-
-Condições da coleta:
-
-- Branch analisado: `main`
-- Data da coleta: 24/11/2025
-- Novo código analisado desde: 17/11/2025
-- Ausência de integração de relatórios de cobertura (LCOV, Jest, etc.)
-
----
-
-## 3. Resultado Obtido
-
-### Lines to Cover
-![Lines to Cover](../../../assets/linesToCover.jpeg)
-
-- Total: **1.144 linhas**
-- Backend: **865**
-- Web: **279**
+### Condições da Coleta:
+- Ambiente: computador pessoal (desktop)  
+- Sistema Operacional: Windows 10 Pro (64 bits)  
+- Conexão: ethernet cabeada  
+- Internet: 70 Mb/s  
+- Navegador: Google Chrome 131.0.6778.86  
+- Sistema em estado ocioso (sem processos pesados)  
+- Cache limpo antes da execução  
+- Ferramenta única: SonarQube (última versão disponível no laboratório)
 
 ---
 
-### Coverage (%)
-![Coverage](../../../assets/coverage.jpeg)
+## 3. Resultados Obtidos
 
-- Cobertura total: **0.0%**
-- Backend: **0.0%** (865 linhas descobertas)
-- Web: **0.0%** (279 linhas descobertas)
+### 3.1 Visão Geral
+- **Coverage geral:** **23,2%**  
+- **Line Coverage geral:** **18,0%**  
+- **Lines to Cover:** **761**  
+- **Uncovered Lines:** **624**  
+- **Linhas cobertas:** 137 (17,9% do total)
 
----
+### 3.2 Cobertura por Módulo
 
-### Coverage Overview
-![Coverage Overview](../../../assets/coverageOverview.jpeg)
+#### **Backend**
+- **Line Coverage:** 28,4%  
+- **Coverage:** 35,3%  
+- **Lines to Cover:** 482  
+- **Uncovered Lines:** 345  
 
-> Observação: Todas as bolhas estão na faixa de **0% de cobertura**, indicando ausência de testes instrumentados.
+O backend possui parte dos testes implementados, resultando em uma cobertura moderada, porém ainda insuficiente.
 
----
+#### **Web (Frontend)**
+- **Line Coverage:** 0%  
+- **Coverage:** 0%  
+- **Lines to Cover:** 279  
+- **Uncovered Lines:** 279  
 
-### Line Coverage
-![Line Coverage](../../../assets/lineCoverage.jpeg)
-
-- Line Coverage total: **0.0%**
-
----
-
-### Uncovered Lines
-![Uncovered Lines](../../../assets/uncoverdedLines.jpeg)
-
-- Total de linhas não cobertas: **1.144**
-- Backend: **865**
-- Web: **279**
+O frontend não possui nenhum teste automatizado, deixando toda a camada visual e lógica de interação sem proteção.
 
 ---
 
-## 4. Interpretação dos Resultados
-A análise consolidada das métricas mostra que:
+## 4. Coverage Overview (Visão Gráfica)
+O gráfico do SonarQube mostra:
 
-### Linhas a serem testadas existem (1.144 linhas)  
-Isso significa que o SonarQube reconheceu estruturas de código passíveis de teste.
-
-### Cobertura = **0%**  
-Todas as métricas de cobertura apresentam **zero**:
-
-- Coverage (%) = **0.0%**  
-- Line Coverage (%) = **0.0%**  
-- Uncovered Lines = **100% das lines to cover**  
-- Coverage Overview = todas as bolhas no eixo dos 0%
-
-Isso confirma que:
-
-> **Nenhum teste automatizado foi detectado ou executado com relatório de cobertura integrado.**
-
-Ou seja:
-
-- Pode existir testes manuais  
-- Pode existir testes automatizados **sem relatório LCOV**  
-- Mas o SonarQube não recebeu nenhum dado de cobertura (LCOV, XML, etc.)
-
-### Consequências para a qualidade:
-- A testabilidade prática não é verificada  
-- Riscos maiores de regressões  
-- Dificuldade de validar hipóteses que dependem de testes  
-- Baixa confiabilidade estrutural do código  
+- A maioria dos arquivos com **cobertura entre 0% e 5%**
+- Arquivos de **alta complexidade ciclomática** com **baixa ou nenhuma cobertura**
+- Poucas bolhas com cobertura alta, todas de arquivos simples e pouco relevantes
 
 ---
 
-## 5. Ligação entre a questão e a hipótese
+## 5. Imagens de Evidência
 
-### Questão GQM Q5  
-"**O código permite a criação e execução eficiente de testes automatizados?**"
+### **Coverage (%)**
+![coverage-img](../../../assets/coverage.jpeg)
 
-### Hipótese 5  
-"**As funções principais possuem cobertura de teste automatizado superior a 80%.**"
+### **Line Coverage**
+![line-coverage-img](../../../assets/lineCoverage.jpeg)
 
-### Análise da hipótese com base na coleta
-- Cobertura medida = **0%**
-- Linhas totalmente não cobertas = **1.144**
-- Não há nenhum arquivo com cobertura > 0%
+### **Uncovered Lines**
+![uncovered-lines-img](../../../assets/uncoveredLines.jpeg)
 
-### Conclusão da hipótese
-A hipótese é **refutada**.
+### **Lines to Cover**
+![lines-to-cover-img](../../../assets/linesToCover.jpeg)
 
-> **Com 0% de cobertura, não há evidência de que os testes automatizados existem ou exercitam qualquer funcionalidade do sistema.**
+### **Coverage Overview (gráfico)**
+![overview-graph-img](../../../assets/coverageOverview.jpeg)
 
 ---
 
-## 6. Evidência da Coleta (Vídeo)
+## 6. Interpretação dos Resultados
 
-> Link do vídeo.
+Com base nos limites definidos na [Fase 2](../../../Fase%202/index.md):
 
-## Histórico de versão
-| Versão | Data       | Descrição                                                                                                         | Autor(es)                                        | Revisor(es)                                |
-| ------ | ---------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------ |
-| 1.0    | 17/11/2025 | Criação do documento                                                                                        | [Leonardo Sauma](https://github.com/leohssjr), [Gabriel Soares](https://github.com/SAnjos3) |                                            |
+- **≥ 80%** → excelente  
+- **60–79%** → adequado  
+- **< 60%** → insuficiente  
+
+O projeto apresenta:
+
+- **23,2% de Coverage geral**  
+- **18% de Line Coverage geral**  
+
+Logo, a testabilidade do sistema é considerada **baixa**.
+
+Principais pontos:
+
+- O **backend** possui alguma cobertura (28,4%), mas longe do ideal.  
+- O **frontend** não possui cobertura alguma **(0%)**, incluindo arquivos críticos como `Dashboard.jsx`.  
+- Alta quantidade de linhas não cobertas (**624**), prejudicando confiança e previsibilidade do sistema.  
+- A baixa cobertura combinada com alta complexidade em alguns arquivos aumenta a probabilidade de regressões.  
+
+---
+
+## 7. Ligação Questão–Hipótese
+
+### **Q5:**  
+“*O código permite a criação e execução eficiente de testes automatizados?*”
+
+### **Hipótese H5:**  
+“*As funções principais possuem cobertura ≥ 80%.*”
+
+### **Resultado:**  
+A hipótese foi **refutada**.
+
+O nível atual de cobertura não evidencia criação eficiente de testes. O percentual está muito abaixo do mínimo desejável e o frontend está completamente sem testes.
+
+---
+
+## 8. Conclusão
+
+A métrica **Cobertura de Testes Automatizados (CTA)** demonstra que:
+
+- Apenas o backend possui testes, mas insuficientes.  
+- O frontend está totalmente sem cobertura.  
+- Apenas **137** de **761** linhas estão cobertas.  
+- O projeto apresenta **baixa testabilidade**, exigindo priorização urgente de testes.
+
+Recomenda-se:
+
+- Implementar testes unitários e de integração no backend  
+- Criar testes para componentes React  
+- Priorizar arquivos de alta complexidade ciclomática  
+- Automatizar testes de rotas principais e fluxos críticos
+
+---
+
+## 9. Histórico de Versão
+
+| Versão | Data | Descrição | Autor(es) | Revisor(es) |
+|--------|------------|------------------------------|-------------------------------|----------------|
+| 1.0 | 27/11/2025 | Criação do documento | [Leonardo Sauma](https://github.com/leohssjr) |  |
