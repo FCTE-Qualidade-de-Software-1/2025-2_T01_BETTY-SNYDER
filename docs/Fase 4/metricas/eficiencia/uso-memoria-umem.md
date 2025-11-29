@@ -1,4 +1,4 @@
-# M10 - Uso de Memória (Umem)
+# Uso de Memória (Umem)
 
 ## Objetivo da Métrica
 Avaliar se o sistema ChamaControl apresenta um consumo de memória adequado durante o uso normal, identificando possíveis gargalos, picos anormais ou comportamentos que indiquem risco de instabilidade.

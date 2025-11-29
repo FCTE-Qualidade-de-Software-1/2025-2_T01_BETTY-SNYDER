@@ -1,4 +1,4 @@
-# M7 - Tempo Médio de Resposta (TR)
+# Tempo Médio de Resposta (TR)
 
 ## Objetivo da Métrica
 Avaliar a velocidade média com que o sistema ChamaControl responde às requisições realizadas durante o uso normal. Essa métrica está vinculada à subcaracterística **Comportamento em Relação ao Tempo**, pertencente à característica de qualidade **Eficiência de Desempenho** (ISO/IEC 25010).

@@ -1,4 +1,4 @@
-# M11 - Taxa de Disponibilidade (TD)
+# Taxa de Disponibilidade (TD)
 
 ## Objetivo da Métrica
 Avaliar a estabilidade e a continuidade de operação do sistema ChamaControl, identificando se o serviço permanece acessível ao longo do tempo.

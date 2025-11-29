@@ -12,7 +12,7 @@ A avaliação será conduzida usando uma combinação de medições quantitativa
 
 ### Abordagem selecionada
 
-- Coleta automatizada: utilização do SonarQube para análise de manutenibilidade, acoplamento, duplicação de código, complexidade e demais métricas estruturais; além de ferramentas de cobertura de testes para cálculo do CTA.
+- Coleta automatizada: utilização do SonarQube para análise de manutenibilidade, duplicação de código, complexidade e demais métricas estruturais; além de ferramentas de cobertura de testes para cálculo do CTA.
 - Medições de desempenho: uso do Lighthouse e do Chrome DevTools para mensurar TR e FCP; monitoramento de CPU e memória em ambiente de teste para avaliação de Ucpu e Umem; análise de logs e sistemas de uptime para a métrica TD.
 - Análise estruturada: interpretação dos resultados com base nos limites definidos na Fase 2, priorizando identificação de pontos críticos e oportunidades de melhoria no código e no desempenho do sistema.
 
@@ -92,32 +92,7 @@ GM = (módulos A/B ÷ total de módulos) × 100
 
 ---
 
-### M2 — Índice de Acoplamento entre Módulos (CBO)
-
-**Objetivo:**  
-Verificar se as dependências entre módulos são baixas o suficiente para facilitar manutenção.
-
-#### Passos de Execução (preliminares)
-- Acessar no SonarQube as medições de CBO por classe.
-- Registrar os valores médios e extremos.
-- Identificar classes com CBO elevado.
-- Capturar prints de classes com acoplamento excessivo.
-
-**Entrada:** Relatório SonarQube (CBO)  
-**Saída:** Valor médio de CBO  
-**Evidências:** Prints das classes com alto acoplamento
-
-#### Cálculo
-Média dos valores de CBO.
-
-#### Critério de Julgamento
-- ≤ 10 → Excelente  
-- 11–25 → Moderado  
-- > 25 → Alto acoplamento  
-
----
-
-### M3 — Cobertura de Documentação (CD)
+### M2 — Cobertura de Documentação (CD)
 
 **Objetivo:**  
 Avaliar se o código está adequadamente documentado.
@@ -144,7 +119,7 @@ Escala qualitativa previamente definida.
 
 ---
 
-### M4 — Percentual de Código Duplicado (DUP)
+### M3 — Percentual de Código Duplicado (DUP)
 
 **Objetivo:**  
 Identificar duplicações de código que prejudicam reutilização e manutenção.
@@ -168,7 +143,7 @@ Valor direto do SonarQube.
 
 ---
 
-### M5 — Cobertura de Testes Automatizados (CTA)
+### M4 — Cobertura de Testes Automatizados (CTA)
 
 **Objetivo:**  
 Avaliar a cobertura de testes das funcionalidades principais.
@@ -193,7 +168,7 @@ Valor reportado pelo Jest.
 
 ---
 
-### M6 — Complexidade Ciclomática Média (CCM)
+### M5 — Complexidade Ciclomática Média (CCM)
 
 **Objetivo:**  
 Avaliar a complexidade lógica das funções.
@@ -222,7 +197,7 @@ CCM = Σ CCᵢ / n
 
 ---
 
-### M7 — Tempo Médio de Resposta (TR)
+### M6 — Tempo Médio de Resposta (TR)
 
 **Objetivo:**  
 Medir a velocidade de respostas das APIs e páginas.
@@ -246,7 +221,7 @@ TR = Σ tempos ÷ total de requisições
 
 ---
 
-### M8 — Tempo até Primeiro Conteúdo (FCP)
+### M7 — Tempo até Primeiro Conteúdo (FCP)
 
 **Objetivo:**  
 Avaliar quão rápido o usuário vê o primeiro conteúdo útil.
@@ -266,7 +241,7 @@ Avaliar quão rápido o usuário vê o primeiro conteúdo útil.
 
 ---
 
-### M9 — Uso de CPU (Ucpu)
+### M8 — Uso de CPU (Ucpu)
 
 **Objetivo:**  
 Identificar gargalos no uso de processamento.
@@ -286,7 +261,7 @@ Identificar gargalos no uso de processamento.
 
 ---
 
-### M10 — Uso de Memória (Umem)
+### M9 — Uso de Memória (Umem)
 
 **Objetivo:**  
 Avaliar se o sistema consome memória de forma eficiente.
@@ -309,7 +284,7 @@ Avaliar se o sistema consome memória de forma eficiente.
 
 ---
 
-### M11 — Taxa de Disponibilidade (TD)
+### M10 — Taxa de Disponibilidade (TD)
 
 **Objetivo:**  
 Verificar a estabilidade do sistema ao longo do tempo.

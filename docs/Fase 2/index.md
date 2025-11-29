@@ -52,27 +52,22 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 **Hipótese 1:** Mais de 80% das funções estão agrupadas de forma coerente e com responsabilidade clara, facilitando modificações.  
 **Métricas utilizadas:** [Grau de Modularidade (GM)](#grau-de-modularidade-gm)
 
-**Q2:** É possível modificar um módulo sem impactar outros componentes do sistema?  
-**Subcaracterística:** *Modificabilidade*  
-**Hipótese 2:** Alterações em módulos independentes afetam menos de 10% de outros módulos, indicando baixo acoplamento.  
-**Métricas utilizadas:** [Índice de Acoplamento entre Módulos (CBO)](#indice-de-acoplamento-entre-modulos-cbo)
-
-**Q3:** O código contém documentação suficiente?  
+**Q2:** O código contém documentação suficiente?  
 **Subcaracterística:** *Analisabilidade*  
 **Hipótese 3:** A maioria das funções possuem comentários e instruções de manutenção.  
 **Métricas utilizadas:** [Cobertura de Documentação (CD)](#cobertura-de-documentacao-cd)
 
-**Q4:** Existe duplicação de código ou funções repetidas que possam dificultar manutenção?  
+**Q3:** Existe duplicação de código ou funções repetidas que possam dificultar manutenção?  
 **Subcaracterística:** *Reutilização*  
 **Hipótese 4:** Menos de 10% do código é duplicado, permitindo maior facilidade de manutenção e evolução.  
 **Métricas utilizadas:** [Percentual de Código Duplicado (DUP)](#percentual-de-codigo-duplicado-dup)
 
-**Q5:** O código permite a criação e execução eficiente de testes automatizados?  
+**Q4:** O código permite a criação e execução eficiente de testes automatizados?  
 **Subcaracterística:** *Testabilidade*  
 **Hipótese 5:** As funções principais possuem cobertura de teste automatizado superior a 80%.  
 **Métricas utilizadas:** [Cobertura de Testes Automatizados (CTA)](#cobertura-de-testes-automatizados-cta)
 
-**Q6:** O nível de complexidade do código impacta a facilidade de manutenção e evolução do sistema?   
+**Q5:** O nível de complexidade do código impacta a facilidade de manutenção e evolução do sistema?   
 **Subcaracterística:** *Analisabilidade*  
 **Hipótese 6:** As funções apresentam complexidade ciclomática média inferior a 10, indicando que o código é de fácil compreensão e exige menor esforço para manutenção.  
 **Métricas utilizadas:** [Complexidade Ciclomática Média (CCM)](#complexidade-ciclomatica-media-ccm)
@@ -99,27 +94,6 @@ Verificar no **SonarQube** os indicadores:
 - ≥ 80% → boa modularidade  
 - 60–79% → aceitável  
 - < 60% → modularidade fraca, possível acoplamento
-
----
-
-#### Índice de Acoplamento entre Módulos (CBO)
-
-**Objetivo:**  
-Avaliar o grau de dependência entre classes e módulos, medindo o impacto de alterações no sistema.
-
-**Fórmula:**  
-Valor médio do *Coupling Between Objects (CBO)* reportado pelo SonarQube.
-
-**Coleta:**  
-Usar o **SonarQube** para identificar:  
-- *CBO* por classe  
-- *Code Smells* de “Excessive coupling”  
-- *Complexity by file*
-
-**Interpretação:**  
-- ≤ 10 → baixo acoplamento  
-- 11–25 → moderado  
-- > 25 → alto, difícil de manter
 
 ---
 
@@ -467,9 +441,10 @@ Esta fase complementa o trabalho iniciado anteriormente ([Fase 1](../Fase%201/in
 | Versão | Data       | Descrição                                                                                                         | Autor(es)                                        | Revisor(es)                                |
 | ------ | ---------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------ |
 | 1.0    | 14/10/2025 | Criação do documento base                                                                                         | [Leonardo Sauma](https://github.com/leohssjr)    |                                            |
-| 1.1    | 14/10/2025 | Adição de objetivos e questões sobre as caracterísitcas Manutenabilidade e Eficiência de Desempenho               | [Leonardo Sauma](https://github.com/leohssjr)    |                                            |
+| 1.1    | 14/10/2025 | Adição de objetivos e questões sobre as características
+ Manutenabilidade e Eficiência de Desempenho               | [Leonardo Sauma](https://github.com/leohssjr)    |                                            |
 | 1.2    | 14/10/2025 | Inclusão das métricas detalhadas de Eficiência de Desempenho (TR, FCP, Ucpu, Umem, TD) e revisão da estrutura GQM | [Breno Fernandes](https://github.com/BrenoFrds)  |       
 | 1.3    | 14/10/2025 | Inclusão das métricas detalhadas de Manutenabilidade e revisão da estrutura GQM | [Bruno Ricardo](https://github.com/EhOBruno)  |                                      |
 | 1.4    | 15/10/2025 | Adição de diagramas para visualização das medições                                                                | [Filipe Bressanelli](https://github.com/fbressa) |                                            |
-| 1.5    | 22/10/2025 | Correção de detalhes nas questoes e adiçao do diagrama geral GQM                                                  | [Gabriel Soares](https://github.com/SAnjos3)     | [Enrico Zoratto](https://github.com/sidts) |
+| 1.5    | 22/10/2025 | Correção de detalhes nas questões e adição do diagrama geral GQM                                                  | [Gabriel Soares](https://github.com/SAnjos3)     | [Enrico Zoratto](https://github.com/sidts) |
 | 1.6    | 25/10/2025 | Inclusão rastreabilidade nas métricas, inclusão declaração uso de IA e ajustes nos diagramas base                                                                                         | [Leonardo Sauma](https://github.com/leohssjr)    |

@@ -1,4 +1,4 @@
-# M8 - Tempo até Primeiro Conteúdo (FCP)
+# Tempo até Primeiro Conteúdo (FCP)
 
 ## Objetivo da Métrica
 
@@ -15,7 +15,7 @@ O **First Contentful Paint (FCP)** mede o tempo decorrido desde o início do car
 Para garantir reprodutibilidade e confiabilidade da medição, o experimento foi conduzido sob condições controladas, conforme descrito abaixo:
 
 * **Dispositivo utilizado:** Computador pessoal (desktop)
-* **Sistema operacional:** Windows 11 Pro (64 bits)
+* **Sistema operacional:** Ubuntu Server (máquina virtual)
 * **Tipo de conexão:** Wi-Fi
 * **Velocidade da internet:** 70 Mb/s (download) / 70 Mb/s (upload)
 * **Roteador / Provedor:** Conexão residencial estável
@@ -34,13 +34,13 @@ Essas condições asseguram que o valor obtido represente fielmente o desempenho
 
 ## Método de Coleta
 
-A coleta foi realizada por meio da ferramenta **Lighthouse**, disponível no **Chrome DevTools**, seguindo os seguintes passos:
+A coleta foi realizada por meio da ferramenta **Lighthouse**, executada diretamente **via terminal**, seguindo os seguintes passos:
 
-1. Acesso ao sistema ChamaControl via navegador.
-2. Abertura do **Chrome DevTools**.
-3. Execução do **Lighthouse** na aba **Performance**.
+1. Acesso ao sistema **ChamaControl** via navegador.
+2. Abertura do **terminal** no diretório do projeto.
+3. Execução do **Lighthouse via linha de comando (CLI)**.
 4. Registro do valor da métrica **First Contentful Paint (FCP)**.
-5. Captura da evidência visual do relatório gerado.
+5. Captura da evidência visual do relatório gerado no terminal.
 
 A métrica representa o **tempo até a renderização do primeiro conteúdo visível ao usuário**.
 
