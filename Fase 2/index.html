@@ -708,8 +708,6 @@
       
         
       
-        
-      
     
     
     
@@ -792,34 +790,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../Fase%204/metricas/manutenibilidade/acoplamento-cbo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    M2 - Acoplamento entre Módulos (CBO)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../Fase%204/metricas/manutenibilidade/cobertura-documentacao-cd/" class="md-nav__link">
         
   
@@ -827,7 +797,7 @@
   <span class="md-ellipsis">
     
   
-    M3 - Cobertura de Documentação (CD)
+    M2 - Cobertura de Documentação (CD)
   
 
     
@@ -855,7 +825,7 @@
   <span class="md-ellipsis">
     
   
-    M4 - Código Duplicado (DUP)
+    M3 - Código Duplicado (DUP)
   
 
     
@@ -883,7 +853,7 @@
   <span class="md-ellipsis">
     
   
-    M5 - Cobertura de Testes (CTA)
+    M4 - Cobertura de Testes (CTA)
   
 
     
@@ -911,7 +881,7 @@
   <span class="md-ellipsis">
     
   
-    M6 - Complexidade Ciclomática Média (CCM)
+    M5 - Complexidade Ciclomática Média (CCM)
   
 
     
@@ -1013,7 +983,7 @@
   <span class="md-ellipsis">
     
   
-    M7 - Tempo Médio de Resposta (TR)
+    M6 - Tempo Médio de Resposta (TR)
   
 
     
@@ -1041,7 +1011,7 @@
   <span class="md-ellipsis">
     
   
-    M8 - Tempo até Primeiro Conteúdo (FCP)
+    M7 - Tempo até Primeiro Conteúdo (FCP)
   
 
     
@@ -1069,7 +1039,7 @@
   <span class="md-ellipsis">
     
   
-    M9 - Uso de CPU (Ucpu)
+    M8 - Uso de CPU (Ucpu)
   
 
     
@@ -1097,7 +1067,7 @@
   <span class="md-ellipsis">
     
   
-    M10 - Uso de Memória (Umem)
+    M9 - Uso de Memória (Umem)
   
 
     
@@ -1125,7 +1095,7 @@
   <span class="md-ellipsis">
     
   
-    M11 - Taxa de Disponibilidade (TD)
+    M10 - Taxa de Disponibilidade (TD)
   
 
     
@@ -1242,17 +1212,6 @@
     <span class="md-ellipsis">
       
         Grau de Modularidade (GM)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#indice-de-acoplamento-entre-modulos-cbo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Índice de Acoplamento entre Módulos (CBO)
       
     </span>
   </a>
@@ -1558,23 +1517,19 @@ A seguir, são detalhados os objetivos, perguntas e métricas definidos para cad
 <strong>Subcaracterística:</strong> <em>Modularidade</em><br />
 <strong>Hipótese 1:</strong> Mais de 80% das funções estão agrupadas de forma coerente e com responsabilidade clara, facilitando modificações.<br />
 <strong>Métricas utilizadas:</strong> <a href="#grau-de-modularidade-gm">Grau de Modularidade (GM)</a></p>
-<p><strong>Q2:</strong> É possível modificar um módulo sem impactar outros componentes do sistema?<br />
-<strong>Subcaracterística:</strong> <em>Modificabilidade</em><br />
-<strong>Hipótese 2:</strong> Alterações em módulos independentes afetam menos de 10% de outros módulos, indicando baixo acoplamento.<br />
-<strong>Métricas utilizadas:</strong> <a href="#indice-de-acoplamento-entre-modulos-cbo">Índice de Acoplamento entre Módulos (CBO)</a></p>
-<p><strong>Q3:</strong> O código contém documentação suficiente?<br />
+<p><strong>Q2:</strong> O código contém documentação suficiente?<br />
 <strong>Subcaracterística:</strong> <em>Analisabilidade</em><br />
 <strong>Hipótese 3:</strong> A maioria das funções possuem comentários e instruções de manutenção.<br />
 <strong>Métricas utilizadas:</strong> <a href="#cobertura-de-documentacao-cd">Cobertura de Documentação (CD)</a></p>
-<p><strong>Q4:</strong> Existe duplicação de código ou funções repetidas que possam dificultar manutenção?<br />
+<p><strong>Q3:</strong> Existe duplicação de código ou funções repetidas que possam dificultar manutenção?<br />
 <strong>Subcaracterística:</strong> <em>Reutilização</em><br />
 <strong>Hipótese 4:</strong> Menos de 10% do código é duplicado, permitindo maior facilidade de manutenção e evolução.<br />
 <strong>Métricas utilizadas:</strong> <a href="#percentual-de-codigo-duplicado-dup">Percentual de Código Duplicado (DUP)</a></p>
-<p><strong>Q5:</strong> O código permite a criação e execução eficiente de testes automatizados?<br />
+<p><strong>Q4:</strong> O código permite a criação e execução eficiente de testes automatizados?<br />
 <strong>Subcaracterística:</strong> <em>Testabilidade</em><br />
 <strong>Hipótese 5:</strong> As funções principais possuem cobertura de teste automatizado superior a 80%.<br />
 <strong>Métricas utilizadas:</strong> <a href="#cobertura-de-testes-automatizados-cta">Cobertura de Testes Automatizados (CTA)</a></p>
-<p><strong>Q6:</strong> O nível de complexidade do código impacta a facilidade de manutenção e evolução do sistema? <br />
+<p><strong>Q5:</strong> O nível de complexidade do código impacta a facilidade de manutenção e evolução do sistema? <br />
 <strong>Subcaracterística:</strong> <em>Analisabilidade</em><br />
 <strong>Hipótese 6:</strong> As funções apresentam complexidade ciclomática média inferior a 10, indicando que o código é de fácil compreensão e exige menor esforço para manutenção.<br />
 <strong>Métricas utilizadas:</strong> <a href="#complexidade-ciclomatica-media-ccm">Complexidade Ciclomática Média (CCM)</a></p>
@@ -1594,21 +1549,6 @@ Verificar no <strong>SonarQube</strong> os indicadores:<br />
 - ≥ 80% → boa modularidade<br />
 - 60–79% → aceitável<br />
 - &lt; 60% → modularidade fraca, possível acoplamento</p>
-<hr />
-<h4 id="indice-de-acoplamento-entre-modulos-cbo">Índice de Acoplamento entre Módulos (CBO)</h4>
-<p><strong>Objetivo:</strong><br />
-Avaliar o grau de dependência entre classes e módulos, medindo o impacto de alterações no sistema.</p>
-<p><strong>Fórmula:</strong><br />
-Valor médio do <em>Coupling Between Objects (CBO)</em> reportado pelo SonarQube.</p>
-<p><strong>Coleta:</strong><br />
-Usar o <strong>SonarQube</strong> para identificar:<br />
-- <em>CBO</em> por classe<br />
-- <em>Code Smells</em> de “Excessive coupling”<br />
-- <em>Complexity by file</em></p>
-<p><strong>Interpretação:</strong><br />
-- ≤ 10 → baixo acoplamento<br />
-- 11–25 → moderado<br />
-- &gt; 25 → alto, difícil de manter</p>
 <hr />
 <h4 id="cobertura-de-documentacao-cd">Cobertura de Documentação (CD)</h4>
 <p><strong>Objetivo:</strong><br />
@@ -1963,8 +1903,15 @@ Esta fase complementa o trabalho iniciado anteriormente (<a href="../Fase%201/">
 <tr>
 <td>1.1</td>
 <td>14/10/2025</td>
-<td>Adição de objetivos e questões sobre as caracterísitcas Manutenabilidade e Eficiência de Desempenho</td>
+<td>Adição de objetivos e questões sobre as características</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Manutenabilidade e Eficiência de Desempenho</td>
 <td><a href="https://github.com/leohssjr">Leonardo Sauma</a></td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -1991,7 +1938,7 @@ Esta fase complementa o trabalho iniciado anteriormente (<a href="../Fase%201/">
 <tr>
 <td>1.5</td>
 <td>22/10/2025</td>
-<td>Correção de detalhes nas questoes e adiçao do diagrama geral GQM</td>
+<td>Correção de detalhes nas questões e adição do diagrama geral GQM</td>
 <td><a href="https://github.com/SAnjos3">Gabriel Soares</a></td>
 <td><a href="https://github.com/sidts">Enrico Zoratto</a></td>
 </tr>

@@ -27,7 +27,7 @@
     
     
       
-        <title>M8 - Tempo até Primeiro Conteúdo (FCP) - Betty Snyder</title>
+        <title>M7 - Tempo até Primeiro Conteúdo (FCP) - Betty Snyder</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#m8-tempo-ate-primeiro-conteudo-fcp" class="md-skip">
+        <a href="#tempo-ate-primeiro-conteudo-fcp" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              M8 - Tempo até Primeiro Conteúdo (FCP)
+              M7 - Tempo até Primeiro Conteúdo (FCP)
             
           </span>
         </div>
@@ -708,8 +708,6 @@
       
         
       
-        
-      
     
     
     
@@ -795,34 +793,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manutenibilidade/acoplamento-cbo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    M2 - Acoplamento entre Módulos (CBO)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../manutenibilidade/cobertura-documentacao-cd/" class="md-nav__link">
         
   
@@ -830,7 +800,7 @@
   <span class="md-ellipsis">
     
   
-    M3 - Cobertura de Documentação (CD)
+    M2 - Cobertura de Documentação (CD)
   
 
     
@@ -858,7 +828,7 @@
   <span class="md-ellipsis">
     
   
-    M4 - Código Duplicado (DUP)
+    M3 - Código Duplicado (DUP)
   
 
     
@@ -886,7 +856,7 @@
   <span class="md-ellipsis">
     
   
-    M5 - Cobertura de Testes (CTA)
+    M4 - Cobertura de Testes (CTA)
   
 
     
@@ -914,7 +884,7 @@
   <span class="md-ellipsis">
     
   
-    M6 - Complexidade Ciclomática Média (CCM)
+    M5 - Complexidade Ciclomática Média (CCM)
   
 
     
@@ -1019,7 +989,7 @@
   <span class="md-ellipsis">
     
   
-    M7 - Tempo Médio de Resposta (TR)
+    M6 - Tempo Médio de Resposta (TR)
   
 
     
@@ -1056,7 +1026,7 @@
   <span class="md-ellipsis">
     
   
-    M8 - Tempo até Primeiro Conteúdo (FCP)
+    M7 - Tempo até Primeiro Conteúdo (FCP)
   
 
     
@@ -1074,7 +1044,7 @@
   <span class="md-ellipsis">
     
   
-    M8 - Tempo até Primeiro Conteúdo (FCP)
+    M7 - Tempo até Primeiro Conteúdo (FCP)
   
 
     
@@ -1221,7 +1191,7 @@
   <span class="md-ellipsis">
     
   
-    M9 - Uso de CPU (Ucpu)
+    M8 - Uso de CPU (Ucpu)
   
 
     
@@ -1249,7 +1219,7 @@
   <span class="md-ellipsis">
     
   
-    M10 - Uso de Memória (Umem)
+    M9 - Uso de Memória (Umem)
   
 
     
@@ -1277,7 +1247,7 @@
   <span class="md-ellipsis">
     
   
-    M11 - Taxa de Disponibilidade (TD)
+    M10 - Taxa de Disponibilidade (TD)
   
 
     
@@ -1451,7 +1421,7 @@
   
 
 
-<h1 id="m8-tempo-ate-primeiro-conteudo-fcp">M8 - Tempo até Primeiro Conteúdo (FCP)</h1>
+<h1 id="tempo-ate-primeiro-conteudo-fcp">Tempo até Primeiro Conteúdo (FCP)</h1>
 <h2 id="objetivo-da-metrica">Objetivo da Métrica</h2>
 <p>Avaliar a rapidez com que o usuário visualiza o <strong>primeiro elemento renderizado na interface do sistema ChamaControl</strong> (texto, título, gráfico ou outro componente visual), refletindo diretamente a <strong>percepção inicial de desempenho da aplicação</strong>.</p>
 <p>Essa métrica está vinculada à subcaracterística <strong>Comportamento em Relação ao Tempo</strong>, pertencente à característica de qualidade <strong>Eficiência de Desempenho</strong> (ISO/IEC 25010).</p>
@@ -1461,7 +1431,7 @@
 <p>Para garantir reprodutibilidade e confiabilidade da medição, o experimento foi conduzido sob condições controladas, conforme descrito abaixo:</p>
 <ul>
 <li><strong>Dispositivo utilizado:</strong> Computador pessoal (desktop)</li>
-<li><strong>Sistema operacional:</strong> Windows 11 Pro (64 bits)</li>
+<li><strong>Sistema operacional:</strong> Ubuntu Server (máquina virtual)</li>
 <li><strong>Tipo de conexão:</strong> Wi-Fi</li>
 <li><strong>Velocidade da internet:</strong> 70 Mb/s (download) / 70 Mb/s (upload)</li>
 <li><strong>Roteador / Provedor:</strong> Conexão residencial estável</li>
@@ -1480,13 +1450,13 @@
 <p>Essas condições asseguram que o valor obtido represente fielmente o desempenho do front-end da aplicação, minimizando interferências externas.</p>
 <hr />
 <h2 id="metodo-de-coleta">Método de Coleta</h2>
-<p>A coleta foi realizada por meio da ferramenta <strong>Lighthouse</strong>, disponível no <strong>Chrome DevTools</strong>, seguindo os seguintes passos:</p>
+<p>A coleta foi realizada por meio da ferramenta <strong>Lighthouse</strong>, executada diretamente <strong>via terminal</strong>, seguindo os seguintes passos:</p>
 <ol>
-<li>Acesso ao sistema ChamaControl via navegador.</li>
-<li>Abertura do <strong>Chrome DevTools</strong>.</li>
-<li>Execução do <strong>Lighthouse</strong> na aba <strong>Performance</strong>.</li>
+<li>Acesso ao sistema <strong>ChamaControl</strong> via navegador.</li>
+<li>Abertura do <strong>terminal</strong> no diretório do projeto.</li>
+<li>Execução do <strong>Lighthouse via linha de comando (CLI)</strong>.</li>
 <li>Registro do valor da métrica <strong>First Contentful Paint (FCP)</strong>.</li>
-<li>Captura da evidência visual do relatório gerado.</li>
+<li>Captura da evidência visual do relatório gerado no terminal.</li>
 </ol>
 <p>A métrica representa o <strong>tempo até a renderização do primeiro conteúdo visível ao usuário</strong>.</p>
 <hr />
