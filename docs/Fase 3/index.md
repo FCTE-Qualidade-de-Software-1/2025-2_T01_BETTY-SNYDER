@@ -216,8 +216,8 @@ Medir a velocidade de respostas das APIs e páginas.
 TR = Σ tempos ÷ total de requisições
 
 #### Critério de Julgamento
-- ≤ 2s → Excelente  
-- > 2s → Necessita análise  
+- `≤` 2s → Excelente  
+- `>` 2s → Necessita análise  
 
 ---
 
@@ -236,8 +236,8 @@ Avaliar quão rápido o usuário vê o primeiro conteúdo útil.
 **Evidências:** Screenshot da aba *Performance*
 
 #### Critério de Julgamento
-- ≤ 3s → Ótimo  
-- > 3s → Carregamento lento  
+- `≤` 3s → Ótimo  
+- `>` 3s → Carregamento lento  
 
 ---
 
@@ -256,8 +256,8 @@ Identificar gargalos no uso de processamento.
 **Evidências:** Capturas dos gráficos
 
 #### Critério de Julgamento
-- ≤ 70% → Adequado  
-- > 70% → Sobrecarga  
+- `≤` 70% → Adequado  
+- `>` 70% → Sobrecarga  
 
 ---
 
