@@ -8,7 +8,7 @@ O plano segue a estrutura e o tom do exemplo utilizado como referência, adaptan
 
 ## Método de Avaliação
 
-A avaliação será conduzida usando uma combinação de medições quantitativas (métricas automáticas e monitoramento) e avaliações qualitativas (observação da documentação). As métricas utilizadas foram definidas na Fase 2 e abrangem indicadores de manutenibilidade (GM, CBO, CD, DUP, CTA, CCM) e eficiência de desempenho (TR, FCP, Ucpu, Umem, TD).
+A avaliação será conduzida usando uma combinação de medições quantitativas (métricas automáticas e monitoramento) e avaliações qualitativas (observação da documentação). As métricas utilizadas foram definidas na Fase 2 e abrangem indicadores de manutenibilidade (GM, CD, DUP, CTA, CCM) e eficiência de desempenho (TR, FCP, Ucpu, Umem, TD).
 
 ### Abordagem selecionada
 
