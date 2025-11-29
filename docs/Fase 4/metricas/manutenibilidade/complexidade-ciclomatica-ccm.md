@@ -1,4 +1,4 @@
-# Complexidade Ciclomática Média (CCM) — Análise dos Resultados no SonarQube
+# M6 - Complexidade Ciclomática Média (CCM) 
 
 ## 1. Objetivo da Métrica
 Avaliar o nível de complexidade lógica do ChamaControl por meio dos valores fornecidos pelo SonarQube.  
@@ -94,10 +94,10 @@ Assim, a análise assume exclusivamente os valores fornecidos pelo SonarQube.
 ---
 
 ## 6. Evidência da Coleta (Vídeo)
-
-> Link do vídeo.
+<iframe width="930" height="523" src="https://www.youtube.com/embed/HFsOQhOxXd8" title="Complexidade Ciclomática Média (CCM)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Histórico de versão
 | Versão | Data       | Descrição                                                                                                         | Autor(es)                                        | Revisor(es)                                |
 | ------ | ---------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------ |
 | 1.0    | 17/11/2025 | Criação do documento                                                                                        | [Leonardo Sauma](https://github.com/leohssjr), [Gabriel Soares](https://github.com/SAnjos3) |                                            |
+| 1.1    | 28/11/2025 | Adição do vídeo                                                                                        | [Leonardo Sauma](https://github.com/leohssjr) |                                            |

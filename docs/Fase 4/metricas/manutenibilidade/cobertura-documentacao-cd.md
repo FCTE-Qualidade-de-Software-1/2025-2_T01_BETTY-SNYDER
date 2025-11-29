@@ -1,4 +1,4 @@
-# Cobertura de Documentação (CD) - Avaliação Manual
+# M3 - Cobertura de Documentação (CD)
 
 ## 1. Objetivo da Métrica
 Avaliar a qualidade e a disponibilidade da documentação do projeto ChamaControl, considerando tanto a **documentação externa** (README, GitHub Pages, artefatos de projeto) quanto a **documentação interna** (comentários no código), verificando se há material suficiente para apoiar compreensão, manutenção e evolução do sistema.
@@ -137,3 +137,4 @@ Em termos de qualidade de software, isso significa:
 | Versão | Data       | Descrição                                                                                                         | Autor(es)                                        | Revisor(es)                                |
 | ------ | ---------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------ |
 | 1.0    | 17/11/2025 | Criação do documento                                                                                        | [Leonardo Sauma](https://github.com/leohssjr), [Gabriel Soares](https://github.com/SAnjos3) |                                            |
+| 1.1    | 28/11/2025 | Adição do vídeo                                                                                        | [Leonardo Sauma](https://github.com/leohssjr) |                                            |

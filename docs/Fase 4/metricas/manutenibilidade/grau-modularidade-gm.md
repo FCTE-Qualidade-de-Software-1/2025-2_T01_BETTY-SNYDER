@@ -1,4 +1,4 @@
-# Grau de Modularidade (GM)
+# M1 - Grau de Modularidade (GM)
 
 ## 1. Objetivo da Métrica
 Avaliar se o ChamaControl possui **módulos bem definidos, organizados e com responsabilidades claras**, garantindo boa manutenibilidade, facilidade de evolução e menor impacto entre componentes.  
@@ -98,3 +98,4 @@ O sistema é modular, bem organizado e exige baixíssimo esforço para manutenç
 | Versão | Data       | Descrição                                                                                                         | Autor(es)                                        | Revisor(es)                                |
 | ------ | ---------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------ |
 | 1.0    | 17/11/2025 | Criação do documento                                                                                        | [Leonardo Sauma](https://github.com/leohssjr), [Gabriel Soares](https://github.com/SAnjos3) |                                            |
+| 1.1    | 28/11/2025 | Adição do vídeo                                                                                        | [Leonardo Sauma](https://github.com/leohssjr) |                                            |

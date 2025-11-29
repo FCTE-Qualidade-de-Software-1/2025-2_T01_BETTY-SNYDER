@@ -1,4 +1,4 @@
-# Cobertura de Testes Automatizados (CTA)
+# M5 - Cobertura de Testes Automatizados (CTA)
 
 ## 1. Objetivo da Métrica
 Avaliar a extensão da cobertura de testes automatizados no sistema **ChamaControl**, verificando se as principais funcionalidades possuem testes suficientes para garantir robustez, prevenir regressões e melhorar a manutenibilidade.  
@@ -149,8 +149,12 @@ Recomenda-se:
 
 ---
 
-## 9. Histórico de Versão
+## 9. Evidência da Coleta (Vídeo)
+<iframe width="930" height="523" src="https://www.youtube.com/embed/a5cbs4alqqs" title="Cobertura de Testes Automatizados (CTA)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## 10. Histórico de Versão
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 |--------|------------|------------------------------|-------------------------------|----------------|
 | 1.0 | 27/11/2025 | Criação do documento | [Leonardo Sauma](https://github.com/leohssjr) |  |
+| 1.1    | 28/11/2025 | Adição do vídeo                                                                                        | [Leonardo Sauma](https://github.com/leohssjr) |                                            |

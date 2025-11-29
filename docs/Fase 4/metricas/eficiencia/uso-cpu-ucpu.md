@@ -1,4 +1,4 @@
-# M9 — Uso de CPU (Ucpu)
+# M9 - Uso de CPU (Ucpu)
 
 ## Objetivo da Métrica
 

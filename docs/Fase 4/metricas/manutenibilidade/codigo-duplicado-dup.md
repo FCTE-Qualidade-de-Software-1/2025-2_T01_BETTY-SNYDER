@@ -1,4 +1,4 @@
-# Percentual de Código Duplicado (DUP)
+# M4 - Percentual de Código Duplicado (DUP)
 
 ## 1. Objetivo da Métrica
 Avaliar a taxa de duplicação de código dentro do ChamaControl, identificando blocos idênticos ou muito semelhantes.  
@@ -94,8 +94,7 @@ Entretanto, recomenda-se uma ação de melhoria no módulo **backend**, que conc
 ---
 
 ## 6. Evidência da Coleta (Vídeo)
-
-> Link do vídeo.
+<iframe width="930" height="523" src="https://www.youtube.com/embed/wsPosmhyJSE" title="Percentual de Código Duplicado (DUP)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Histórico de versão
 | Versão | Data       | Descrição                                                                                                         | Autor(es)                                        | Revisor(es)                                |
