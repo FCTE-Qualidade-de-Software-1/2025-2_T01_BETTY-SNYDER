@@ -108,6 +108,10 @@ Portanto, **a hipótese de carregamento inicial rápido não foi confirmada**.
 
 ---
 
+## Evidência da Coleta (Vídeo)
+
+<iframe width="1425" height="570" src="https://www.youtube.com/embed/K461UT6yA-o" title="Tempo até Primeiro Conteúdo (FCP)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Histórico de versão
 
 | Versão | Data       | Descrição                                           | Autor(es)                                  | Revisor(es) |
