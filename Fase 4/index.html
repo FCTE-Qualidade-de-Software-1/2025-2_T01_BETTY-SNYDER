@@ -1150,6 +1150,97 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo-da-fase-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo da Fase 4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execucao-das-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execução das Métricas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Execução das Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manutenibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manutenibilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eficiencia-de-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eficiência de Desempenho
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teste-das-propostas-definidas-anteriormente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste das Propostas Definidas Anteriormente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultados-e-evidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultados e Evidências
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1169,6 +1260,64 @@
 
 
 <h1 id="fase-4">Fase 4</h1>
+<h2 id="introducao">Introdução</h2>
+<p>A Fase 4 corresponde à execução prática da avaliação de qualidade do <strong>ChamaControl</strong>, aplicando todas as métricas, critérios e procedimentos definidos nas fases anteriores (<strong>Fase 1, Fase 2 e Fase 3</strong>). Nesta etapa, serão testadas, na prática, as métricas propostas, bem como validadas as hipóteses formuladas a partir do modelo <strong>GQM</strong>.</p>
+<p>O objetivo principal desta fase é verificar se os resultados obtidos por meio das medições confirmam ou refutam as hipóteses levantadas anteriormente, além de identificar pontos fortes, limitações técnicas e oportunidades concretas de melhoria no sistema.</p>
+<hr />
+<h2 id="objetivo-da-fase-4">Objetivo da Fase 4</h2>
+<ul>
+<li>Executar as medições definidas na <strong>Fase 2</strong>, conforme o plano estabelecido na <strong>Fase 3</strong>;</li>
+<li>Testar as métricas de <strong>Manutenibilidade</strong> e <strong>Eficiência de Desempenho</strong> em ambiente controlado;</li>
+<li>Validar as hipóteses associadas a cada questão do <strong>GQM</strong>;</li>
+<li>Registrar resultados reais, evidências e anomalias encontradas;</li>
+<li>Comparar os valores obtidos com os limiares de aceitação definidos anteriormente;</li>
+<li>Produzir insumos para as recomendações finais de melhoria.</li>
+</ul>
+<hr />
+<h2 id="execucao-das-metricas">Execução das Métricas</h2>
+<p>Nesta fase, serão aplicadas, de forma efetiva, as seguintes métricas:</p>
+<h3 id="manutenibilidade">Manutenibilidade</h3>
+<ul>
+<li>Grau de Modularidade (GM)</li>
+<li>Cobertura de Documentação (CD)</li>
+<li>Percentual de Código Duplicado (DUP)</li>
+<li>Cobertura de Testes Automatizados (CTA)</li>
+<li>Complexidade Ciclomática Média (CCM)</li>
+</ul>
+<h3 id="eficiencia-de-desempenho">Eficiência de Desempenho</h3>
+<ul>
+<li>Tempo Médio de Resposta (TR)</li>
+<li>Tempo até o Primeiro Conteúdo (FCP)</li>
+<li>Uso de CPU (Ucpu)</li>
+<li>Uso de Memória (Umem)</li>
+<li>Taxa de Disponibilidade (TD)</li>
+</ul>
+<p>Cada métrica será coletada conforme o procedimento descrito na <strong>Fase 3</strong>, utilizando as ferramentas previamente definidas (<strong>SonarQube, Jest, Lighthouse, DevTools, monitoramento de sistema</strong>, entre outras).</p>
+<hr />
+<h2 id="teste-das-propostas-definidas-anteriormente">Teste das Propostas Definidas Anteriormente</h2>
+<p>Além da simples coleta de dados, esta fase tem como foco testar empiricamente tudo o que foi proposto nas fases anteriores, incluindo:</p>
+<ul>
+<li>A eficácia das métricas selecionadas;</li>
+<li>A adequação dos limites e faixas de interpretação definidos;</li>
+<li>A coerência das hipóteses do <strong>GQM</strong>;</li>
+<li>A viabilidade prática do plano de avaliação.</li>
+</ul>
+<p>Os resultados obtidos serão confrontados diretamente com:</p>
+<ul>
+<li>As hipóteses da <strong>Fase 2</strong>;</li>
+<li>Os critérios de sucesso da <strong>Fase 3</strong>.</li>
+</ul>
+<p>Dessa forma, será possível verificar se as proposições teóricas realmente se sustentam quando aplicadas ao sistema real.</p>
+<hr />
+<h2 id="resultados-e-evidencias">Resultados e Evidências</h2>
+<p>Para cada métrica executada, serão apresentados:</p>
+<ul>
+<li>Valor obtido;</li>
+<li>Ferramenta utilizada;</li>
+<li>Evidências (prints, relatórios, logs);</li>
+<li>Classificação segundo o critério de julgamento;</li>
+<li>Observações técnicas relevantes.</li>
+</ul>
 
 
 
