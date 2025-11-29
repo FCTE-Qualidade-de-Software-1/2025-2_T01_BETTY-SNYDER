@@ -92,7 +92,7 @@ O sistema é modular, bem organizado e exige baixíssimo esforço para manutenç
 
 ## 6. Evidência da Coleta (Vídeo)
 
-> Link do vídeo.
+<iframe width="1425" height="570" src="https://www.youtube.com/embed/XzDBKjXr3Pg" title="Grau de Modularidade (GM)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Histórico de versão
 | Versão | Data       | Descrição                                                                                                         | Autor(es)                                        | Revisor(es)                                |
