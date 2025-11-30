@@ -5,6 +5,11 @@ Avaliar a velocidade média com que o sistema ChamaControl responde às requisi�
 
 O tempo de resposta influencia diretamente a experiência do usuário e a fluidez da navegação, além de evidenciar possíveis gargalos no back-end, banco de dados ou frontend.
 
+O TR é fundamental para avaliar:
+- fluidez da experiência do usuário,  
+- eficiência das rotas da API,  
+- eventuais gargalos no backend ou banco de dados.
+
 ---
 
 ## Condições de Coleta
@@ -27,8 +32,18 @@ Para garantir reprodutibilidade e confiabilidade da medição, o experimento foi
 Essas condições asseguram que o tempo de resposta medido reflete principalmente o desempenho da aplicação, e não limitações do ambiente de teste.
 
 ## Método de Coleta
-A coleta foi realizada utilizando o **Chrome DevTools**, na aba **Network**, registrando o tempo total de finalização de cada requisição (campo **Finish**).  
-Foram capturadas **20 amostras reais**, executando o sistema em condições normais de uso.
+A coleta seguiu passo a passo o método descrito na Fase 3:
+
+1. Acessar o sistema `https://chamacontrol.online/`.  
+2. Abrir **Chrome DevTools → Network**.  
+3. Limpar o cache do navegador.  
+4. Atualizar a página repetidas vezes (20 execuções).  
+5. Registrar o valor da coluna **Finish** para cada requisição principal.  
+6. Registrar os tempos em planilha.  
+7. Calcular a média.  
+8. Exportar e anexar evidências.
+
+Todo o procedimento foi reproduzível e seguiu integralmente o plano.
 
 As medições foram realizadas em sequência, atualizando a página e observando o tempo total consumido para carregar o conteúdo principal do dashboard.
 
@@ -75,6 +90,20 @@ As 20 amostras coletadas foram:
 
 ---
 
+## Ligação entre a Questão e a Hipótese
+### Questão Q4  
+**“O sistema responde rapidamente às requisições realizadas durante o uso normal?”**
+
+### Hipótese H4  
+“**O tempo médio de resposta permanece ≤ 2 segundos.**”
+
+### Resultado
+- TR obtido: **0.56 s**
+- Limite máximo permitido: **2 s**
+
+### Conclusão da Hipótese
+✅ **HIPÓTESE CONFIRMADA.**
+
 ## Interpretação dos Resultados
 
 De acordo com os critérios definidos na Fase 2:
@@ -110,3 +139,4 @@ Com um tempo médio de **~0,56 s**, o sistema atende plenamente às expectativas
 | ------ | ---------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------ |
 | 1.0    | 17/11/2025 | Criação do documento                                                                                        | [Leonardo Sauma](https://github.com/leohssjr)    |                                            |
 | 1.1    | 17/11/2025 | Adição condições de coleta                                                                                     | [Leonardo Sauma](https://github.com/leohssjr)    |                                            |
+| 1.3 | 27/11/2025 | Ajustes finais da documentação | [Leonardo Sauma](https://github.com/leohssjr) |  |

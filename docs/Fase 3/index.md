@@ -4,19 +4,77 @@
 
 Este documento reúne o Plano de Avaliação (Fase 3) para o projeto ChamaControl com base nas decisões tomadas na Fase 2 (GQM: objetivos, questões e métricas). O objetivo é descrever como a avaliação será aplicada na prática, quais recursos serão necessários, o cronograma das atividades e os critérios de sucesso para interpretar os resultados.
 
-O plano segue a estrutura e o tom do exemplo utilizado como referência, adaptando os métodos e métricas à realidade e às prioridades definidas em Fase 2 (Manutenibilidade e Eficiência de Desempenho).
+O objetivo desta fase é garantir que todas as métricas de **Manutenibilidade** e **Eficiência de Desempenho** sejam coletadas de forma:
 
-## Método de Avaliação
+- **repetível**  
+- **reprodutível**  
+- **justificada tecnicamente**  
+- **rastreável**  
 
-A avaliação será conduzida usando uma combinação de medições quantitativas (métricas automáticas e monitoramento) e avaliações qualitativas (observação da documentação). As métricas utilizadas foram definidas na Fase 2 e abrangem indicadores de manutenibilidade (GM, CD, DUP, CTA, CCM) e eficiência de desempenho (TR, FCP, Ucpu, Umem, TD).
+para que a Fase 4 produza resultados confiáveis e auditáveis.
 
-### Abordagem selecionada
+
+## Abordagem selecionada
 
 - Coleta automatizada: utilização do SonarQube para análise de manutenibilidade, duplicação de código, complexidade e demais métricas estruturais; além de ferramentas de cobertura de testes para cálculo do CTA.
 - Medições de desempenho: uso do Lighthouse e do Chrome DevTools para mensurar TR e FCP; monitoramento de CPU e memória em ambiente de teste para avaliação de Ucpu e Umem; análise de logs e sistemas de uptime para a métrica TD.
 - Análise estruturada: interpretação dos resultados com base nos limites definidos na Fase 2, priorizando identificação de pontos críticos e oportunidades de melhoria no código e no desempenho do sistema.
 
-### Critério de sucesso
+
+## Justificativa do Método e Garantia de Repetibilidade
+
+A avaliação será conduzida usando uma combinação de medições quantitativas (métricas automáticas e monitoramento) e avaliações qualitativas (observação da documentação). As métricas utilizadas foram definidas na Fase 2 e abrangem indicadores de manutenibilidade (GM, CD, DUP, CTA, CCM) e eficiência de desempenho (TR, FCP, Ucpu, Umem, TD).
+
+A escolha de cada ferramenta segue critérios técnicos reconhecidos internacionalmente:
+### SonarQube  
+- Métricas estruturais padronizadas (ISO 25010).  
+- Detecta duplicação, complexidade, dívida técnica e cobertura.  
+- Engine determinístico → garante reprodutibilidade.
+
+###  Lighthouse (CLI)  
+- Ferramenta oficial do Google/Chrome Labs.  
+- Mede FCP conforme padrões W3C.  
+- Execução via CLI elimina interferências de extensões.
+
+###  Chrome DevTools  
+- Coleta granular e realista de TR, CPU e memória.  
+- Permite resetar cache e registrar métricas precisas.
+
+## Procedimentos para Repetibilidade e Controle
+
+Antes de cada coleta:
+
+- fechar todas as abas do navegador  
+- reiniciar o Chrome  
+- limpar cache e cookies  
+- garantir CPU < 15%  
+- garantir ausência de downloads/processos pesados 
+- usar sempre o mesmo dispositivo  
+
+## Ambiente Técnico Padronizado
+
+As avaliações foram padronizadas no seguinte ambiente:
+
+###  Hardware
+| Item | Especificação mínima |
+|------|-----------------------|
+| CPU | 4 núcleos |
+| RAM | 8 GB |
+| Armazenamento | SSD |
+
+###  Software
+| Tecnologia | Versão |
+|------------|---------|
+| Windows | 10 Pro 64 bits |
+| Ubuntu Server | 22.04 |
+| Node.js | 20.x LTS |
+| SonarQube | 10.x CE |
+| Chrome | 131.0.6778.86 |
+| Lighthouse CLI | 11.x |
+| Jest | versão do projeto |
+| UptimeRobot | Free Tier |
+
+## Critério de sucesso
 
 A avaliação será considerada satisfatória se pelo menos 70% das métricas-chave (definidas na Fase 2) atingirem níveis aceitáveis ou melhores, conforme as interpretações estabelecidas em cada métrica (por exemplo, CTA ≥ 80%, TR ≤ 2s em 90% das requisições, DUP < 10%, CCM média ≤ 10, etc.).
 
@@ -54,9 +112,6 @@ Durante as sessões observadas, registrar: tempo por tarefa, sucesso/falha, erro
 | Testes de desempenho e monitoramento         | 22/11/2025     | 23/11/2025        | Equipe Técnica  |
 | Consolidação e relatório final (Fase 3)      | 26/11/2025     | 27/11/2025        | Equipe Técnica  |
 
-
-
-Adapte as semanas para datas concretas conforme o calendário do grupo.
 
 ## Consolidação e critérios de relatório
 
@@ -326,3 +381,4 @@ Este Plano de Avaliação operacionaliza as decisões definidas na Fase 2, forne
 | 1.0    | 10/11/2025 | Inicio do Plano de Avaliação (Fase 3) |[Gabriel Soares](github.com/SAnjos3)|
 | 1.1    | 17/11/2025 | Atualização do cronograma com datas reais             | [Breno Fernandes](https://github.com/BrenoFrds) |
 | 1.2    | 20/11/2025 | Adicionada a estrutura preliminar do Plano por Métrica, incluindo seções e templates de execução para todas as métricas definidas na Fase 2 | [Breno Fernandes](https://github.com/BrenoFrds) |
+| 1.3    | 29/11/2025 | Ajustes finais da documentação |[Leonardo Sauma](github.com/leohssjr)|

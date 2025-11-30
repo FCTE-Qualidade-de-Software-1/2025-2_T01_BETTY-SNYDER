@@ -10,7 +10,7 @@ O objetivo principal desta fase é verificar se os resultados obtidos por meio d
 
 ## Objetivo da Fase 4
 
-- Executar as medições definidas na **Fase 2**, conforme o plano estabelecido na **Fase 3**;
+- Executar as medições definidas na [**Fase 2**](../Fase%202/index.md), conforme o plano estabelecido na [**Fase 3**](../Fase%203/index.md);
 - Testar as métricas de **Manutenibilidade** e **Eficiência de Desempenho** em ambiente controlado;
 - Validar as hipóteses associadas a cada questão do **GQM**;
 - Registrar resultados reais, evidências e anomalias encontradas;
@@ -61,6 +61,17 @@ Dessa forma, será possível verificar se as proposições teóricas realmente s
 
 ---
 
+## Consistência com o GQM
+
+Para cada métrica, foi explicitamente indicado:
+
+- Qual **Questão** do GQM ela responde  
+- Qual **Hipótese** ela valida ou refuta  
+- Como o resultado impacta os **Objetivos de Medição**
+
+A rastreabilidade garante coerência da [Fase 1](../Fase%201/index.md) > [Fase 4](../Fase%204/index.md).
+
+
 ## Resultados e Evidências
 
 Para cada métrica executada, serão apresentados:
@@ -70,3 +81,10 @@ Para cada métrica executada, serão apresentados:
 - Evidências (prints, relatórios, logs);
 - Classificação segundo o critério de julgamento;
 - Observações técnicas relevantes.
+
+## 10. Histórico de Versão
+
+| Versão | Data | Descrição | Autor(es) | Revisor(es) |
+|--------|------------|------------------------------|-------------------------------|----------------|
+| 1.0 | 28/11/2025 | Criação do documento | [Enrico Zoratto](https://github.com/sidts) |  [Leonardo Sauma](https://github.com/leohssjr) |
+| 1.1 | 29/11/2025 | Ajuste e revisão na documentação | [Leonardo Sauma](https://github.com/leohssjr) |  |
