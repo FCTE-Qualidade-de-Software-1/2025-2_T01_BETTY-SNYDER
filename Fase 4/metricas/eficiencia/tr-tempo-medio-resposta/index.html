@@ -1114,6 +1114,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ligacao-entre-a-questao-e-a-hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ligação entre a Questão e a Hipótese
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ligação entre a Questão e a Hipótese">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questao-q4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questão Q4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipotese-h4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese H4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusao-da-hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusão da Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#interpretacao-dos-resultados" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1392,6 +1453,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ligacao-entre-a-questao-e-a-hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ligação entre a Questão e a Hipótese
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ligação entre a Questão e a Hipótese">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questao-q4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questão Q4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipotese-h4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese H4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusao-da-hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusão da Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#interpretacao-dos-resultados" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1459,6 +1581,10 @@
 <h2 id="objetivo-da-metrica">Objetivo da Métrica</h2>
 <p>Avaliar a velocidade média com que o sistema ChamaControl responde às requisições realizadas durante o uso normal. Essa métrica está vinculada à subcaracterística <strong>Comportamento em Relação ao Tempo</strong>, pertencente à característica de qualidade <strong>Eficiência de Desempenho</strong> (ISO/IEC 25010).</p>
 <p>O tempo de resposta influencia diretamente a experiência do usuário e a fluidez da navegação, além de evidenciar possíveis gargalos no back-end, banco de dados ou frontend.</p>
+<p>O TR é fundamental para avaliar:
+- fluidez da experiência do usuário,<br />
+- eficiência das rotas da API,<br />
+- eventuais gargalos no backend ou banco de dados.</p>
 <hr />
 <h2 id="condicoes-de-coleta">Condições de Coleta</h2>
 <p>Para garantir reprodutibilidade e confiabilidade da medição, o experimento foi conduzido sob condições controladas, conforme descrito abaixo:</p>
@@ -1480,8 +1606,18 @@
 </ul>
 <p>Essas condições asseguram que o tempo de resposta medido reflete principalmente o desempenho da aplicação, e não limitações do ambiente de teste.</p>
 <h2 id="metodo-de-coleta">Método de Coleta</h2>
-<p>A coleta foi realizada utilizando o <strong>Chrome DevTools</strong>, na aba <strong>Network</strong>, registrando o tempo total de finalização de cada requisição (campo <strong>Finish</strong>).<br />
-Foram capturadas <strong>20 amostras reais</strong>, executando o sistema em condições normais de uso.</p>
+<p>A coleta seguiu passo a passo o método descrito na Fase 3:</p>
+<ol>
+<li>Acessar o sistema <code>https://chamacontrol.online/</code>.  </li>
+<li>Abrir <strong>Chrome DevTools → Network</strong>.  </li>
+<li>Limpar o cache do navegador.  </li>
+<li>Atualizar a página repetidas vezes (20 execuções).  </li>
+<li>Registrar o valor da coluna <strong>Finish</strong> para cada requisição principal.  </li>
+<li>Registrar os tempos em planilha.  </li>
+<li>Calcular a média.  </li>
+<li>Exportar e anexar evidências.</li>
+</ol>
+<p>Todo o procedimento foi reproduzível e seguiu integralmente o plano.</p>
 <p>As medições foram realizadas em sequência, atualizando a página e observando o tempo total consumido para carregar o conteúdo principal do dashboard.</p>
 <hr />
 <h2 id="amostragem-realizada">Amostragem Realizada</h2>
@@ -1586,6 +1722,18 @@ Foram capturadas <strong>20 amostras reais</strong>, executando o sistema em con
 <li><strong>Tempo Médio de Resposta (TR): 560,75 ms (~0,56 s)</strong></li>
 </ul>
 <hr />
+<h2 id="ligacao-entre-a-questao-e-a-hipotese">Ligação entre a Questão e a Hipótese</h2>
+<h3 id="questao-q4">Questão Q4</h3>
+<p><strong>“O sistema responde rapidamente às requisições realizadas durante o uso normal?”</strong></p>
+<h3 id="hipotese-h4">Hipótese H4</h3>
+<p>“<strong>O tempo médio de resposta permanece ≤ 2 segundos.</strong>”</p>
+<h3 id="resultado">Resultado</h3>
+<ul>
+<li>TR obtido: <strong>0.56 s</strong></li>
+<li>Limite máximo permitido: <strong>2 s</strong></li>
+</ul>
+<h3 id="conclusao-da-hipotese">Conclusão da Hipótese</h3>
+<p>✅ <strong>HIPÓTESE CONFIRMADA.</strong></p>
 <h2 id="interpretacao-dos-resultados">Interpretação dos Resultados</h2>
 <p>De acordo com os critérios definidos na Fase 2:</p>
 <blockquote>
@@ -1630,6 +1778,13 @@ Com um tempo médio de <strong>~0,56 s</strong>, o sistema atende plenamente às
 <td>1.1</td>
 <td>17/11/2025</td>
 <td>Adição condições de coleta</td>
+<td><a href="https://github.com/leohssjr">Leonardo Sauma</a></td>
+<td></td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>27/11/2025</td>
+<td>Ajustes finais da documentação</td>
 <td><a href="https://github.com/leohssjr">Leonardo Sauma</a></td>
 <td></td>
 </tr>

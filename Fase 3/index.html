@@ -1162,18 +1162,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#metodo-de-avaliacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Método de Avaliação
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Método de Avaliação">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#abordagem-selecionada" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1183,12 +1171,46 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#criterio-de-sucesso" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#justificativa-do-metodo-e-garantia-de-repetibilidade" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Critério de sucesso
+        Justificativa do Método e Garantia de Repetibilidade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Justificativa do Método e Garantia de Repetibilidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sonarqube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SonarQube
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lighthouse-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lighthouse (CLI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chrome-devtools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chrome DevTools
       
     </span>
   </a>
@@ -1197,6 +1219,67 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedimentos-para-repetibilidade-e-controle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedimentos para Repetibilidade e Controle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambiente-tecnico-padronizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ambiente Técnico Padronizado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ambiente Técnico Padronizado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterio-de-sucesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critério de sucesso
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1818,16 +1901,119 @@
 <h1 id="plano-de-avaliacao-fase-3">Plano de Avaliação — Fase 3</h1>
 <h2 id="introducao">Introdução</h2>
 <p>Este documento reúne o Plano de Avaliação (Fase 3) para o projeto ChamaControl com base nas decisões tomadas na Fase 2 (GQM: objetivos, questões e métricas). O objetivo é descrever como a avaliação será aplicada na prática, quais recursos serão necessários, o cronograma das atividades e os critérios de sucesso para interpretar os resultados.</p>
-<p>O plano segue a estrutura e o tom do exemplo utilizado como referência, adaptando os métodos e métricas à realidade e às prioridades definidas em Fase 2 (Manutenibilidade e Eficiência de Desempenho).</p>
-<h2 id="metodo-de-avaliacao">Método de Avaliação</h2>
-<p>A avaliação será conduzida usando uma combinação de medições quantitativas (métricas automáticas e monitoramento) e avaliações qualitativas (observação da documentação). As métricas utilizadas foram definidas na Fase 2 e abrangem indicadores de manutenibilidade (GM, CD, DUP, CTA, CCM) e eficiência de desempenho (TR, FCP, Ucpu, Umem, TD).</p>
-<h3 id="abordagem-selecionada">Abordagem selecionada</h3>
+<p>O objetivo desta fase é garantir que todas as métricas de <strong>Manutenibilidade</strong> e <strong>Eficiência de Desempenho</strong> sejam coletadas de forma:</p>
+<ul>
+<li><strong>repetível</strong>  </li>
+<li><strong>reprodutível</strong>  </li>
+<li><strong>justificada tecnicamente</strong>  </li>
+<li><strong>rastreável</strong>  </li>
+</ul>
+<p>para que a Fase 4 produza resultados confiáveis e auditáveis.</p>
+<h2 id="abordagem-selecionada">Abordagem selecionada</h2>
 <ul>
 <li>Coleta automatizada: utilização do SonarQube para análise de manutenibilidade, duplicação de código, complexidade e demais métricas estruturais; além de ferramentas de cobertura de testes para cálculo do CTA.</li>
 <li>Medições de desempenho: uso do Lighthouse e do Chrome DevTools para mensurar TR e FCP; monitoramento de CPU e memória em ambiente de teste para avaliação de Ucpu e Umem; análise de logs e sistemas de uptime para a métrica TD.</li>
 <li>Análise estruturada: interpretação dos resultados com base nos limites definidos na Fase 2, priorizando identificação de pontos críticos e oportunidades de melhoria no código e no desempenho do sistema.</li>
 </ul>
-<h3 id="criterio-de-sucesso">Critério de sucesso</h3>
+<h2 id="justificativa-do-metodo-e-garantia-de-repetibilidade">Justificativa do Método e Garantia de Repetibilidade</h2>
+<p>A avaliação será conduzida usando uma combinação de medições quantitativas (métricas automáticas e monitoramento) e avaliações qualitativas (observação da documentação). As métricas utilizadas foram definidas na Fase 2 e abrangem indicadores de manutenibilidade (GM, CD, DUP, CTA, CCM) e eficiência de desempenho (TR, FCP, Ucpu, Umem, TD).</p>
+<p>A escolha de cada ferramenta segue critérios técnicos reconhecidos internacionalmente:</p>
+<h3 id="sonarqube">SonarQube</h3>
+<ul>
+<li>Métricas estruturais padronizadas (ISO 25010).  </li>
+<li>Detecta duplicação, complexidade, dívida técnica e cobertura.  </li>
+<li>Engine determinístico → garante reprodutibilidade.</li>
+</ul>
+<h3 id="lighthouse-cli">Lighthouse (CLI)</h3>
+<ul>
+<li>Ferramenta oficial do Google/Chrome Labs.  </li>
+<li>Mede FCP conforme padrões W3C.  </li>
+<li>Execução via CLI elimina interferências de extensões.</li>
+</ul>
+<h3 id="chrome-devtools">Chrome DevTools</h3>
+<ul>
+<li>Coleta granular e realista de TR, CPU e memória.  </li>
+<li>Permite resetar cache e registrar métricas precisas.</li>
+</ul>
+<h2 id="procedimentos-para-repetibilidade-e-controle">Procedimentos para Repetibilidade e Controle</h2>
+<p>Antes de cada coleta:</p>
+<ul>
+<li>fechar todas as abas do navegador  </li>
+<li>reiniciar o Chrome  </li>
+<li>limpar cache e cookies  </li>
+<li>garantir CPU &lt; 15%  </li>
+<li>garantir ausência de downloads/processos pesados </li>
+<li>usar sempre o mesmo dispositivo  </li>
+</ul>
+<h2 id="ambiente-tecnico-padronizado">Ambiente Técnico Padronizado</h2>
+<p>As avaliações foram padronizadas no seguinte ambiente:</p>
+<h3 id="hardware">Hardware</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Especificação mínima</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>4 núcleos</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>8 GB</td>
+</tr>
+<tr>
+<td>Armazenamento</td>
+<td>SSD</td>
+</tr>
+</tbody>
+</table>
+<h3 id="software">Software</h3>
+<table>
+<thead>
+<tr>
+<th>Tecnologia</th>
+<th>Versão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>10 Pro 64 bits</td>
+</tr>
+<tr>
+<td>Ubuntu Server</td>
+<td>22.04</td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td>20.x LTS</td>
+</tr>
+<tr>
+<td>SonarQube</td>
+<td>10.x CE</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>131.0.6778.86</td>
+</tr>
+<tr>
+<td>Lighthouse CLI</td>
+<td>11.x</td>
+</tr>
+<tr>
+<td>Jest</td>
+<td>versão do projeto</td>
+</tr>
+<tr>
+<td>UptimeRobot</td>
+<td>Free Tier</td>
+</tr>
+</tbody>
+</table>
+<h2 id="criterio-de-sucesso">Critério de sucesso</h2>
 <p>A avaliação será considerada satisfatória se pelo menos 70% das métricas-chave (definidas na Fase 2) atingirem níveis aceitáveis ou melhores, conforme as interpretações estabelecidas em cada métrica (por exemplo, CTA ≥ 80%, TR ≤ 2s em 90% das requisições, DUP &lt; 10%, CCM média ≤ 10, etc.).</p>
 <h2 id="instrucoes-de-execucao">Instruções de execução</h2>
 <ol>
@@ -1889,7 +2075,6 @@
 </tr>
 </tbody>
 </table>
-<p>Adapte as semanas para datas concretas conforme o calendário do grupo.</p>
 <h2 id="consolidacao-e-criterios-de-relatorio">Consolidação e critérios de relatório</h2>
 <p>O relatório final deve conter, para cada métrica, a descrição da coleta, os resultados brutos, a interpretação segundo os limiares da Fase 2 e recomendações práticas (priorizadas por impacto e esforço). Incluir também evidências (relatórios SonarQube, logs, planilhas de observação e gravações se houver).</p>
 <h2 id="plano-por-metrica-manutenibilidade">Plano por Métrica — Manutenibilidade</h2>
@@ -2183,6 +2368,12 @@ Verificar a estabilidade do sistema ao longo do tempo.</p>
 <td>20/11/2025</td>
 <td>Adicionada a estrutura preliminar do Plano por Métrica, incluindo seções e templates de execução para todas as métricas definidas na Fase 2</td>
 <td><a href="https://github.com/BrenoFrds">Breno Fernandes</a></td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>29/11/2025</td>
+<td>Ajustes finais da documentação</td>
+<td><a href="github.com/leohssjr">Leonardo Sauma</a></td>
 </tr>
 </tbody>
 </table>
