@@ -112,7 +112,7 @@ De acordo com os critérios definidos na Fase 2:
 
 > *“Valores até 70% indicam utilização adequada dos recursos. Valores superiores a esse limite indicam sobrecarga de processamento.”*
 
-Os valores obtidos (**8,73% de uso médio** e **~22% de pico máximo**) encontram-se **muito abaixo do limite de 70%**, indicando:
+Os valores obtidos (**9,39% de uso médio** e **13,9% de pico máximo**) encontram-se **muito abaixo do limite de 70%**, indicando:
 
 * Baixa carga sobre o processador
 * Ausência de gargalos de processamento
@@ -126,7 +126,7 @@ Portanto, **a hipótese de que o sistema apresenta utilização adequada de CPU 
 ## Conclusão
 
 A métrica **Uso de CPU (Ucpu)** apresentou desempenho plenamente satisfatório.
-Com consumo médio de **8,73%** e pico máximo de aproximadamente **22%**, o sistema **ChamaControl opera dentro dos padrões recomendados de eficiência de desempenho**, não apresentando sobrecarga nem necessidade imediata de otimizações relacionadas ao processamento.
+Com consumo médio de **9,39%** e pico máximo de aproximadamente **13,9%**, o sistema **ChamaControl opera dentro dos padrões recomendados de eficiência de desempenho**, não apresentando sobrecarga nem necessidade imediata de otimizações relacionadas ao processamento.
 
 ---
 
