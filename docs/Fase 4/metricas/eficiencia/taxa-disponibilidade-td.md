@@ -3,7 +3,7 @@
 ## Objetivo da Métrica
 Avaliar a estabilidade e a continuidade de operação do sistema ChamaControl, identificando se o serviço permanece acessível ao longo do tempo.
 
-Esta métrica está associada à subcaracterística **Disponibilidade**, pertencente à característica de qualidade **Confiabilidade** no modelo ISO/IEC 25010.
+Esta métrica está associada à subcaracterística **Disponibilidade**, pertencente à característica de qualidade **Eficiência de Desempenho** no modelo ISO/IEC 25010.
 
 ---
 
@@ -60,7 +60,7 @@ De acordo com os critérios definidos na Fase 3:
 
 Como o resultado obtido foi de **100%**, a aplicação apresenta:
 
-- **Alta confiabilidade** na infraestrutura de hospedagem.
+- **Alto nível de eficiência e desempenho** na infraestrutura de hospedagem.
 - **Estabilidade total** durante o período de teste.
 - Ausência de interrupções perceptíveis aos usuários finais.
 
@@ -68,7 +68,7 @@ Como o resultado obtido foi de **100%**, a aplicação apresenta:
 
 ## Ligação entre a Questão e a Hipótese
 
-### Questão GQM Q7 (Confiabilidade)
+### Questão GQM Q7 (Eficiência de Desempenho)
 "**O sistema permanece disponível durante o uso normal?**"
 
 ### Hipótese 7
@@ -80,7 +80,7 @@ Como o resultado obtido foi de **100%**, a aplicação apresenta:
 
 ### Conclusão da Hipótese
 A hipótese foi **CONFIRMADA**.
-O ChamaControl demonstra alta confiabilidade e estabilidade, permanecendo acessível durante todo o período analisado sem falhas.
+O ChamaControl demonstra bom desempenho operacional, permanecendo acessível durante todo o período analisado sem falhas.
 
 ---
 
@@ -93,8 +93,8 @@ O ChamaControl demonstra alta confiabilidade e estabilidade, permanecendo acess�
 
 ## Conclusão
 
-A métrica **Taxa de Disponibilidade (TD)** demonstra que o ChamaControl opera de maneira contínua e estável.
-A disponibilidade de 100% reforça a maturidade da hospedagem atual e indica que o sistema está apto para uso contínuo, atendendo aos requisitos de confiabilidade esperados.
+A métrica **Taxa de Disponibilidade (TD)** demonstra que o ChamaControl opera de maneira contínua e estável.  
+A disponibilidade de 100% reforça a maturidade da hospedagem atual e indica que o sistema está apto para uso contínuo, atendendo aos requisitos de **eficiência de desempenho** esperados.
 
 ## Histórico de versão
 
