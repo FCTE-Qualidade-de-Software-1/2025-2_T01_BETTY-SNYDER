@@ -94,6 +94,12 @@ O ChamaControl utiliza memória de forma eficiente e segura, sem risco de satura
 
 ---
 
+## Evidência da Coleta (Vídeo)
+
+<iframe width="1351" height="480" src="https://youtu.be/3DsymX7u5dM" title="Uso de Memória" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 ## Conclusão
 
 A métrica **Uso de Memória (Umem)** demonstra que o ChamaControl apresenta um consumo de memória extremamente baixo.
@@ -104,3 +110,4 @@ O comportamento observado é consistente com uma aplicação otimizada, sem ind�
 | Versão | Data       | Descrição                                         | Autor(es)                                      | Revisor(es) |
 | ------ | ---------- | ------------------------------------------------- | ---------------------------------------------- | ----------- |
 | 1.0    | 25/11/2025 | Criação do documento da métrica M10 (Uso de Memória) | [Breno Fernandes](https://github.com/BrenoFrds) |             |
+| 1.1    | 30/11/2025 | Adicionando Vídeo M9 | [Bruno Ricardo](https://github.com/EhOBruno) |             |

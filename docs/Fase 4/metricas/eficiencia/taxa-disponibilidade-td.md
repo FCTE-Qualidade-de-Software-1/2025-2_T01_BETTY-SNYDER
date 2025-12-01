@@ -91,6 +91,12 @@ O ChamaControl demonstra bom desempenho operacional, permanecendo acessível dur
 
 ---
 
+## Evidência da Coleta (Vídeo)
+
+<iframe width="1351" height="480" src="https://youtu.be/XAwd2crgH3U" title="Taxa de Disponibilidade" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 ## Conclusão
 
 A métrica **Taxa de Disponibilidade (TD)** demonstra que o ChamaControl opera de maneira contínua e estável.  
@@ -101,3 +107,4 @@ A disponibilidade de 100% reforça a maturidade da hospedagem atual e indica que
 | Versão | Data       | Descrição                                         | Autor(es)                                     | Revisor(es) |
 | ------ | ---------- | ------------------------------------------------- | --------------------------------------------- | ----------- |
 | 1.0    | 28/11/2025 | Criação do documento da métrica M11 (Taxa de Disponibilidade) | [Breno Fernandes](https://github.com/BrenoFrds) |             |
+| 1.1    | 30/11/2025 | Adicionando Vídeo M10 | [Bruno Ricardo](https://github.com/EhOBruno) |             |
