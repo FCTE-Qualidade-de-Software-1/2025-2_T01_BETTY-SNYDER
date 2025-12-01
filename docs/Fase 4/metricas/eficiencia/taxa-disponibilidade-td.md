@@ -93,7 +93,7 @@ O ChamaControl demonstra bom desempenho operacional, permanecendo acessível dur
 
 ## Evidência da Coleta (Vídeo)
 
-<iframe width="1351" height="480" src="https://youtu.be/XAwd2crgH3U" title="Taxa de Disponibilidade" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="914" height="514" src="https://www.youtube.com/embed/XAwd2crgH3U" title="M10   Análise de Desempenho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
